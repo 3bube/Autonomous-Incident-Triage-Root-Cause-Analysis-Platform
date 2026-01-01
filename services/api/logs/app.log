@@ -1,0 +1,302 @@
+2026-01-01 14:26:03,220 - __main__ - INFO - Starting Autonomous Incident Triage API on 127.0.0.1:8000
+2026-01-01 14:42:13,449 - __main__ - INFO - Starting Autonomous Incident Triage API on 127.0.0.1:8000
+2026-01-01 14:47:19,060 - __main__ - INFO - Starting Autonomous Incident Triage API on 127.0.0.1:8000
+2026-01-01 14:49:20,055 - routes.auth_routes - INFO - New registration attempt for: ugbore2@gmail.com
+2026-01-01 14:49:20,056 - services.user_service - INFO - Creating user: ugbore2@gmail.com
+2026-01-01 14:49:24,580 - services.user_service - ERROR - Error creating user: (psycopg2.errors.NotNullViolation) null value in column "username" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (1, null, ugbore2@gmail.com, Ebubechukwu Ugbor, admin, $2b$12$50lwuD4hO8eVkJ2r56QLfOOhv6WaUemLmVA78g96WQ8F5LryBzh4G).
+
+[SQL: INSERT INTO users (username, email, full_name, role, password) VALUES (%(username)s, %(email)s, %(full_name)s, %(role)s, %(password)s) RETURNING users.id]
+[parameters: {'username': None, 'email': 'ugbore2@gmail.com', 'full_name': 'Ebubechukwu Ugbor', 'role': 'admin', 'password': '$2b$12$50lwuD4hO8eVkJ2r56QLfOOhv6WaUemLmVA78g96WQ8F5LryBzh4G'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-01-01 14:49:24,589 - routes.auth_routes - ERROR - Registration error: (psycopg2.errors.NotNullViolation) null value in column "username" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (1, null, ugbore2@gmail.com, Ebubechukwu Ugbor, admin, $2b$12$50lwuD4hO8eVkJ2r56QLfOOhv6WaUemLmVA78g96WQ8F5LryBzh4G).
+
+[SQL: INSERT INTO users (username, email, full_name, role, password) VALUES (%(username)s, %(email)s, %(full_name)s, %(role)s, %(password)s) RETURNING users.id]
+[parameters: {'username': None, 'email': 'ugbore2@gmail.com', 'full_name': 'Ebubechukwu Ugbor', 'role': 'admin', 'password': '$2b$12$50lwuD4hO8eVkJ2r56QLfOOhv6WaUemLmVA78g96WQ8F5LryBzh4G'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-01-01 14:50:16,677 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:13,575 - watchfiles.main - INFO - 3 changes detected
+2026-01-01 14:51:18,099 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:18,913 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:19,280 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:19,829 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:20,286 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:20,723 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:21,133 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:21,546 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:22,687 - watchfiles.main - INFO - 10 changes detected
+2026-01-01 14:51:23,355 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:23,849 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:24,372 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:25,153 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:25,587 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:26,107 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:26,537 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:26,948 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:27,360 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:27,857 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:28,302 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:28,704 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:29,150 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:29,642 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:30,047 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:30,431 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:51:48,260 - __main__ - INFO - Starting Autonomous Incident Triage API on 127.0.0.1:8000
+2026-01-01 14:53:34,986 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:53:45,643 - watchfiles.main - INFO - 2 changes detected
+2026-01-01 14:53:48,395 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:53:50,185 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:53:50,605 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:53:51,004 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:53:51,467 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:53:51,899 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:55:47,977 - __main__ - INFO - Starting Autonomous Incident Triage API on 127.0.0.1:8000
+2026-01-01 14:56:18,784 - routes.auth_routes - INFO - New registration attempt for: ugbore2@gmail.com
+2026-01-01 14:56:18,785 - services.user_service - INFO - Creating user: ugbore2@gmail.com
+2026-01-01 14:56:19,102 - services.user_service - ERROR - Error creating user: 'UserCreateSchema' object has no attribute 'username'
+2026-01-01 14:56:19,102 - routes.auth_routes - ERROR - Registration error: 'UserCreateSchema' object has no attribute 'username'
+2026-01-01 14:56:45,132 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:56:50,130 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:56:55,183 - watchfiles.main - INFO - 5 changes detected
+2026-01-01 14:56:55,547 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:56:55,935 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:56:56,409 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:56:56,831 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:56:57,222 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:56:57,804 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:56:58,397 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:56:58,843 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:56:59,354 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:56:59,806 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:00,262 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:01,076 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:02,404 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:02,869 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:03,361 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:03,516 - routes.auth_routes - INFO - New registration attempt for: ugbore2@gmail.com
+2026-01-01 14:57:03,560 - services.user_service - INFO - Creating user: ugbore2@gmail.com
+2026-01-01 14:57:04,157 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:04,769 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:05,578 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:06,470 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:06,884 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:07,393 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:08,006 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:08,553 - services.user_service - ERROR - Error creating user: object NoneType can't be used in 'await' expression
+2026-01-01 14:57:08,572 - routes.auth_routes - ERROR - Registration error: object NoneType can't be used in 'await' expression
+2026-01-01 14:57:08,782 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:09,292 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:09,846 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:10,351 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:10,935 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:11,371 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:11,822 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:12,457 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:12,968 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:13,469 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:13,988 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:14,451 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:14,871 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:15,325 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:15,783 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:16,199 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:16,646 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:17,082 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:17,501 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:17,907 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:18,264 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:18,620 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:19,334 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:19,818 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:20,335 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:20,843 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:21,278 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:21,698 - watchfiles.main - INFO - 1 change detected
+2026-01-01 14:57:40,755 - __main__ - INFO - Starting Autonomous Incident Triage API on 127.0.0.1:8000
+2026-01-01 14:58:02,342 - routes.auth_routes - INFO - New registration attempt for: ugbore2@gmail.com
+2026-01-01 14:58:02,343 - services.user_service - INFO - Creating user: ugbore2@gmail.com
+2026-01-01 14:58:07,423 - services.user_service - ERROR - Error creating user: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_users_email"
+DETAIL:  Key (email)=(ugbore2@gmail.com) already exists.
+
+[SQL: INSERT INTO users (email, full_name, role, password) VALUES (%(email)s, %(full_name)s, %(role)s, %(password)s) RETURNING users.id]
+[parameters: {'email': 'ugbore2@gmail.com', 'full_name': 'Ebubechukwu', 'role': 'admin', 'password': '$2b$12$3iRLlE8DbEg3DQBNQwcCFeJb7Gb3i24ADF7JLMQjgCNHUGHmIymTq'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-01-01 14:58:07,424 - routes.auth_routes - ERROR - Registration error: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_users_email"
+DETAIL:  Key (email)=(ugbore2@gmail.com) already exists.
+
+[SQL: INSERT INTO users (email, full_name, role, password) VALUES (%(email)s, %(full_name)s, %(role)s, %(password)s) RETURNING users.id]
+[parameters: {'email': 'ugbore2@gmail.com', 'full_name': 'Ebubechukwu', 'role': 'admin', 'password': '$2b$12$3iRLlE8DbEg3DQBNQwcCFeJb7Gb3i24ADF7JLMQjgCNHUGHmIymTq'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-01-01 14:59:27,267 - __main__ - INFO - Starting Autonomous Incident Triage API on 127.0.0.1:8000
+2026-01-01 14:59:59,290 - routes.auth_routes - INFO - New registration attempt for: user@example.com
+2026-01-01 14:59:59,291 - services.user_service - INFO - Creating user: user@example.com
+2026-01-01 15:00:04,874 - services.user_service - ERROR - Error creating user: object NoneType can't be used in 'await' expression
+2026-01-01 15:00:04,874 - routes.auth_routes - ERROR - Registration error: object NoneType can't be used in 'await' expression
+2026-01-01 15:01:04,898 - watchfiles.main - INFO - 1 change detected
+2026-01-01 15:02:25,486 - watchfiles.main - INFO - 3 changes detected
+2026-01-01 15:03:01,881 - __main__ - INFO - Starting Autonomous Incident Triage API on 127.0.0.1:8000
+2026-01-01 15:03:33,213 - routes.auth_routes - INFO - New registration attempt for: user@example.com
+2026-01-01 15:03:33,213 - services.user_service - INFO - Creating user: user@example.com
+2026-01-01 15:03:37,864 - services.user_service - ERROR - Error creating user: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_users_email"
+DETAIL:  Key (email)=(user@example.com) already exists.
+
+[SQL: INSERT INTO users (email, full_name, role, password) VALUES (%(email)s, %(full_name)s, %(role)s, %(password)s) RETURNING users.id]
+[parameters: {'email': 'user@example.com', 'full_name': 'string', 'role': 'admin', 'password': '$2b$12$OM6Hi.OeYsfjio/V7fiH6.RcmcSUa35AchuiZeLnMdYCwVyQH2..S'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-01-01 15:03:37,866 - routes.auth_routes - ERROR - Registration error: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ix_users_email"
+DETAIL:  Key (email)=(user@example.com) already exists.
+
+[SQL: INSERT INTO users (email, full_name, role, password) VALUES (%(email)s, %(full_name)s, %(role)s, %(password)s) RETURNING users.id]
+[parameters: {'email': 'user@example.com', 'full_name': 'string', 'role': 'admin', 'password': '$2b$12$OM6Hi.OeYsfjio/V7fiH6.RcmcSUa35AchuiZeLnMdYCwVyQH2..S'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-01-01 22:28:41,745 - __main__ - INFO - Starting Autonomous Incident Triage API on 127.0.0.1:8000
+2026-01-01 22:30:13,854 - routes.auth_routes - INFO - New registration attempt for: user@example.com
+2026-01-01 22:30:13,855 - services.user_service - INFO - Creating user: user@example.com
+2026-01-01 22:30:19,198 - services.user_service - INFO - User created: user@example.com
+2026-01-01 22:30:19,206 - services.user_service - ERROR - Error creating user: 1 validation error for UserResponseSchema
+username
+  Field required [type=missing, input_value=<models.user_model.UserMo...t at 0x00000202C21B56A0>, input_type=UserModel]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-01-01 22:30:19,444 - routes.auth_routes - ERROR - Registration error: 1 validation error for UserResponseSchema
+username
+  Field required [type=missing, input_value=<models.user_model.UserMo...t at 0x00000202C21B56A0>, input_type=UserModel]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-01-01 22:30:33,715 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:30:47,748 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:30:48,118 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:30:49,307 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:30:49,754 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:30:50,250 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:30:50,769 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:30:51,626 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:30:52,520 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:30:54,050 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:30:54,591 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:30:56,671 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:09,947 - watchfiles.main - INFO - 5 changes detected
+2026-01-01 22:31:13,229 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:13,645 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:14,043 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:14,521 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:14,888 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:15,297 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:15,711 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:16,084 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:16,436 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:16,790 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:17,255 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:17,682 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:18,178 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:18,614 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:19,064 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:19,483 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:19,910 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:20,362 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:20,804 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:21,458 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:21,885 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:22,403 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:22,866 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:23,281 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:23,761 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:24,200 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:24,586 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:24,987 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:25,419 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:25,930 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:26,324 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:26,735 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:27,203 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:27,634 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:28,068 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:28,484 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:28,844 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:29,258 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:29,670 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:30,031 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:30,390 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:30,912 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:31,309 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:31,730 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:32,129 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:31:56,216 - __main__ - INFO - Starting Autonomous Incident Triage API on 127.0.0.1:8000
+2026-01-01 22:32:17,187 - routes.auth_routes - INFO - New registration attempt for: user@example.com
+2026-01-01 22:32:17,188 - services.user_service - INFO - Creating user: user@example.com
+2026-01-01 22:32:22,277 - services.user_service - INFO - User created: user@example.com
+2026-01-01 22:33:10,689 - routes.auth_routes - INFO - Login attempt for: user@example.com
+2026-01-01 22:33:10,690 - services.user_service - INFO - Authenticating user: user@example.com
+2026-01-01 22:37:04,624 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:25,499 - watchfiles.main - INFO - 2 changes detected
+2026-01-01 22:37:33,504 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:36,013 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:36,368 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:36,915 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:37,457 - watchfiles.main - INFO - 6 changes detected
+2026-01-01 22:37:37,881 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:38,360 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:38,766 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:39,279 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:39,678 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:40,082 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:40,516 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:41,000 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:41,436 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:41,851 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:42,252 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:42,675 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:43,107 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:43,499 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:43,976 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:44,419 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:44,926 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:45,346 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:45,792 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:46,199 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:46,630 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:47,043 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:47,441 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:47,839 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:48,388 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:48,765 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:49,172 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:49,578 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:49,939 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:50,312 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:50,734 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:51,275 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:51,698 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:52,087 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:52,629 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:53,091 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:53,514 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:54,088 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:54,542 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:54,994 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:55,443 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:55,821 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:56,403 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:56,800 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:57,263 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:57,689 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:58,185 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:58,631 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:59,058 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:59,459 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:37:59,921 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:38:00,325 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:38:00,732 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:38:01,091 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:38:01,502 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:38:01,911 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:38:02,266 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:38:02,646 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:38:03,573 - watchfiles.main - INFO - 1 change detected
+2026-01-01 22:38:04,184 - watchfiles.main - INFO - 2 changes detected
+2026-01-01 22:38:14,421 - watchfiles.main - INFO - 2 changes detected
+2026-01-01 22:38:24,640 - watchfiles.main - INFO - 6 changes detected
+2026-01-01 22:38:42,360 - __main__ - INFO - Starting Autonomous Incident Triage API on 127.0.0.1:8000
+2026-01-01 22:39:03,301 - routes.auth_routes - INFO - Login attempt for: user@example.com
+2026-01-01 22:39:03,302 - services.user_service - INFO - Authenticating user: user@example.com
+2026-01-01 22:39:07,830 - services.user_service - INFO - Authentication successful: user@example.com
+2026-01-01 22:39:07,835 - routes.auth_routes - INFO - Successful login for: user@example.com
