@@ -1,6 +1,5 @@
 from models.user_model import UserModel
 from sqlalchemy.orm import Session
-from sqlalchemy import select
 from schemas.user_schema import UserCreateSchema, UserResponseSchema
 from core.security import hash_password, verify_password
 from core.config import get_logger

@@ -25,6 +25,25 @@ from core.database import Base
 
 # Import all models so Alembic can detect them
 from models.user_model import UserModel  # noqa
+from models.organization_model import OrganizationModel  # noqa
+from models.services_model import ServiceModel  # noqa
+from models.incidents_model import IncidentModel  # noqa
+from models.alert_model import AlertModel  # noqa
+from models.telemetry_sources_model import TelemetrySourceModel  # noqa
+from models.incident_alerts_model import IncidentAlertModel  # noqa
+from models.incident_services_model import IncidentServiceModel  # noqa
+from models.ai_decisions_model import AIDecisionsModel  # noqa
+from models.incident_events_model import IncidentEventModel  # noqa
+from models.incident_feedback_model import IncidentFeedbackModel  # noqa
+from models.incident_features_model import IncidentFeatureModel  # noqa
+from models.incident_clusters_model import IncidentClustersModel  # noqa
+from models.cluster_members_model import ClusterMembersModel  # noqa
+from models.causal_edges_model import CausalEdgeModel  # noqa
+from models.root_cause_hypotheses_model import RootCauseHypothesisModel  # noqa
+from models.service_baselines_model import ServiceBaselineModel  # noqa
+from models.model_training_labels_model import ModelTrainingLabelsModel  # noqa
+from models.overrides_model import OverrideModel  # noqa
+from models.change_events_model import ChangeEventModel  # noqa
 
 # add your model's MetaData object here
 # for 'autogenerate' support
