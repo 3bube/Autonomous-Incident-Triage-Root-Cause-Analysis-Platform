@@ -12,7 +12,6 @@ class OrganizationService:
     
     def create_organization_for_user(self, user_id: str, org_name: str = None) -> OrganizationResponseSchema:
         """Auto-create organization when user signs up"""
-        # Use username or email as org name if not provided
         org_name = org_name or f"{user_id}-org"
         
         logger.info(f"Creating organization for user: {user_id}")
