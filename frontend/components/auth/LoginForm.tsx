@@ -16,7 +16,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import Link from "next/link";
-import { Shield, ShieldCheck } from "lucide-react";
+import { Mail, Lock, ShieldCheck } from "lucide-react";
+import { authService } from "@/services/auth.service";
 
 const loginSchema = z.object({
   email: z.string().email("Invalid email address"),
@@ -42,30 +43,13 @@ export default function LoginForm() {
     setIsLoading(true);
     setError(null);
 
+    console.log("Submitting login form with values:", data);
+
     try {
-      const response = await fetch("http://localhost:8000/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: data.email,
-          password: data.password,
-        }),
-      });
+      const response = await authService.login(data.email, data.password);
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.detail || "Login failed");
-      }
-
-      const responseData = await response.json();
-
-      // Store token in localStorage
-      localStorage.setItem("access_token", responseData.access_token);
-
-      // Redirect to dashboard
-      router.push("/dashboard");
+      console.log(response);
+      // router.push("/dashboard");
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");
     } finally {
@@ -74,24 +58,27 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="bg-primary/10 border border-primary flex flex-col items-center justify-center max-w-md w-full rounded-2xl shadow-[0_4px_30px_rgba(0,0,0,0.5)] overflow-hidden">
-      {/* Header */}
-
-      <div
-        className="mb-8 w-full p-4 border-b border-black pb-10 shadow-md"
-        style={{
-          background:
-            "linear-gradient(0deg, #16212C 0%, rgba(21, 31, 43, 0) 100%)",
-        }}
-      >
-        <div className="flex items-center gap-2 mb-4">
-          <div className="bg-secondary p-1 rounded">
-            <Shield className="w-5 h-5 text-white" />
+    <div className="bg-[#16212c] border border-[#324d67] flex flex-col max-w-110 w-110 rounded-xl shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)] overflow-hidden">
+      {/* Header with background */}
+      <div className="h-32 bg-linear-to-b from-[#16212c] to-[#16212c] relative border-b border-black">
+        <div className="absolute inset-0 bg-linear-to-b from-[#16212c] to-transparent" />
+        <div className="relative flex gap-2 items-center p-4 top-4 left-4">
+          <div className="bg-[#2b8cee] p-1.5 rounded-lg flex items-center justify-center size-8">
+            <svg
+              className="w-5 h-5 text-white"
+              viewBox="0 0 20 24"
+              fill="currentColor"
+            >
+              <path d="M10 2C5.58 2 2 5.58 2 10v10h16V10c0-4.42-3.58-8-8-8zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 10c-2.21 0-4-1.79-4-4h8c0 2.21-1.79 4-4 4z" />
+            </svg>
           </div>
-          <span className="text-white font-semibold">OpsGuard AI</span>
+          <h2 className="text-white font-bold text-lg leading-7">
+            OpsGuard AI
+          </h2>
         </div>
       </div>
-      <div className="w-full px-6 mb-8">
+
+      <div className="w-full px-8 pt-2 pb-12">
         {/* Error Message */}
         {error && (
           <div className="mb-4 p-3 bg-red-900/20 border border-red-600 rounded text-red-400 text-sm">
@@ -101,72 +88,83 @@ export default function LoginForm() {
 
         {/* Form */}
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <div className="mb-10">
-              {" "}
-              <h1 className="text-2xl font-bold text-white mb-2">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <div className="space-y-1">
+              <h1 className="text-2xl font-bold text-white leading-8 -tracking-[0.6px]">
                 Welcome back
               </h1>
-              <p className="text-gray-400">Log in to your SRE workspace</p>
+              <p className="text-[#92adc9] text-sm leading-5">
+                Log in to your SRE workspace
+              </p>
             </div>
-            {/* Email Field */}
+
             <FormField
               control={form.control}
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <Label htmlFor="email" className="text-gray-300">
+                  <Label
+                    htmlFor="email"
+                    className="text-[#e2e8f0] text-sm font-medium"
+                  >
                     Work Email
                   </Label>
-                  <FormControl>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="user@company.com"
-                      className="bg-gray-900 border-gray-700 text-white placeholder:text-gray-600"
-                      {...field}
-                    />
-                  </FormControl>
+                  <div className="relative mt-2">
+                    <FormControl>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="user@company.com"
+                        className="h-11 bg-[#192633] border border-[#324d67] text-white placeholder:text-[#6b7280] rounded-lg pl-10 pr-4"
+                        {...field}
+                      />
+                    </FormControl>
+                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6b7280]" />
+                  </div>
                   <FormMessage />
                 </FormItem>
               )}
             />
 
-            {/* Password Field */}
             <FormField
               control={form.control}
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <div className="flex items-center justify-between ">
-                    <Label htmlFor="password" className="text-gray-300">
+                  <div className="flex items-center justify-between">
+                    <Label
+                      htmlFor="password"
+                      className="text-[#e2e8f0] text-sm font-medium"
+                    >
                       Password
                     </Label>
                     <Link
                       href="/forgot-password"
-                      className="text-secondary hover:text-secondary/80 text-sm"
+                      className="text-[#2b8cee] hover:text-[#58a8f5] text-xs font-medium"
                     >
                       Forgot password?
                     </Link>
                   </div>
-                  <FormControl>
-                    <Input
-                      id="password"
-                      type="password"
-                      placeholder="••••••••"
-                      className="bg-gray-900 border-gray-700 text-white placeholder:text-gray-600"
-                      {...field}
-                    />
-                  </FormControl>
+                  <div className="relative mt-2">
+                    <FormControl>
+                      <Input
+                        id="password"
+                        type="password"
+                        placeholder="••••••••"
+                        className="h-11 bg-[#192633] border border-[#324d67] text-white placeholder:text-[#6b7280] rounded-lg pl-10 pr-4"
+                        {...field}
+                      />
+                    </FormControl>
+                    <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6b7280]" />
+                  </div>
                   <FormMessage />
                 </FormItem>
               )}
             />
 
-            {/* Log In Button */}
             <Button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2"
+              className="w-full h-11 bg-[#2b8cee] hover:bg-[#58a8f5] text-white font-semibold text-sm rounded-lg shadow-[0px_10px_15px_-3px_rgba(59,130,246,0.2),0px_4px_6px_-4px_rgba(59,130,246,0.2)]"
               disabled={isLoading}
             >
               {isLoading ? "Logging in..." : "Log in"}
@@ -174,33 +172,29 @@ export default function LoginForm() {
           </form>
         </Form>
 
-        {/* Divider */}
-        <div className="flex items-center gap-4 my-6">
-          <div className="flex-1 h-px bg-gray-700"></div>
-          <span className="text-gray-500 text-sm">OR CONTINUE WITH</span>
-          <div className="flex-1 h-px bg-gray-700"></div>
+        <div className="flex items-center gap-4 my-5">
+          <div className="flex-1 h-px bg-[#324d67]"></div>
+          <span className="text-[#94a3b8] text-xs font-medium uppercase">
+            Or continue with
+          </span>
+          <div className="flex-1 h-px bg-[#324d67]"></div>
         </div>
 
-        {/* Social Login Placeholder */}
         <Button
           variant="outline"
-          className="w-full border-gray-700 text-gray-300 hover:bg-gray-900"
+          className="w-full h-11 bg-[#192633] border border-[#324d67] text-white hover:bg-[#1f2f3f] rounded-lg"
           disabled
         >
-          <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M15.5 1h-11C3.12 1 2 2.12 2 3.5v13C2 17.88 3.12 19 4.5 19h11c1.38 0 2.5-1.12 2.5-2.5v-13C18 2.12 16.88 1 15.5 1zm0 15h-11v-10h11v10zm-5.5-9a1.5 1.5 0 11-3 0 1.5 1.5 0 113 0z" />
-          </svg>
-          Coming soon
+          Coming Soon
         </Button>
-
-        {/* Footer */}
       </div>
-      <div className="w-full px-6 py-5 bg-black border-t border-primary flex items-center justify-between text-sm rounded-b-2xl">
-        <div className="flex items-center gap-1 ">
-          <ShieldCheck className="w-4 h-4 text-green-500" />
-          <span>SOC2 Type II</span>
+
+      <div className="w-full px-8 py-4 bg-[#0c141c] border-t border-[#324d67] flex items-center justify-between text-xs">
+        <div className="flex items-center gap-1">
+          <ShieldCheck className="w-4 h-4 text-[#22c55e]" />
+          <span className="text-[#94a3b8]">SOC2 Type II</span>
         </div>
-        <Link href="/help" className="text-gray-400 hover:text-gray-300">
+        <Link href="/help" className="text-[#94a3b8] hover:text-white">
           Need help?
         </Link>
       </div>
