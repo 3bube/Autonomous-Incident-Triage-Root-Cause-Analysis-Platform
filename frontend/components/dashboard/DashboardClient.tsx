@@ -2,56 +2,11 @@
 
 import React from "react";
 import StatCard from "./StatCard";
-import {
-  AlertTriangle,
-  Clock,
-  TrendingDown,
-  Heart,
-  Activity,
-  Zap,
-  HardDrive,
-} from "lucide-react";
-
-// Single stat data array with both compact and detailed cards
-const statData = [
-  {
-    variant: "compact" as const,
-    label: "Active Incidents",
-    value: 3,
-    icon: AlertTriangle,
-    iconColor: "text-yellow-500",
-    trend: { value: "↑ 1", isPositive: false },
-    meta: "vs. last 24 hours",
-  },
-  {
-    variant: "compact" as const,
-    label: "MTTR (AVG)",
-    value: "45m",
-    icon: Clock,
-    iconColor: "text-blue-400",
-    trend: { value: "↓ 5m", isPositive: true },
-    meta: "Mean time to resolution",
-  },
-  {
-    variant: "compact" as const,
-    label: "Noise Reduction",
-    value: "99.2%",
-    icon: TrendingDown,
-    iconColor: "text-green-500",
-    trend: { value: "+2.1%", isPositive: true },
-    meta: "AI Signal-to-Noise Ratio",
-  },
-  {
-    variant: "detailed" as const,
-    label: "System Health",
-    value: "98%",
-    progressValue: 98,
-    progressColor: "green" as const,
-    icon: Heart,
-    iconColor: "text-green-500",
-    trend: { value: "+0.5%", isPositive: true },
-  },
-];
+import CorrelationEngine from "./CorrelationEngine";
+import IncidentVolume from "./IncidentVolume";
+import CriticalServices from "./CriticalServices";
+import { statData } from "@/constants";
+import IncidentsTable from "./IncidentsTable";
 
 function DashboardClient() {
   return (
@@ -72,6 +27,27 @@ function DashboardClient() {
             progressColor={stat.progressColor}
           />
         ))}
+      </div>
+
+      <CorrelationEngine
+        rawAlertCount={1247}
+        incidentCount={1}
+        title="Alert Correlation"
+        description=""
+        relatedPattern="Service-Mesh-Latency"
+      />
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Left Column - Incidents Table */}
+        <div className="lg:col-span-2">
+          <IncidentsTable />
+        </div>
+
+        {/* Right Column - Charts and Services */}
+        <div className="space-y-8">
+          <IncidentVolume timeRange="Last 7 Days" />
+          <CriticalServices />
+        </div>
       </div>
     </div>
   );
