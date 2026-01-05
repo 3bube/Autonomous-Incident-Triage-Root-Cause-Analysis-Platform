@@ -11,7 +11,7 @@ function IntegrationClient() {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 mt-8">
       <IntegrationPanel onConfigureIntegration={handleConfigureIntegration} />
       <SuppressionPoliciesClient />
     </div>

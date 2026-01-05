@@ -98,7 +98,9 @@ export default function SuppressionPoliciesTable({
 
                 {/* Condition */}
                 <td className="px-6 py-4 text-md text-[#92adc9] font-mono">
-                  {policy.condition}
+                  <span className="bg-primary/40 px-2 py-1 rounded">
+                    {policy.condition}
+                  </span>
                 </td>
 
                 {/* Impact */}

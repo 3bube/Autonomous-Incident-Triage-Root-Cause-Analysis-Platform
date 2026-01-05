@@ -17,6 +17,12 @@ import {
   MessageSquare,
   Cpu,
   Wrench,
+  Shield,
+  AlertOctagon,
+  Gauge,
+  Target,
+  BarChart3,
+  RefreshCw,
 } from "lucide-react";
 
 export const navItems: NavItem[] = [
@@ -177,5 +183,83 @@ export const suppressionPolicies = [
     condition: "any >= 300 MBs; 1ms -< 02:30 am utc",
     impact: "Suppresses all Sev1 alerts",
     status: "active" as const,
+  },
+];
+
+export const alertRulesData = [
+  {
+    variant: "compact" as const,
+    label: "Active Rules",
+    value: 142,
+    icon: Shield,
+    iconColor: "text-blue-400",
+    trend: { value: "+2%", isPositive: true },
+    meta: "Rules enabled",
+  },
+  {
+    variant: "compact" as const,
+    label: "Inactive Rules",
+    value: 12,
+    icon: AlertCircle,
+    iconColor: "text-gray-400",
+    trend: { value: "0%", isPositive: false },
+    meta: "Disabled",
+  },
+  {
+    variant: "compact" as const,
+    label: "Suppressed (24h)",
+    value: "1,204",
+    icon: Bell,
+    iconColor: "text-green-500",
+    trend: { value: "+15%", isPositive: true },
+    meta: "Alerts suppressed",
+  },
+  {
+    variant: "compact" as const,
+    label: "Routing Errors",
+    value: 0,
+    icon: AlertOctagon,
+    iconColor: "text-red-400",
+    trend: { value: "Stable", isPositive: true },
+    meta: "No errors",
+  },
+];
+
+export const aiModelsData = [
+  {
+    variant: "compact" as const,
+    label: "Active Models",
+    value: 12,
+    icon: Cpu,
+    iconColor: "text-blue-400",
+    trend: { value: "+2.2%", isPositive: true },
+    meta: "All models operational",
+  },
+  {
+    variant: "compact" as const,
+    label: "Global Accuracy",
+    value: "98.4%",
+    icon: Target,
+    iconColor: "text-green-500",
+    trend: { value: "+0.1%", isPositive: true },
+    meta: "Weighted average efficiency",
+  },
+  {
+    variant: "compact" as const,
+    label: "Alerts Suppressed",
+    value: "45.2%",
+    icon: BarChart3,
+    iconColor: "text-purple-400",
+    trend: { value: "+5.2%", isPositive: true },
+    meta: "Noise reduction effective",
+  },
+  {
+    variant: "compact" as const,
+    label: "Last Retraining",
+    value: "2h ago",
+    icon: RefreshCw,
+    iconColor: "text-cyan-400",
+    trend: { value: "Idle", isPositive: true },
+    meta: "Status: Idle",
   },
 ];
