@@ -23,6 +23,8 @@ import {
   Target,
   BarChart3,
   RefreshCw,
+  ShieldCheck,
+  Mail,
 } from "lucide-react";
 
 export const navItems: NavItem[] = [
@@ -263,3 +265,136 @@ export const aiModelsData = [
     meta: "Status: Idle",
   },
 ];
+
+export const teamData = [
+  {
+    variant: "compact" as const,
+    label: "Total Users",
+    value: 42,
+    icon: Users,
+    iconColor: "text-blue-400",
+    trend: { value: "+4", isPositive: true },
+    meta: "this week",
+  },
+  {
+    variant: "compact" as const,
+    label: "Active Admins",
+    value: 5,
+    icon: ShieldCheck,
+    iconColor: "text-green-500",
+    trend: { value: "2", isPositive: true },
+    meta: "super admins",
+  },
+  {
+    variant: "compact" as const,
+    label: "SRE Team",
+    value: 12,
+    icon: Users,
+    iconColor: "text-purple-400",
+    trend: { value: "+1", isPositive: true },
+    meta: "Active members",
+  },
+  {
+    variant: "compact" as const,
+    label: "Pending Invites",
+    value: 3,
+    icon: Mail,
+    iconColor: "text-orange-400",
+    trend: { value: "0", isPositive: true },
+    meta: "Awaiting response",
+  },
+];
+
+export const incidentDetailData = [
+  {
+    variant: "compact" as const,
+    label: "Severity Level",
+    value: "P1- Critical",
+    icon: AlertTriangle,
+    iconColor: "text-red-500",
+    trend: { value: "", isPositive: false },
+    meta: "",
+  },
+  {
+    variant: "compact" as const,
+    label: "Elapsed Time",
+    value: "00:24:12",
+    icon: Clock,
+    iconColor: "text-gray-400",
+    trend: { value: "", isPositive: true },
+    meta: "",
+  },
+  {
+    variant: "compact" as const,
+    label: "Affected Users",
+    value: "~12.5k",
+    icon: Users,
+    iconColor: "text-cyan-400",
+    trend: { value: "+2k/min", isPositive: false },
+    meta: "",
+  },
+  {
+    variant: "compact" as const,
+    label: "AI Confidence",
+    value: "88%",
+    icon: Brain,
+    iconColor: "text-blue-400",
+    trend: { value: "High", isPositive: true },
+    meta: "",
+  },
+];
+
+export const rootCauseHypothesis = {
+  title: "Bad Deployment: checkout-service v2.4.1",
+  description:
+    "Suspected trigger: Deployment event at 14:02 UTC correlated with 500 error spike.",
+  confidence: 92,
+  reasons: [
+    {
+      text: "Latency jumped from 45ms to 1200ms within 30s of deployment completion.",
+    },
+    {
+      text: "New error signature ConnectionRefused: DB_POOL appeared in logs.",
+      highlight: "ConnectionRefused: DB_POOL",
+    },
+  ],
+};
+
+export const incidentTimelineData = [
+  { time: "13:48", value: 15, status: "normal" },
+  { time: "13:51", value: 22, status: "normal" },
+  { time: "13:54", value: 18, status: "normal" },
+  { time: "13:57", value: 20, status: "normal" },
+  { time: "13:59", value: 25, status: "normal", event: "Deploy v2.4.1" },
+  { time: "14:02", value: 45, status: "warning" },
+  { time: "14:05", value: 85, status: "critical", annotation: "Latency > 1s" },
+  { time: "14:08", value: 100, status: "critical" },
+  { time: "14:11", value: 92, status: "critical" },
+  { time: "14:14", value: 75, status: "critical" },
+  { time: "14:17", value: 60, status: "warning" },
+  { time: "14:20", value: 55, status: "warning" },
+  { time: "14:23", value: 48, status: "warning" },
+];
+
+export const incidentRCAData = {
+  summary:
+    "High latency detected in payment-service-v2 coincided with a spike in database connection pool exhaustion. The system identified a potential memory leak in the new connection handling logic deployed 45 minutes ago.",
+  rootCause: "Connection Pool Exhaustion (PostgreSQL)",
+  confidence: 92,
+  affectedServices: ["payment-service", "checkout-api", "auth-provider"],
+  evidence: [
+    { label: "Error Rate", value: "+15%" },
+    { label: "Avg Latency", value: "2.4s" },
+    { label: "DB Connections", value: "Maxed (1000)" },
+  ],
+  timeline: [
+    { time: "10:42:00", event: "Deployment v2.4.1 initiated", type: "info" },
+    {
+      time: "10:48:30",
+      event: "Latency spike (>500ms) detected",
+      type: "warning",
+    },
+    { time: "10:49:15", event: "Error rate increased to 5%", type: "error" },
+    { time: "10:50:00", event: "Auto-scaling event triggered", type: "info" },
+  ],
+};

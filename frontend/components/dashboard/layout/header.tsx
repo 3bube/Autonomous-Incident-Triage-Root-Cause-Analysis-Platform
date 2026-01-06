@@ -5,7 +5,7 @@ import { Bell, Settings } from "lucide-react";
 
 export default function Header() {
   return (
-    <div className="bg-[#111a22] border-b border-[#233648] flex items-center gap-210 px-6 py-3 h-16">
+    <div className="bg-[#111a22] border-b border-[#233648] flex items-center justify-between px-6 py-3 h-16">
       {/* Left Section: Logo and Branding */}
       <div className="flex items-center gap-8">
         {/* Logo Container */}
@@ -52,9 +52,6 @@ export default function Header() {
 
       {/* Right Section: Navigation and Actions */}
       <div className="flex items-center gap-6">
-        {/* Vertical Divider */}
-        <div className="w-px h-6 bg-[#233648]"></div>
-
         {/* Action Icons */}
         <div className="flex items-center gap-2">
           {/* Notifications */}
