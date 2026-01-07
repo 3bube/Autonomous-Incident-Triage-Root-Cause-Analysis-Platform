@@ -6,6 +6,7 @@ class AuthService {
     register: "/auth/register",
     logout: "/auth/logout",
     refreshToken: "/auth/refresh-token",
+    me: "/auth/me",
   };
 
   async login(email: string, password: string) {
@@ -29,6 +30,10 @@ class AuthService {
 
   async refreshToken(refreshToken: string) {
     return await apiClient.post(this.endpoints.refreshToken, { refreshToken });
+  }
+
+  async checkAuth() {
+    return await apiClient.get(this.endpoints.me);
   }
 }
 

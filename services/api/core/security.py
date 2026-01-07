@@ -28,7 +28,25 @@ def decode_access_token(token: str):
     except jwt.PyJWTError:
         return None
     
-    
+def create_refresh_token(data: dict, expires_delta: timedelta = timedelta(days=7)):
+    to_encode = data.copy()
+    expire = datetime.now(timezone.utc) + expires_delta
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return encoded_jwt
+
+
+def validate_refresh_token(refresh_token: str):
+    try:
+        payload = jwt.decode(refresh_token, SECRET_KEY, algorithms=[ALGORITHM])
+        return payload
+    except jwt.ExpiredSignatureError:
+        logger.warning("Refresh token expired")
+        return None
+    except jwt.PyJWTError:
+        logger.warning("Invalid refresh token")
+        return None
+
 def hash_password(plain_password: str) -> str:
     """Hash a plaintext password"""
     hashed = hashpw(plain_password.encode('utf-8'), gensalt())

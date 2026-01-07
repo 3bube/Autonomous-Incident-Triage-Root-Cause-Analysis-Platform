@@ -26,7 +26,14 @@ class Settings(BaseSettings):
     # Security Settings
     SECRET_KEY: str
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30  # 30 minutes
+    REFRESH_TOKEN_EXPIRE_DAYS: int = 7  # 7 days
     ALGORITHM: str
+    
+    # CORS Settings
+    CORS_ORIGINS: list = ["http://localhost:3000", "http://localhost:5173"]
+    CORS_ALLOW_CREDENTIALS: bool = True
+    CORS_ALLOW_METHODS: list = ["*"]
+    CORS_ALLOW_HEADERS: list = ["*"]
 
     @field_validator("DEBUG", mode="before")
     @classmethod
@@ -45,27 +52,20 @@ class Settings(BaseSettings):
 
 settings = Settings()
 
-
-CORS_ORIGINS = [
-    "http://localhost:3000",]
-
-CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
-CORS_ALLOW_HEADERS = ["*"]
-
 def configure_logging():
     """Configure logging for the application"""
-    # Create logs directory if it doesn't exist
-    logs_dir = 'logs'
-    os.makedirs(logs_dir, exist_ok=True)
+    handlers = [logging.StreamHandler()]  # Console output
+    
+    # Only log to file in production (not in debug mode)
+    if not settings.DEBUG:
+        logs_dir = 'logs'
+        os.makedirs(logs_dir, exist_ok=True)
+        handlers.append(logging.FileHandler('logs/app.log', mode='a'))
     
     logging.basicConfig(
         level=getattr(logging, settings.LOG_LEVEL.upper(), logging.INFO),
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        handlers=[
-            logging.StreamHandler(),  # Console output
-            logging.FileHandler('logs/app.log', mode='a')  # File output
-        ]
+        handlers=handlers
     )
 
 # Initialize logging

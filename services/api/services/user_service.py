@@ -15,7 +15,6 @@ class UserService:
       try:
         hashed_password = hash_password(user.password)
         new_user = UserModel(
-            username=user.username,
             email=user.email,
             full_name=user.full_name,
             role=user.role.value,
