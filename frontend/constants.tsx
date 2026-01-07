@@ -25,6 +25,7 @@ import {
   RefreshCw,
   ShieldCheck,
   Mail,
+  ChartBarDecreasing,
 } from "lucide-react";
 
 export const navItems: NavItem[] = [
@@ -51,6 +52,12 @@ export const navItems: NavItem[] = [
     label: "AI Models",
     icon: <Brain className="w-5 h-5" />,
     path: "/dashboard/ai-models",
+  },
+  {
+    id: "analytics",
+    label: "Analytics",
+    icon: <ChartBarDecreasing className="w-5 h-5" />,
+    path: "/dashboard/analytics",
   },
 
   {
@@ -376,6 +383,39 @@ export const incidentTimelineData = [
   { time: "14:23", value: 48, status: "warning" },
 ];
 
+export const blastRadiusData = {
+  nodes: [
+    {
+      id: "web-client",
+      label: "web-client",
+      icon: "ShoppingCart",
+      status: "degraded",
+      x: 30, // percentage
+      y: 35,
+    },
+    {
+      id: "checkout-svc",
+      label: "checkout-svc",
+      icon: "Server",
+      status: "critical",
+      x: 50,
+      y: 55,
+    },
+    {
+      id: "payment-gw",
+      label: "payment-gw",
+      icon: "Banknote",
+      status: "healthy",
+      x: 70,
+      y: 75,
+    },
+  ],
+  edges: [
+    { source: "web-client", target: "checkout-svc", status: "critical" },
+    { source: "checkout-svc", target: "payment-gw", status: "healthy" },
+  ],
+};
+
 export const incidentRCAData = {
   summary:
     "High latency detected in payment-service-v2 coincided with a spike in database connection pool exhaustion. The system identified a potential memory leak in the new connection handling logic deployed 45 minutes ago.",
@@ -398,3 +438,117 @@ export const incidentRCAData = {
     { time: "10:50:00", event: "Auto-scaling event triggered", type: "info" },
   ],
 };
+
+export const liveLogs = [
+  {
+    timestamp: "14:24:12",
+    level: "ERROR",
+    message: "connection refused: database pool...",
+    color: "text-red-400",
+  },
+  {
+    timestamp: "14:24:11",
+    level: "ERROR",
+    message: "transaction rollback triggered",
+    color: "text-red-400",
+  },
+  {
+    timestamp: "14:24:10",
+    level: "INFO",
+    message: "retry attempt 3/5...",
+    color: "text-gray-400",
+  },
+  {
+    timestamp: "14:24:09",
+    level: "WARN",
+    message: "high latency detected in pool",
+    color: "text-yellow-400/80",
+  },
+];
+
+export const analyticsStatData = [
+  {
+    variant: "compact" as const,
+    label: "Mean Time to Resolve",
+    value: "45m",
+    icon: Clock,
+    iconColor: "text-green-500",
+    trend: { value: "↓ 5.2%", isPositive: true },
+    meta: "MTTR improving",
+  },
+  {
+    variant: "compact" as const,
+    label: "Mean Time to Detect",
+    value: "4m 12s",
+    icon: AlertTriangle,
+    iconColor: "text-blue-400",
+    trend: { value: "↓ 8s", isPositive: true },
+    meta: "Detection speed",
+  },
+  {
+    variant: "compact" as const,
+    label: "Noise Reduction",
+    value: "94%",
+    icon: TrendingDown,
+    iconColor: "text-purple-400",
+    trend: { value: "+2.1%", isPositive: true },
+    meta: "AI efficiency",
+  },
+  {
+    variant: "compact" as const,
+    label: "Remaining Error Budget",
+    value: "99.92%",
+    icon: ShieldCheck,
+    iconColor: "text-yellow-500",
+    trend: { value: "Bind High", isPositive: false },
+    meta: "SLA status",
+  },
+];
+
+export const analyticsVolumeData = [
+  { time: "06:00", incidents: 12, isDeployment: false },
+  { time: "07:00", incidents: 15, isDeployment: false },
+  { time: "08:00", incidents: 18, isDeployment: false },
+  { time: "09:00", incidents: 35, isDeployment: true }, // Deployment 1
+  { time: "10:00", incidents: 25, isDeployment: false },
+  { time: "11:00", incidents: 45, isDeployment: false },
+  { time: "12:00", incidents: 30, isDeployment: false },
+  { time: "13:00", incidents: 20, isDeployment: false },
+  {
+    time: "14:00",
+    incidents: 85,
+    isDeployment: false,
+    annotation: "Critical Spike",
+  }, // Spike
+  { time: "15:00", incidents: 60, isDeployment: true }, // Deployment 2
+  { time: "16:00", incidents: 40, isDeployment: false },
+  { time: "17:00", incidents: 30, isDeployment: false },
+];
+
+export const serviceHealthData = Array.from({ length: 18 }, (_, i) => {
+  let status = "healthy";
+  if (i === 6) status = "degraded"; // Row 2, Col 1
+  if (i === 9) status = "critical"; // Row 2, Col 4
+  return { id: i, status };
+});
+
+export const rootCauseStats = [
+  { name: "Database Timeout", value: 42, color: "bg-cyan-400" },
+  { name: "3rd Party API", value: 28, color: "bg-purple-400" },
+  { name: "Config Error", value: 15, color: "bg-blue-500" },
+  { name: "Memory Leak", value: 12, color: "bg-red-400" },
+];
+
+export const alertFunnelData = {
+  rawAlerts: 14203,
+  correlatedGroups: 842,
+  incidents: 42,
+  efficiency: 0.3,
+};
+
+export const teamLoadData = [
+  { team: "CORE", load: 55, status: "healthy" },
+  { team: "PAY", load: 30, status: "healthy" },
+  { team: "OPS", load: 88, status: "critical" },
+  { team: "DATA", load: 45, status: "healthy" },
+];

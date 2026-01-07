@@ -22,8 +22,9 @@ const chartConfig = {
   },
 };
 
-const DeployLabel = (props: any) => {
+const DeployLabel = (props: { viewBox?: { x: number; y: number } }) => {
   const { viewBox } = props;
+  if (!viewBox) return null;
   const { x, y } = viewBox;
 
   return (
@@ -41,9 +42,12 @@ const DeployLabel = (props: any) => {
   );
 };
 
-const LatencyLabel = (props: any) => {
+const LatencyLabel = (props: {
+  viewBox?: { x: number; y: number; height: number };
+}) => {
   const { viewBox } = props;
-  const { x, y, height } = viewBox; // height is reference line height usually
+  if (!viewBox) return null;
+  const { x, y } = viewBox; // height is reference line height usually
 
   // Position slightly above the bar or at a fixed height
   // Since ReferenceLine without y is full height, we can position relative to top
@@ -124,7 +128,6 @@ function IncidentTimeline() {
             strokeDasharray="3 3"
             strokeOpacity={0.5}
             label={<DeployLabel />}
-            isFront
           />
 
           {/* Latency Annotation */}
@@ -132,7 +135,6 @@ function IncidentTimeline() {
             x="14:05"
             stroke="transparent"
             label={<LatencyLabel />}
-            isFront
           />
         </BarChart>
       </ChartContainer>

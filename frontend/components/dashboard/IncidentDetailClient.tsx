@@ -5,6 +5,9 @@ import StatCard from "./StatCard";
 import { incidentDetailData } from "@/constants";
 import AIRootCauseHypothesis from "./AIRootCauseHypothesis";
 import IncidentTimeline from "./IncidentTimeline";
+import BlastRadius from "./BlastRadius";
+import HumanVerification from "./HumanVerification";
+import LiveLogStream from "./LiveLogStream";
 
 function IncidentDetailClient() {
   return (
@@ -24,8 +27,19 @@ function IncidentDetailClient() {
         ))}
       </div>
 
-      <AIRootCauseHypothesis />
-      <IncidentTimeline />
+      <div className="flex space-x-4 mt-6 lg:space-x-6">
+        <div>
+          <AIRootCauseHypothesis />
+
+          <IncidentTimeline />
+        </div>
+
+        <div className="lg:col-span-1 space-y-6">
+          <BlastRadius />
+          <HumanVerification />
+          <LiveLogStream />
+        </div>
+      </div>
     </div>
   );
 }
