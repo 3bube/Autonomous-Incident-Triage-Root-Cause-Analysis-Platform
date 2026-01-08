@@ -58,6 +58,7 @@ output/fixtures/
 ## Data Schemas
 
 ### Metrics
+
 ```json
 {
   "timestamp": "2024-01-15T10:30:00+00:00",
@@ -69,6 +70,7 @@ output/fixtures/
 ```
 
 ### Logs
+
 ```json
 {
   "timestamp": "2024-01-15T10:30:00+00:00",
@@ -80,6 +82,7 @@ output/fixtures/
 ```
 
 ### Traces
+
 ```json
 {
   "timestamp": "2024-01-15T10:30:00+00:00",
@@ -94,6 +97,7 @@ output/fixtures/
 ```
 
 ### Events
+
 ```json
 {
   "timestamp": "2024-01-15T10:30:00+00:00",
@@ -108,24 +112,28 @@ output/fixtures/
 ## Incident Scenarios
 
 ### Service Degradation
+
 - Simulates gradually increasing latency
 - High error rates in traces (slow operations)
 - Increased timeouts in logs
 - Duration: 60s incident (customizable)
 
 ### Database Outage
+
 - Sudden spike in errors and connection failures
 - Database-specific error messages
 - High query times in metrics
 - Duration: 60s incident (customizable)
 
 ### Cascade Failure
+
 - Propagation of failures across services
 - Circuit breaker patterns
 - Increasing error rates
 - Duration: 90s incident (customizable)
 
 ### Deployment Failure
+
 - Health check failures
 - Configuration errors
 - Deployment event recorded
@@ -134,16 +142,19 @@ output/fixtures/
 ## Noise Patterns
 
 ### Transient Spikes
+
 - Brief, isolated metric spikes
 - Good for testing alert suppression
 - Realistic false-positive scenarios
 
 ### High Volume
+
 - Large volume of normal requests
 - No actual errors, just high throughput
 - Tests system scalability
 
 ### Intermittent Errors
+
 - Random, scattered errors
 - 15% error rate in logs
 - Mimics flaky services
@@ -157,6 +168,7 @@ The generated fixtures can be used by the API service in three ways:
 3. **Streaming Endpoint**: Expose fixtures via HTTP for real-time ingestion
 
 Example usage in API:
+
 ```python
 from telemetry_simulation.main import normal, outage
 from pathlib import Path
@@ -180,6 +192,7 @@ for metric in metrics:
 ## Customization
 
 Edit scenario files to modify:
+
 - Service names (10 available by default)
 - Metric names and ranges
 - Error messages and patterns

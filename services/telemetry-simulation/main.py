@@ -53,8 +53,8 @@ def cli():
 
 
 @cli.command()
-@click.option('--duration', default=300, help='Duration in seconds')
-@click.option('--interval', default=10, help='Sampling interval in seconds')
+@click.option('--duration', default=120, help='Duration in seconds')
+@click.option('--interval', default=20, help='Sampling interval in seconds')
 def normal(duration, interval):
     """Generate normal operation telemetry."""
     click.echo(f"Generating normal operation telemetry ({duration}s)...")
@@ -75,10 +75,10 @@ def normal(duration, interval):
 
 
 @cli.command()
-@click.option('--incident-duration', default=60, help='Incident duration in seconds')
-@click.option('--pre-incident', default=120, help='Pre-incident baseline duration')
-@click.option('--post-incident', default=120, help='Post-incident recovery duration')
-@click.option('--interval', default=10, help='Sampling interval in seconds')
+@click.option('--incident-duration', default=30, help='Incident duration in seconds')
+@click.option('--pre-incident', default=60, help='Pre-incident baseline duration')
+@click.option('--post-incident', default=60, help='Post-incident recovery duration')
+@click.option('--interval', default=20, help='Sampling interval in seconds')
 def degradation(incident_duration, pre_incident, post_incident, interval):
     """Generate service degradation incident."""
     click.echo("Generating service degradation incident...")
@@ -101,10 +101,10 @@ def degradation(incident_duration, pre_incident, post_incident, interval):
 
 
 @cli.command()
-@click.option('--incident-duration', default=60, help='Incident duration in seconds')
-@click.option('--pre-incident', default=120, help='Pre-incident baseline duration')
-@click.option('--post-incident', default=120, help='Post-incident recovery duration')
-@click.option('--interval', default=10, help='Sampling interval in seconds')
+@click.option('--incident-duration', default=30, help='Incident duration in seconds')
+@click.option('--pre-incident', default=60, help='Pre-incident baseline duration')
+@click.option('--post-incident', default=60, help='Post-incident recovery duration')
+@click.option('--interval', default=20, help='Sampling interval in seconds')
 def outage(incident_duration, pre_incident, post_incident, interval):
     """Generate database outage incident."""
     click.echo("Generating database outage incident...")
@@ -127,10 +127,10 @@ def outage(incident_duration, pre_incident, post_incident, interval):
 
 
 @cli.command()
-@click.option('--incident-duration', default=90, help='Incident duration in seconds')
-@click.option('--pre-incident', default=120, help='Pre-incident baseline duration')
-@click.option('--post-incident', default=180, help='Post-incident recovery duration')
-@click.option('--interval', default=10, help='Sampling interval in seconds')
+@click.option('--incident-duration', default=45, help='Incident duration in seconds')
+@click.option('--pre-incident', default=60, help='Pre-incident baseline duration')
+@click.option('--post-incident', default=90, help='Post-incident recovery duration')
+@click.option('--interval', default=20, help='Sampling interval in seconds')
 def cascade(incident_duration, pre_incident, post_incident, interval):
     """Generate cascade failure incident."""
     click.echo("Generating cascade failure incident...")
@@ -153,10 +153,10 @@ def cascade(incident_duration, pre_incident, post_incident, interval):
 
 
 @cli.command()
-@click.option('--incident-duration', default=60, help='Incident duration in seconds')
-@click.option('--pre-incident', default=120, help='Pre-incident baseline duration')
-@click.option('--post-incident', default=120, help='Post-incident recovery duration')
-@click.option('--interval', default=10, help='Sampling interval in seconds')
+@click.option('--incident-duration', default=30, help='Incident duration in seconds')
+@click.option('--pre-incident', default=60, help='Pre-incident baseline duration')
+@click.option('--post-incident', default=60, help='Post-incident recovery duration')
+@click.option('--interval', default=20, help='Sampling interval in seconds')
 def deployment(incident_duration, pre_incident, post_incident, interval):
     """Generate deployment failure incident."""
     click.echo("Generating deployment failure incident...")
@@ -181,8 +181,8 @@ def deployment(incident_duration, pre_incident, post_incident, interval):
 @cli.command()
 @click.option('--noise-type', type=click.Choice(['transient', 'high-volume', 'intermittent']), 
               required=True, help='Type of noise to generate')
-@click.option('--duration', default=300, help='Duration in seconds')
-@click.option('--interval', default=10, help='Sampling interval in seconds')
+@click.option('--duration', default=120, help='Duration in seconds')
+@click.option('--interval', default=20, help='Sampling interval in seconds')
 def noise(noise_type, duration, interval):
     """Generate noise scenarios for testing alert suppression."""
     click.echo(f"Generating {noise_type} noise scenario...")

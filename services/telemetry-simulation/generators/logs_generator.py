@@ -38,7 +38,7 @@ class LogsGenerator(BaseGenerator):
         """Generate normal logs."""
         logs = []
         time_buckets = self.get_time_buckets(start_time, duration_seconds, interval_seconds)
-        services = self.get_service_names(count=3)
+        services = self.get_service_names(count=2)
         
         for timestamp in time_buckets:
             for service in services:
@@ -65,7 +65,7 @@ class LogsGenerator(BaseGenerator):
         """Generate error logs for incidents."""
         logs = []
         time_buckets = self.get_time_buckets(start_time, duration_seconds, interval_seconds)
-        services = self.get_service_names(count=2)
+        services = self.get_service_names(count=1)
         
         messages = self.ERROR_MESSAGES.get(error_type, self.ERROR_MESSAGES["database"])
         

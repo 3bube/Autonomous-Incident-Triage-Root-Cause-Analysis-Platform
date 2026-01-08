@@ -1,0 +1,4 @@
+{"timestamp": "2026-01-08T12:05:36.042613", "type": "failover", "service": "payment-service", "details": "failover event for payment-service", "severity": "warning"}
+{"timestamp": "2026-01-08T12:06:07.042613", "type": "config_change", "service": "notification-service", "details": "config_change event for notification-service", "severity": "critical"}
+{"timestamp": "2026-01-08T12:06:42.042613", "type": "maintenance_window", "service": "notification-service", "details": "maintenance_window event for notification-service", "severity": "critical"}
+{"timestamp": "2026-01-08T12:07:07.042613", "type": "failover", "service": "notification-service", "details": "failover event for notification-service", "severity": "critical"}

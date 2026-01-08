@@ -42,8 +42,8 @@ class MetricsGenerator(BaseGenerator):
         """Generate normal metrics."""
         metrics = []
         time_buckets = self.get_time_buckets(start_time, duration_seconds, interval_seconds)
-        services = self.get_service_names(count=3)
-        metric_names = self.get_metric_names(count=5)
+        services = self.get_service_names(count=2)
+        metric_names = self.get_metric_names(count=3)
         
         for timestamp in time_buckets:
             for service in services:
@@ -64,8 +64,8 @@ class MetricsGenerator(BaseGenerator):
         """Generate metrics with anomalies."""
         metrics = []
         time_buckets = self.get_time_buckets(start_time, duration_seconds, interval_seconds)
-        services = self.get_service_names(count=3)
-        metric_names = self.get_metric_names(count=5)
+        services = self.get_service_names(count=2)
+        metric_names = self.get_metric_names(count=3)
         
         for timestamp in time_buckets:
             for service in services:

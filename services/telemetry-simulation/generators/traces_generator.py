@@ -14,7 +14,7 @@ class TracesGenerator(BaseGenerator):
         """Generate normal traces."""
         traces = []
         time_buckets = self.get_time_buckets(start_time, duration_seconds, interval_seconds)
-        services = self.get_service_names(count=3)
+        services = self.get_service_names(count=2)
         
         for timestamp in time_buckets:
             trace_id = self.generate_trace_id()
@@ -40,7 +40,7 @@ class TracesGenerator(BaseGenerator):
         """Generate slow/anomalous traces."""
         traces = []
         time_buckets = self.get_time_buckets(start_time, duration_seconds, interval_seconds)
-        services = self.get_service_names(count=3)
+        services = self.get_service_names(count=2)
         
         for timestamp in time_buckets:
             trace_id = self.generate_trace_id()

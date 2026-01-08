@@ -1,0 +1,92 @@
+{"timestamp": "2026-01-08T12:07:13.244452", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "jjxo23fbcckpqvia"}
+{"timestamp": "2026-01-08T12:07:13.244452", "service": "inventory-service", "level": "INFO", "message": "inventory-service processed request", "trace_id": "6lse996ncp8ydti3"}
+{"timestamp": "2026-01-08T12:07:13.244452", "service": "notification-service", "level": "DEBUG", "message": "notification-service processed request", "trace_id": "sgir2ms3c5mk8pg9"}
+{"timestamp": "2026-01-08T12:07:23.244452", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "p4izlsqlmk4ggmy5"}
+{"timestamp": "2026-01-08T12:07:23.244452", "service": "inventory-service", "level": "DEBUG", "message": "inventory-service processed request", "trace_id": "bggdt9m8tby4j77c"}
+{"timestamp": "2026-01-08T12:07:23.244452", "service": "notification-service", "level": "ERROR", "message": "notification-service encountered an error", "trace_id": "r0sjh6fqtz593sq3"}
+{"timestamp": "2026-01-08T12:07:33.244452", "service": "analytics-service", "level": "INFO", "message": "analytics-service processed request", "trace_id": "bxeaq8zyxs7yju4o"}
+{"timestamp": "2026-01-08T12:07:33.244452", "service": "inventory-service", "level": "INFO", "message": "inventory-service processed request", "trace_id": "2hajrh9ml4p1pgxd"}
+{"timestamp": "2026-01-08T12:07:33.244452", "service": "notification-service", "level": "DEBUG", "message": "notification-service processed request", "trace_id": "g8uwws2hrzyn5h0q"}
+{"timestamp": "2026-01-08T12:07:43.244452", "service": "analytics-service", "level": "INFO", "message": "analytics-service processed request", "trace_id": "39hgetny2y25fdfy"}
+{"timestamp": "2026-01-08T12:07:43.244452", "service": "inventory-service", "level": "INFO", "message": "inventory-service processed request", "trace_id": "kb9gp3mf2zp776fy"}
+{"timestamp": "2026-01-08T12:07:43.244452", "service": "notification-service", "level": "INFO", "message": "notification-service processed request", "trace_id": "89v5xeg3os832s2h"}
+{"timestamp": "2026-01-08T12:07:53.244452", "service": "analytics-service", "level": "INFO", "message": "analytics-service processed request", "trace_id": "rhrpb97t35fbxt8o"}
+{"timestamp": "2026-01-08T12:07:53.244452", "service": "inventory-service", "level": "INFO", "message": "inventory-service processed request", "trace_id": "sduh99aomfb9nuc2"}
+{"timestamp": "2026-01-08T12:07:53.244452", "service": "notification-service", "level": "DEBUG", "message": "notification-service processed request", "trace_id": "4zpi6nfyjuayx5q4"}
+{"timestamp": "2026-01-08T12:08:03.244452", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "lfq1qlh74tkfqhc3"}
+{"timestamp": "2026-01-08T12:08:03.244452", "service": "inventory-service", "level": "INFO", "message": "inventory-service processed request", "trace_id": "1ev45tvs6yg39pf4"}
+{"timestamp": "2026-01-08T12:08:03.244452", "service": "notification-service", "level": "DEBUG", "message": "notification-service processed request", "trace_id": "ra6877ozvsxsyium"}
+{"timestamp": "2026-01-08T12:08:13.244452", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "086i7rmjcy03slkz"}
+{"timestamp": "2026-01-08T12:08:13.244452", "service": "inventory-service", "level": "INFO", "message": "inventory-service processed request", "trace_id": "gg9dk3xpz1i931d1"}
+{"timestamp": "2026-01-08T12:08:13.244452", "service": "notification-service", "level": "DEBUG", "message": "notification-service processed request", "trace_id": "1y3mrv9nbla3gh0k"}
+{"timestamp": "2026-01-08T12:08:23.244452", "service": "analytics-service", "level": "INFO", "message": "analytics-service processed request", "trace_id": "6aivvkmpqtlr0kge"}
+{"timestamp": "2026-01-08T12:08:23.244452", "service": "inventory-service", "level": "INFO", "message": "inventory-service processed request", "trace_id": "22h1uf44hpqn4th1"}
+{"timestamp": "2026-01-08T12:08:23.244452", "service": "notification-service", "level": "DEBUG", "message": "notification-service processed request", "trace_id": "s0m68nlbui5b0g80"}
+{"timestamp": "2026-01-08T12:08:33.244452", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "u8l3ri8hak0bbt0v"}
+{"timestamp": "2026-01-08T12:08:33.244452", "service": "inventory-service", "level": "INFO", "message": "inventory-service processed request", "trace_id": "11awyojj25f437np"}
+{"timestamp": "2026-01-08T12:08:33.244452", "service": "notification-service", "level": "INFO", "message": "notification-service processed request", "trace_id": "uzko9p9ijfyqj8v9"}
+{"timestamp": "2026-01-08T12:08:43.244452", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "xsxm1y1ztdfzlm2e"}
+{"timestamp": "2026-01-08T12:08:43.244452", "service": "inventory-service", "level": "INFO", "message": "inventory-service processed request", "trace_id": "ofrnfkfl3sgn06tv"}
+{"timestamp": "2026-01-08T12:08:43.244452", "service": "notification-service", "level": "DEBUG", "message": "notification-service processed request", "trace_id": "vcykaqw7kkp6zi2q"}
+{"timestamp": "2026-01-08T12:08:53.244452", "service": "analytics-service", "level": "INFO", "message": "analytics-service processed request", "trace_id": "7z8k33y22n1mgb5g"}
+{"timestamp": "2026-01-08T12:08:53.244452", "service": "inventory-service", "level": "INFO", "message": "inventory-service processed request", "trace_id": "p9frqz2f7a9m456c"}
+{"timestamp": "2026-01-08T12:08:53.244452", "service": "notification-service", "level": "INFO", "message": "notification-service processed request", "trace_id": "mlqw0zu7clzq4eo9"}
+{"timestamp": "2026-01-08T12:09:03.244452", "service": "analytics-service", "level": "INFO", "message": "analytics-service processed request", "trace_id": "yd7uya3asrnvukts"}
+{"timestamp": "2026-01-08T12:09:03.244452", "service": "inventory-service", "level": "DEBUG", "message": "inventory-service processed request", "trace_id": "76pdb0tooky3wi2v"}
+{"timestamp": "2026-01-08T12:09:03.244452", "service": "notification-service", "level": "INFO", "message": "notification-service processed request", "trace_id": "r4uoln163gnmm8zs"}
+{"timestamp": "2026-01-08T12:09:13.244452", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "6mbxyft3hlov21c2"}
+{"timestamp": "2026-01-08T12:09:13.244452", "service": "inventory-service", "level": "DEBUG", "message": "inventory-service processed request", "trace_id": "g0s2pb2pi7sd0dur"}
+{"timestamp": "2026-01-08T12:09:13.244452", "service": "notification-service", "level": "DEBUG", "message": "notification-service processed request", "trace_id": "xo6omu5y4cobxjeg"}
+{"timestamp": "2026-01-08T12:09:13.244452", "service": "analytics-service", "level": "ERROR", "message": "Configuration error", "trace_id": "w9mh0mfdu3t0q9cl", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:09:13.244452", "service": "database-service", "level": "ERROR", "message": "Health check failed", "trace_id": "fcflnfba0nq48b0g", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:09:23.244452", "service": "analytics-service", "level": "ERROR", "message": "Configuration error", "trace_id": "er49yhhqmtg1135d", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:09:23.244452", "service": "database-service", "level": "ERROR", "message": "Service startup failed", "trace_id": "7mqt2cpca7ec6o10", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:09:33.244452", "service": "analytics-service", "level": "ERROR", "message": "Service startup failed", "trace_id": "dd1ohgry7mpwv668", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:09:33.244452", "service": "database-service", "level": "ERROR", "message": "Service startup failed", "trace_id": "88y8cw33zi14tm9u", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:09:43.244452", "service": "analytics-service", "level": "ERROR", "message": "Configuration error", "trace_id": "7x5spxv6l7r90j0u", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:09:43.244452", "service": "database-service", "level": "ERROR", "message": "Service startup failed", "trace_id": "dbwojnnavt8lwux1", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:09:53.244452", "service": "analytics-service", "level": "ERROR", "message": "Configuration error", "trace_id": "2f2gf0q1ltsahzcf", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:09:53.244452", "service": "database-service", "level": "ERROR", "message": "Health check failed", "trace_id": "01masive4k8f3b0v", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:10:03.244452", "service": "analytics-service", "level": "ERROR", "message": "Health check failed", "trace_id": "zvxh4mffjzweskfp", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:10:03.244452", "service": "database-service", "level": "ERROR", "message": "Health check failed", "trace_id": "zfoey53wnbt6ard6", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:10:13.244452", "service": "analytics-service", "level": "ERROR", "message": "Service startup failed", "trace_id": "zzulhm31uk0ri29z", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:10:13.244452", "service": "database-service", "level": "ERROR", "message": "Service startup failed", "trace_id": "gn23mpjqd1248h1j", "error_type": "deployment"}
+{"timestamp": "2026-01-08T12:10:13.244452", "service": "api-gateway", "level": "INFO", "message": "api-gateway processed request", "trace_id": "i02edg21ebexunld"}
+{"timestamp": "2026-01-08T12:10:13.244452", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "z4hqiwtbvyv8x0jw"}
+{"timestamp": "2026-01-08T12:10:13.244452", "service": "cache-service", "level": "INFO", "message": "cache-service processed request", "trace_id": "8rohi847yy725ldw"}
+{"timestamp": "2026-01-08T12:10:23.244452", "service": "api-gateway", "level": "INFO", "message": "api-gateway processed request", "trace_id": "3izbxazfzm11sxuj"}
+{"timestamp": "2026-01-08T12:10:23.244452", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "06h2ogtq4gdzvydz"}
+{"timestamp": "2026-01-08T12:10:23.244452", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "zdinvkf0ears8ma1"}
+{"timestamp": "2026-01-08T12:10:33.244452", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "pc8lofmcbfwc9z4l"}
+{"timestamp": "2026-01-08T12:10:33.244452", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "g2kfc301cbluxwof"}
+{"timestamp": "2026-01-08T12:10:33.244452", "service": "cache-service", "level": "INFO", "message": "cache-service processed request", "trace_id": "ymfr0wn6cnqolk1y"}
+{"timestamp": "2026-01-08T12:10:43.244452", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "ccsmxei8m5012sex"}
+{"timestamp": "2026-01-08T12:10:43.244452", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "it9isr0rfil6ylwk"}
+{"timestamp": "2026-01-08T12:10:43.244452", "service": "cache-service", "level": "INFO", "message": "cache-service processed request", "trace_id": "me88afyxnccbtasa"}
+{"timestamp": "2026-01-08T12:10:53.244452", "service": "api-gateway", "level": "INFO", "message": "api-gateway processed request", "trace_id": "n5567vaogyqvml3u"}
+{"timestamp": "2026-01-08T12:10:53.244452", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "tkodoner80maxm7s"}
+{"timestamp": "2026-01-08T12:10:53.244452", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "mozzjtlo90pdsean"}
+{"timestamp": "2026-01-08T12:11:03.244452", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "35yli8w5630kh6si"}
+{"timestamp": "2026-01-08T12:11:03.244452", "service": "order-service", "level": "ERROR", "message": "order-service encountered an error", "trace_id": "07ug8y1q21he055x"}
+{"timestamp": "2026-01-08T12:11:03.244452", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "4wy7iex9vnnz7nx6"}
+{"timestamp": "2026-01-08T12:11:13.244452", "service": "api-gateway", "level": "INFO", "message": "api-gateway processed request", "trace_id": "8bm6pssb60hfbvx1"}
+{"timestamp": "2026-01-08T12:11:13.244452", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "e6f3egblp0mce7k4"}
+{"timestamp": "2026-01-08T12:11:13.244452", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "j5x6g61pqgrv2eq1"}
+{"timestamp": "2026-01-08T12:11:23.244452", "service": "api-gateway", "level": "INFO", "message": "api-gateway processed request", "trace_id": "v595c5c4h7vg21e2"}
+{"timestamp": "2026-01-08T12:11:23.244452", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "ge7q0zwel6lix1zm"}
+{"timestamp": "2026-01-08T12:11:23.244452", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "7gi399shwtqgutl7"}
+{"timestamp": "2026-01-08T12:11:33.244452", "service": "api-gateway", "level": "INFO", "message": "api-gateway processed request", "trace_id": "289z06pm8pfz0gcl"}
+{"timestamp": "2026-01-08T12:11:33.244452", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "cpz87i86kr0ohlcj"}
+{"timestamp": "2026-01-08T12:11:33.244452", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "w5kk2ch1trszejk4"}
+{"timestamp": "2026-01-08T12:11:43.244452", "service": "api-gateway", "level": "INFO", "message": "api-gateway processed request", "trace_id": "2isyingmrsdq6rz1"}
+{"timestamp": "2026-01-08T12:11:43.244452", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "r79t6n73ke3rfnp7"}
+{"timestamp": "2026-01-08T12:11:43.244452", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "z9pf8vpjhnkbe2mj"}
+{"timestamp": "2026-01-08T12:11:53.244452", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "004tokumgck5m4wz"}
+{"timestamp": "2026-01-08T12:11:53.244452", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "cj9esl8shfhw8n05"}
+{"timestamp": "2026-01-08T12:11:53.244452", "service": "cache-service", "level": "INFO", "message": "cache-service processed request", "trace_id": "4zm7dcyyx3as98y0"}
+{"timestamp": "2026-01-08T12:12:03.244452", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "s0ms9lp9et8miebf"}
+{"timestamp": "2026-01-08T12:12:03.244452", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "s6jxdxligpuszgwm"}
+{"timestamp": "2026-01-08T12:12:03.244452", "service": "cache-service", "level": "INFO", "message": "cache-service processed request", "trace_id": "j9uusg4ppd9j6nyb"}
+{"timestamp": "2026-01-08T12:12:13.244452", "service": "api-gateway", "level": "INFO", "message": "api-gateway processed request", "trace_id": "sui71s3ignfzhsfw"}
+{"timestamp": "2026-01-08T12:12:13.244452", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "9j7goik7moihax96"}
+{"timestamp": "2026-01-08T12:12:13.244452", "service": "cache-service", "level": "INFO", "message": "cache-service processed request", "trace_id": "c1oyu4jw3j2k4275"}
