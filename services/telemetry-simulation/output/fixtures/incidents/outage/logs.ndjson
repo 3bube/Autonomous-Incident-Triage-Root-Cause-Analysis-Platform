@@ -1,0 +1,18 @@
+{"timestamp": "2026-01-08T12:43:34.875278", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "thhxx69mgmwyshp5"}
+{"timestamp": "2026-01-08T12:43:34.875278", "service": "payment-service", "level": "DEBUG", "message": "payment-service processed request", "trace_id": "9296brkv7h4x1a1k"}
+{"timestamp": "2026-01-08T12:43:54.875278", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "5n0lcpqz7amdhfwo"}
+{"timestamp": "2026-01-08T12:43:54.875278", "service": "payment-service", "level": "INFO", "message": "payment-service processed request", "trace_id": "8gp5mm0t0wu4uev8"}
+{"timestamp": "2026-01-08T12:44:14.875278", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "xbz4dvxo94x2hri1"}
+{"timestamp": "2026-01-08T12:44:14.875278", "service": "payment-service", "level": "INFO", "message": "payment-service processed request", "trace_id": "1umn9e5chhe09nyg"}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "hjhtwsf1cajjhv3c"}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "payment-service", "level": "INFO", "message": "payment-service processed request", "trace_id": "bhgr0d3r1y9wgbkb"}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "order-service", "level": "ERROR", "message": "Transaction deadlock detected", "trace_id": "3ps2jmlh5uzam234", "error_type": "database"}
+{"timestamp": "2026-01-08T12:44:54.875278", "service": "order-service", "level": "ERROR", "message": "Connection pool exhausted", "trace_id": "m2h9en9b4id3w1ps", "error_type": "database"}
+{"timestamp": "2026-01-08T12:45:04.875278", "service": "payment-service", "level": "DEBUG", "message": "payment-service processed request", "trace_id": "b81w8ms11f3q10x7"}
+{"timestamp": "2026-01-08T12:45:04.875278", "service": "inventory-service", "level": "DEBUG", "message": "inventory-service processed request", "trace_id": "p34sfjpndu4m95y6"}
+{"timestamp": "2026-01-08T12:45:24.875278", "service": "payment-service", "level": "INFO", "message": "payment-service processed request", "trace_id": "fcjaxg21m5by7mms"}
+{"timestamp": "2026-01-08T12:45:24.875278", "service": "inventory-service", "level": "INFO", "message": "inventory-service processed request", "trace_id": "wc2qs6dlxwy0qyls"}
+{"timestamp": "2026-01-08T12:45:44.875278", "service": "payment-service", "level": "DEBUG", "message": "payment-service processed request", "trace_id": "uua4n638jz1tkhz5"}
+{"timestamp": "2026-01-08T12:45:44.875278", "service": "inventory-service", "level": "DEBUG", "message": "inventory-service processed request", "trace_id": "i2wuc5spmj7yvf46"}
+{"timestamp": "2026-01-08T12:46:04.875278", "service": "payment-service", "level": "DEBUG", "message": "payment-service processed request", "trace_id": "gwlvcqj6h2o9gs6k"}
+{"timestamp": "2026-01-08T12:46:04.875278", "service": "inventory-service", "level": "DEBUG", "message": "inventory-service processed request", "trace_id": "7i8jm8552pagcalu"}

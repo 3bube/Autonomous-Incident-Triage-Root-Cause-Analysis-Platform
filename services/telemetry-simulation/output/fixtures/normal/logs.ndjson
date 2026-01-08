@@ -1,0 +1,14 @@
+{"timestamp": "2026-01-08T12:44:04.800721", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "190zhknoti7dv3kz"}
+{"timestamp": "2026-01-08T12:44:04.800721", "service": "auth-service", "level": "DEBUG", "message": "auth-service processed request", "trace_id": "6hp61pc6pq7jh4lf"}
+{"timestamp": "2026-01-08T12:44:24.800721", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "z6hvho9lguvukosq"}
+{"timestamp": "2026-01-08T12:44:24.800721", "service": "auth-service", "level": "DEBUG", "message": "auth-service processed request", "trace_id": "jkdzpj7733u41fca"}
+{"timestamp": "2026-01-08T12:44:44.800721", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "hkio438ef27gigqy"}
+{"timestamp": "2026-01-08T12:44:44.800721", "service": "auth-service", "level": "DEBUG", "message": "auth-service processed request", "trace_id": "fy0qwbi7hqzzonwc"}
+{"timestamp": "2026-01-08T12:45:04.800721", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "jkj8l09otnsf06su"}
+{"timestamp": "2026-01-08T12:45:04.800721", "service": "auth-service", "level": "DEBUG", "message": "auth-service processed request", "trace_id": "hdkr7rdti5wj3fta"}
+{"timestamp": "2026-01-08T12:45:24.800721", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "f6nimtfstahyfb6z"}
+{"timestamp": "2026-01-08T12:45:24.800721", "service": "auth-service", "level": "INFO", "message": "auth-service processed request", "trace_id": "ns5q5l9uik99z9au"}
+{"timestamp": "2026-01-08T12:45:44.800721", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "b3urgnrm5s1yh5wn"}
+{"timestamp": "2026-01-08T12:45:44.800721", "service": "auth-service", "level": "INFO", "message": "auth-service processed request", "trace_id": "3h0rtjhl4gnuwn4c"}
+{"timestamp": "2026-01-08T12:46:04.800721", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "8e5hpipypdvleu53"}
+{"timestamp": "2026-01-08T12:46:04.800721", "service": "auth-service", "level": "INFO", "message": "auth-service processed request", "trace_id": "owpzloatueoy65qb"}

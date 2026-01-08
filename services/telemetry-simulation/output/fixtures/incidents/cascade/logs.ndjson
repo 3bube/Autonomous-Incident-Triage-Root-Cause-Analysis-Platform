@@ -1,116 +1,21 @@
-{"timestamp": "2026-01-08T12:05:31.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "7owjqgynh2ikvzrk"}
-{"timestamp": "2026-01-08T12:05:31.042613", "service": "payment-service", "level": "DEBUG", "message": "payment-service processed request", "trace_id": "hr73f886sfwlhn7j"}
-{"timestamp": "2026-01-08T12:05:31.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "n3vxv1fngudj5fwh"}
-{"timestamp": "2026-01-08T12:05:41.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "uwzahqs100771hfs"}
-{"timestamp": "2026-01-08T12:05:41.042613", "service": "payment-service", "level": "INFO", "message": "payment-service processed request", "trace_id": "rso1xy9ax3w92n6w"}
-{"timestamp": "2026-01-08T12:05:41.042613", "service": "order-service", "level": "ERROR", "message": "order-service encountered an error", "trace_id": "distt9aodwzbs9o6"}
-{"timestamp": "2026-01-08T12:05:51.042613", "service": "user-service", "level": "ERROR", "message": "user-service encountered an error", "trace_id": "wazu9qp8qub5srcz"}
-{"timestamp": "2026-01-08T12:05:51.042613", "service": "payment-service", "level": "DEBUG", "message": "payment-service processed request", "trace_id": "ew8jw28h3m1dw9l2"}
-{"timestamp": "2026-01-08T12:05:51.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "i92ic3bhdw6m2r42"}
-{"timestamp": "2026-01-08T12:06:01.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "f98ll8aueym286og"}
-{"timestamp": "2026-01-08T12:06:01.042613", "service": "payment-service", "level": "DEBUG", "message": "payment-service processed request", "trace_id": "zg5yoa71bcfjxhhg"}
-{"timestamp": "2026-01-08T12:06:01.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "xpts9aspp3syvca0"}
-{"timestamp": "2026-01-08T12:06:11.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "zyg9r46eysxa0ycv"}
-{"timestamp": "2026-01-08T12:06:11.042613", "service": "payment-service", "level": "DEBUG", "message": "payment-service processed request", "trace_id": "bo39zik5kxfb6sjs"}
-{"timestamp": "2026-01-08T12:06:11.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "jn7w34ycapwsvcf6"}
-{"timestamp": "2026-01-08T12:06:21.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "zpxnyjjq9t8z1yev"}
-{"timestamp": "2026-01-08T12:06:21.042613", "service": "payment-service", "level": "DEBUG", "message": "payment-service processed request", "trace_id": "csrkrv15l9qmr1tt"}
-{"timestamp": "2026-01-08T12:06:21.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "zuvrt7nd0wlu3170"}
-{"timestamp": "2026-01-08T12:06:31.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "yoayqqxcw4f2kgn1"}
-{"timestamp": "2026-01-08T12:06:31.042613", "service": "payment-service", "level": "INFO", "message": "payment-service processed request", "trace_id": "cnlau33rn5wefnuw"}
-{"timestamp": "2026-01-08T12:06:31.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "etm7qpwa1lsleksr"}
-{"timestamp": "2026-01-08T12:06:41.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "sr1qdjvm1k5at97s"}
-{"timestamp": "2026-01-08T12:06:41.042613", "service": "payment-service", "level": "INFO", "message": "payment-service processed request", "trace_id": "uwuqsygxdjqg2dyk"}
-{"timestamp": "2026-01-08T12:06:41.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "nj8880yj0y9gnhq0"}
-{"timestamp": "2026-01-08T12:06:51.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "8oz0vs27ad42pune"}
-{"timestamp": "2026-01-08T12:06:51.042613", "service": "payment-service", "level": "INFO", "message": "payment-service processed request", "trace_id": "obm1vvrtx26hqxp7"}
-{"timestamp": "2026-01-08T12:06:51.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "bi87le624y2hx0kg"}
-{"timestamp": "2026-01-08T12:07:01.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "ysngkv9kb3v5l28s"}
-{"timestamp": "2026-01-08T12:07:01.042613", "service": "payment-service", "level": "INFO", "message": "payment-service processed request", "trace_id": "3xg5t2elswxqvd2m"}
-{"timestamp": "2026-01-08T12:07:01.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "3cn24o7483usiz50"}
-{"timestamp": "2026-01-08T12:07:11.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "ghu196348p1l6tv6"}
-{"timestamp": "2026-01-08T12:07:11.042613", "service": "payment-service", "level": "DEBUG", "message": "payment-service processed request", "trace_id": "jo4g46exmsd4b6k8"}
-{"timestamp": "2026-01-08T12:07:11.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "tx13eqf9ooaisuoh"}
-{"timestamp": "2026-01-08T12:07:21.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "9n40xcwkkzd3wxuw"}
-{"timestamp": "2026-01-08T12:07:21.042613", "service": "payment-service", "level": "DEBUG", "message": "payment-service processed request", "trace_id": "fw23w6qjh8dh4y3l"}
-{"timestamp": "2026-01-08T12:07:21.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "7zulmztms0ff0phu"}
-{"timestamp": "2026-01-08T12:07:31.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "c2hrax4qzo8mtolr"}
-{"timestamp": "2026-01-08T12:07:31.042613", "service": "payment-service", "level": "INFO", "message": "payment-service processed request", "trace_id": "9m9lz1q7jfgv9tzi"}
-{"timestamp": "2026-01-08T12:07:31.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "i7aktmlrzf4ymcxz"}
-{"timestamp": "2026-01-08T12:07:31.042613", "service": "cache-service", "level": "ERROR", "message": "Retry limit exceeded", "trace_id": "3i1ne2td26u0b33h", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:07:31.042613", "service": "payment-service", "level": "ERROR", "message": "Circuit breaker opened", "trace_id": "az2jjo0i4ylivuzn", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:07:41.042613", "service": "cache-service", "level": "ERROR", "message": "Downstream service failure", "trace_id": "jjsufqcopmbak88i", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:07:41.042613", "service": "payment-service", "level": "ERROR", "message": "Circuit breaker opened", "trace_id": "1wwt8a35g9h60i2j", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:07:51.042613", "service": "cache-service", "level": "ERROR", "message": "Retry limit exceeded", "trace_id": "tr8v5zbub916dlut", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:07:51.042613", "service": "payment-service", "level": "ERROR", "message": "Retry limit exceeded", "trace_id": "m1b9d6kypxsaxyk6", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:08:01.042613", "service": "cache-service", "level": "ERROR", "message": "Retry limit exceeded", "trace_id": "v22cdv0npa830sxm", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:08:01.042613", "service": "payment-service", "level": "ERROR", "message": "Retry limit exceeded", "trace_id": "sft5wighhk9qxl6d", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:08:11.042613", "service": "cache-service", "level": "ERROR", "message": "Circuit breaker opened", "trace_id": "0on83985gn70pgb6", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:08:11.042613", "service": "payment-service", "level": "ERROR", "message": "Circuit breaker opened", "trace_id": "b5o1x32gyb3duztx", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:08:21.042613", "service": "cache-service", "level": "ERROR", "message": "Circuit breaker opened", "trace_id": "fon4524m500mwf5s", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:08:21.042613", "service": "payment-service", "level": "ERROR", "message": "Retry limit exceeded", "trace_id": "hzv1ocw1l80dp4ng", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:08:31.042613", "service": "cache-service", "level": "ERROR", "message": "Downstream service failure", "trace_id": "dbejabw1gezoshf9", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:08:31.042613", "service": "payment-service", "level": "ERROR", "message": "Downstream service failure", "trace_id": "z38xareln33c80s6", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:08:41.042613", "service": "cache-service", "level": "ERROR", "message": "Retry limit exceeded", "trace_id": "xal2scodspi5xvza", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:08:41.042613", "service": "payment-service", "level": "ERROR", "message": "Retry limit exceeded", "trace_id": "umg9vxtcaxuzu0yr", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:08:51.042613", "service": "cache-service", "level": "ERROR", "message": "Retry limit exceeded", "trace_id": "9armkrbll3emcce3", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:08:51.042613", "service": "payment-service", "level": "ERROR", "message": "Downstream service failure", "trace_id": "64eawmjmwkovlvwe", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:09:01.042613", "service": "cache-service", "level": "ERROR", "message": "Retry limit exceeded", "trace_id": "qxixgvwk1h35az2a", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:09:01.042613", "service": "payment-service", "level": "ERROR", "message": "Downstream service failure", "trace_id": "6t51xc7taw3v38r6", "error_type": "cascade"}
-{"timestamp": "2026-01-08T12:09:01.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "g62q5uyf3sc3b03m"}
-{"timestamp": "2026-01-08T12:09:01.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "dzxeak67jkk8mrai"}
-{"timestamp": "2026-01-08T12:09:01.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "va7stw3g1o5zdr4o"}
-{"timestamp": "2026-01-08T12:09:11.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "b6j25r0jy53hyeps"}
-{"timestamp": "2026-01-08T12:09:11.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "mzdayfue9msbjlgz"}
-{"timestamp": "2026-01-08T12:09:11.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "ya0qfyqytpjezbdz"}
-{"timestamp": "2026-01-08T12:09:21.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "dj3ice6xjpsfvqly"}
-{"timestamp": "2026-01-08T12:09:21.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "mwsjwvqq001nrrvo"}
-{"timestamp": "2026-01-08T12:09:21.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "1emdv6pip1tu30zd"}
-{"timestamp": "2026-01-08T12:09:31.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "pxk424ep86m2a7fg"}
-{"timestamp": "2026-01-08T12:09:31.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "9jvosdvevie3dbnm"}
-{"timestamp": "2026-01-08T12:09:31.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "gi9gxm1kcmw96qdr"}
-{"timestamp": "2026-01-08T12:09:41.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "eu61d2u5jgcz0htq"}
-{"timestamp": "2026-01-08T12:09:41.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "bq5wyk88ci01kll0"}
-{"timestamp": "2026-01-08T12:09:41.042613", "service": "analytics-service", "level": "INFO", "message": "analytics-service processed request", "trace_id": "731uj6zhf28q7rkn"}
-{"timestamp": "2026-01-08T12:09:51.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "ztmtg51mersqma7z"}
-{"timestamp": "2026-01-08T12:09:51.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "9mnxwwiw3s5rtj9y"}
-{"timestamp": "2026-01-08T12:09:51.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "3c3mh0m4di6tzf10"}
-{"timestamp": "2026-01-08T12:10:01.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "p3ypqg8goh3lss4k"}
-{"timestamp": "2026-01-08T12:10:01.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "yg55nn25l6a8rnn6"}
-{"timestamp": "2026-01-08T12:10:01.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "377c9ga3wxba9oxv"}
-{"timestamp": "2026-01-08T12:10:11.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "vokqcpoq71er22t7"}
-{"timestamp": "2026-01-08T12:10:11.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "3ay00t6qgwja1n0z"}
-{"timestamp": "2026-01-08T12:10:11.042613", "service": "analytics-service", "level": "INFO", "message": "analytics-service processed request", "trace_id": "6q6hzs6buzus8kcj"}
-{"timestamp": "2026-01-08T12:10:21.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "d5yiso6quuyve36f"}
-{"timestamp": "2026-01-08T12:10:21.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "dxzx2u58tzekgk67"}
-{"timestamp": "2026-01-08T12:10:21.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "pbsviocd8sqszkpp"}
-{"timestamp": "2026-01-08T12:10:31.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "a3liul4i2getj2qu"}
-{"timestamp": "2026-01-08T12:10:31.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "ixm52jhweowmu58w"}
-{"timestamp": "2026-01-08T12:10:31.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "xdn2k4y3cyvx2thu"}
-{"timestamp": "2026-01-08T12:10:41.042613", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "kuqz9kqfu1vvyifu"}
-{"timestamp": "2026-01-08T12:10:41.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "fahl301w9ytr4rgi"}
-{"timestamp": "2026-01-08T12:10:41.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "n0p0by0svi5rv1jy"}
-{"timestamp": "2026-01-08T12:10:51.042613", "service": "user-service", "level": "ERROR", "message": "user-service encountered an error", "trace_id": "11trq1j93e0zi6fs"}
-{"timestamp": "2026-01-08T12:10:51.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "89jqp3ibfrh1g3a0"}
-{"timestamp": "2026-01-08T12:10:51.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "8lukrmzwre31jytr"}
-{"timestamp": "2026-01-08T12:11:01.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "3bom0uy2qmlp13lh"}
-{"timestamp": "2026-01-08T12:11:01.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "0qljdbxgntjc5nuc"}
-{"timestamp": "2026-01-08T12:11:01.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "lawyppnkc91pzeef"}
-{"timestamp": "2026-01-08T12:11:11.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "s53v7smkkrfsvvyi"}
-{"timestamp": "2026-01-08T12:11:11.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "ib3794pgnc6cepro"}
-{"timestamp": "2026-01-08T12:11:11.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "fto8q1dw6w0g101o"}
-{"timestamp": "2026-01-08T12:11:21.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "w3kuqrid9w66xf35"}
-{"timestamp": "2026-01-08T12:11:21.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "xu9zsts39vlpmbtx"}
-{"timestamp": "2026-01-08T12:11:21.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "af2qc99y8oakw0b7"}
-{"timestamp": "2026-01-08T12:11:31.042613", "service": "user-service", "level": "ERROR", "message": "user-service encountered an error", "trace_id": "eakzygmhk49ho2fq"}
-{"timestamp": "2026-01-08T12:11:31.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "ky93ciri9d7e8ttj"}
-{"timestamp": "2026-01-08T12:11:31.042613", "service": "analytics-service", "level": "INFO", "message": "analytics-service processed request", "trace_id": "a683h4jflhrntx18"}
-{"timestamp": "2026-01-08T12:11:41.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "8bhl84ixmdnk4hk6"}
-{"timestamp": "2026-01-08T12:11:41.042613", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "2veo3bshef9l7hpp"}
-{"timestamp": "2026-01-08T12:11:41.042613", "service": "analytics-service", "level": "INFO", "message": "analytics-service processed request", "trace_id": "jxsb27i63t7y57rh"}
-{"timestamp": "2026-01-08T12:11:51.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "gw6wm4q1vej98p6w"}
-{"timestamp": "2026-01-08T12:11:51.042613", "service": "order-service", "level": "ERROR", "message": "order-service encountered an error", "trace_id": "h9rgtwuykr4nnjqm"}
-{"timestamp": "2026-01-08T12:11:51.042613", "service": "analytics-service", "level": "DEBUG", "message": "analytics-service processed request", "trace_id": "wn4pv94zy5aoybel"}
-{"timestamp": "2026-01-08T12:12:01.042613", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "jhbge0g3i32cwpd7"}
-{"timestamp": "2026-01-08T12:12:01.042613", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "e4y7b6bq3qyyvoqa"}
-{"timestamp": "2026-01-08T12:12:01.042613", "service": "analytics-service", "level": "ERROR", "message": "analytics-service encountered an error", "trace_id": "3c3rzuboijpraouv"}
+{"timestamp": "2026-01-08T12:42:49.887518", "service": "auth-service", "level": "DEBUG", "message": "auth-service processed request", "trace_id": "t09erall6muz4i09"}
+{"timestamp": "2026-01-08T12:42:49.887518", "service": "user-service", "level": "INFO", "message": "user-service processed request", "trace_id": "rwcqrb820ajlxhkq"}
+{"timestamp": "2026-01-08T12:43:09.887518", "service": "auth-service", "level": "INFO", "message": "auth-service processed request", "trace_id": "ddj71rfh2y450t5t"}
+{"timestamp": "2026-01-08T12:43:09.887518", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "vwwqncyt84gwl06d"}
+{"timestamp": "2026-01-08T12:43:29.887518", "service": "auth-service", "level": "INFO", "message": "auth-service processed request", "trace_id": "lvwfnqn1ued4sva7"}
+{"timestamp": "2026-01-08T12:43:29.887518", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "ygtp7vgqy66d3608"}
+{"timestamp": "2026-01-08T12:43:49.887518", "service": "auth-service", "level": "INFO", "message": "auth-service processed request", "trace_id": "k2g6v01oex3q2deu"}
+{"timestamp": "2026-01-08T12:43:49.887518", "service": "user-service", "level": "DEBUG", "message": "user-service processed request", "trace_id": "fmtzq7svy9sulbg5"}
+{"timestamp": "2026-01-08T12:43:49.887518", "service": "analytics-service", "level": "ERROR", "message": "Downstream service failure", "trace_id": "g1vlgfmcic972l1f", "error_type": "cascade"}
+{"timestamp": "2026-01-08T12:44:09.887518", "service": "analytics-service", "level": "ERROR", "message": "Downstream service failure", "trace_id": "ikt8cdjavctzoj14", "error_type": "cascade"}
+{"timestamp": "2026-01-08T12:44:29.887518", "service": "analytics-service", "level": "ERROR", "message": "Retry limit exceeded", "trace_id": "og8f1day8eweoahk", "error_type": "cascade"}
+{"timestamp": "2026-01-08T12:44:34.887518", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "qga3i9dw535lt92b"}
+{"timestamp": "2026-01-08T12:44:34.887518", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "89wc8fwjupp5jepk"}
+{"timestamp": "2026-01-08T12:44:54.887518", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "vvib9dihao0y4eni"}
+{"timestamp": "2026-01-08T12:44:54.887518", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "3kgxg8vetbunvdxl"}
+{"timestamp": "2026-01-08T12:45:14.887518", "service": "cache-service", "level": "INFO", "message": "cache-service processed request", "trace_id": "pvbz7hac6mwategv"}
+{"timestamp": "2026-01-08T12:45:14.887518", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "v2r503vf31dz9tjj"}
+{"timestamp": "2026-01-08T12:45:34.887518", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "hrndogs3hsqpfcfl"}
+{"timestamp": "2026-01-08T12:45:34.887518", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "odfkokvmm0cbuldt"}
+{"timestamp": "2026-01-08T12:45:54.887518", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "42ndkhs9xffjrizh"}
+{"timestamp": "2026-01-08T12:45:54.887518", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "ny2c7vx1jiokf5xh"}

@@ -1,0 +1,2 @@
+{"timestamp": "2026-01-08T12:44:40.931750", "type": "failover", "service": "api-gateway", "details": "failover event for api-gateway", "severity": "critical"}
+{"timestamp": "2026-01-08T12:46:01.931750", "type": "deployment", "service": "payment-service", "details": "deployment event for payment-service", "severity": "info"}

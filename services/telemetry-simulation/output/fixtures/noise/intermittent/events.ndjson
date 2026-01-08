@@ -1,0 +1,2 @@
+{"timestamp": "2026-01-08T12:44:58.945534", "type": "maintenance_window", "service": "auth-service", "details": "maintenance_window event for auth-service", "severity": "critical"}
+{"timestamp": "2026-01-08T12:45:29.945534", "type": "maintenance_window", "service": "api-gateway", "details": "maintenance_window event for api-gateway", "severity": "critical"}

@@ -1,0 +1,60 @@
+{"timestamp": "2026-01-08T12:43:34.875278", "service": "order-service", "metric": "request_rate", "value": 1046.1252717646926, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:43:34.875278", "service": "order-service", "metric": "cache_hit_ratio", "value": 77.77569767735257, "unit": "%"}
+{"timestamp": "2026-01-08T12:43:34.875278", "service": "order-service", "metric": "connection_pool_active", "value": 50.08261747974768, "unit": "count"}
+{"timestamp": "2026-01-08T12:43:34.875278", "service": "analytics-service", "metric": "request_rate", "value": 1024.8818189185365, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:43:34.875278", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 90.63972529712187, "unit": "%"}
+{"timestamp": "2026-01-08T12:43:34.875278", "service": "analytics-service", "metric": "connection_pool_active", "value": 38.42820436442463, "unit": "count"}
+{"timestamp": "2026-01-08T12:43:54.875278", "service": "order-service", "metric": "request_rate", "value": 1039.8007538926022, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:43:54.875278", "service": "order-service", "metric": "cache_hit_ratio", "value": 79.70927405879944, "unit": "%"}
+{"timestamp": "2026-01-08T12:43:54.875278", "service": "order-service", "metric": "connection_pool_active", "value": 49.79038725768203, "unit": "count"}
+{"timestamp": "2026-01-08T12:43:54.875278", "service": "analytics-service", "metric": "request_rate", "value": 985.2868567684177, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:43:54.875278", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 81.24533175355008, "unit": "%"}
+{"timestamp": "2026-01-08T12:43:54.875278", "service": "analytics-service", "metric": "connection_pool_active", "value": 46.00476523336879, "unit": "count"}
+{"timestamp": "2026-01-08T12:44:14.875278", "service": "order-service", "metric": "request_rate", "value": 971.3939234934458, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:44:14.875278", "service": "order-service", "metric": "cache_hit_ratio", "value": 92.71067769969743, "unit": "%"}
+{"timestamp": "2026-01-08T12:44:14.875278", "service": "order-service", "metric": "connection_pool_active", "value": 56.18125574025876, "unit": "count"}
+{"timestamp": "2026-01-08T12:44:14.875278", "service": "analytics-service", "metric": "request_rate", "value": 849.4479853008527, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:44:14.875278", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 87.14410354444054, "unit": "%"}
+{"timestamp": "2026-01-08T12:44:14.875278", "service": "analytics-service", "metric": "connection_pool_active", "value": 64.65330387443353, "unit": "count"}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "order-service", "metric": "request_rate", "value": 980.5753273599058, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "order-service", "metric": "cache_hit_ratio", "value": 84.07477756464291, "unit": "%"}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "order-service", "metric": "connection_pool_active", "value": 48.17810496387284, "unit": "count"}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "analytics-service", "metric": "request_rate", "value": 893.7465160436512, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 91.65571190555139, "unit": "%"}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "analytics-service", "metric": "connection_pool_active", "value": 62.022681570197676, "unit": "count"}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 49.324396852379614, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "analytics-service", "metric": "request_latency", "value": 197.28119970340242, "unit": "ms", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "analytics-service", "metric": "request_rate", "value": 1993.2625933962497, "unit": "req/s", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "order-service", "metric": "cache_hit_ratio", "value": 46.891015734770434, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "order-service", "metric": "request_latency", "value": 233.67136396805387, "unit": "ms", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.875278", "service": "order-service", "metric": "request_rate", "value": 1811.0998892768143, "unit": "req/s", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.875278", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 48.658301283913175, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.875278", "service": "analytics-service", "metric": "request_latency", "value": 270.03192391173064, "unit": "ms", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.875278", "service": "analytics-service", "metric": "request_rate", "value": 2220.9612808992724, "unit": "req/s", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.875278", "service": "order-service", "metric": "cache_hit_ratio", "value": 45.80019867838762, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.875278", "service": "order-service", "metric": "request_latency", "value": 210.53645939464784, "unit": "ms", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.875278", "service": "order-service", "metric": "request_rate", "value": 1944.8477433523772, "unit": "req/s", "anomaly": true}
+{"timestamp": "2026-01-08T12:45:04.875278", "service": "auth-service", "metric": "error_rate", "value": 0, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:45:04.875278", "service": "auth-service", "metric": "memory_usage", "value": 65.67349279945242, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:04.875278", "service": "auth-service", "metric": "cpu_usage", "value": 48.184290261013196, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:04.875278", "service": "cache-service", "metric": "error_rate", "value": 0.7549273944140251, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:45:04.875278", "service": "cache-service", "metric": "memory_usage", "value": 65.26034684516779, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:04.875278", "service": "cache-service", "metric": "cpu_usage", "value": 56.7138418586964, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:24.875278", "service": "auth-service", "metric": "error_rate", "value": 0.4634437226645571, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:45:24.875278", "service": "auth-service", "metric": "memory_usage", "value": 55.07281314122469, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:24.875278", "service": "auth-service", "metric": "cpu_usage", "value": 39.091372575337935, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:24.875278", "service": "cache-service", "metric": "error_rate", "value": 0.05041283985480466, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:45:24.875278", "service": "cache-service", "metric": "memory_usage", "value": 50.9970869903341, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:24.875278", "service": "cache-service", "metric": "cpu_usage", "value": 45.1997894763513, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:44.875278", "service": "auth-service", "metric": "error_rate", "value": 0.4999940759521539, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:45:44.875278", "service": "auth-service", "metric": "memory_usage", "value": 61.91686858282809, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:44.875278", "service": "auth-service", "metric": "cpu_usage", "value": 36.92815249889016, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:44.875278", "service": "cache-service", "metric": "error_rate", "value": 0.4580336453688205, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:45:44.875278", "service": "cache-service", "metric": "memory_usage", "value": 54.904947129922434, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:44.875278", "service": "cache-service", "metric": "cpu_usage", "value": 44.9619229319675, "unit": "%"}
+{"timestamp": "2026-01-08T12:46:04.875278", "service": "auth-service", "metric": "error_rate", "value": 0.335231867622918, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:46:04.875278", "service": "auth-service", "metric": "memory_usage", "value": 58.89942818630958, "unit": "%"}
+{"timestamp": "2026-01-08T12:46:04.875278", "service": "auth-service", "metric": "cpu_usage", "value": 45.50759651059272, "unit": "%"}
+{"timestamp": "2026-01-08T12:46:04.875278", "service": "cache-service", "metric": "error_rate", "value": 0.7108803340482017, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:46:04.875278", "service": "cache-service", "metric": "memory_usage", "value": 60.46121169099338, "unit": "%"}
+{"timestamp": "2026-01-08T12:46:04.875278", "service": "cache-service", "metric": "cpu_usage", "value": 43.95049488840093, "unit": "%"}

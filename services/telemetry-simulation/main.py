@@ -222,5 +222,20 @@ def list_fixtures():
         click.echo(f"  - {item.relative_to(OUTPUT_DIR)} ({size_mb:.2f} MB)")
 
 
+# a function to run everything except list fixtures
+@cli.command()
+def all():
+    """Generate all scenarios."""
+    ctx = click.get_current_context()
+    ctx.invoke(normal, duration=120, interval=20)
+    ctx.invoke(degradation, incident_duration=30, pre_incident=60, post_incident=60, interval=20)
+    ctx.invoke(outage, incident_duration=30, pre_incident=60, post_incident=60, interval=20)
+    ctx.invoke(cascade, incident_duration=45, pre_incident=60, post_incident=90, interval=20)
+    ctx.invoke(deployment, incident_duration=30, pre_incident=60, post_incident=60, interval=20)
+    ctx.invoke(noise, noise_type='transient', duration=120, interval=20)
+    ctx.invoke(noise, noise_type='high-volume', duration=120, interval=20)
+    ctx.invoke(noise, noise_type='intermittent', duration=120, interval=20)
+
+
 if __name__ == '__main__':
     cli()

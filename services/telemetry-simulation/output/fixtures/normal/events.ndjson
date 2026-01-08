@@ -1,0 +1,3 @@
+{"timestamp": "2026-01-08T12:45:37.800721", "type": "config_change", "service": "inventory-service", "details": "config_change event for inventory-service", "severity": "critical"}
+{"timestamp": "2026-01-08T12:45:53.800721", "type": "deployment", "service": "analytics-service", "details": "deployment event for analytics-service", "severity": "info"}
+{"timestamp": "2026-01-08T12:45:54.800721", "type": "config_change", "service": "api-gateway", "details": "config_change event for api-gateway", "severity": "info"}

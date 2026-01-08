@@ -1,0 +1,14 @@
+{"timestamp": "2026-01-08T12:44:04.918412", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "qvtki9jtxylbdl35"}
+{"timestamp": "2026-01-08T12:44:04.918412", "service": "api-gateway", "level": "INFO", "message": "api-gateway processed request", "trace_id": "2mmqw1xhvqagnsuc"}
+{"timestamp": "2026-01-08T12:44:24.918412", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "vvqv4gtd51bxmylq"}
+{"timestamp": "2026-01-08T12:44:24.918412", "service": "api-gateway", "level": "INFO", "message": "api-gateway processed request", "trace_id": "2seglxhn9yoktksw"}
+{"timestamp": "2026-01-08T12:44:44.918412", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "9ijltubdbcoaag9q"}
+{"timestamp": "2026-01-08T12:44:44.918412", "service": "api-gateway", "level": "INFO", "message": "api-gateway processed request", "trace_id": "qyfwaggbm0l438ok"}
+{"timestamp": "2026-01-08T12:45:04.918412", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "myp1mntipn3gjdko"}
+{"timestamp": "2026-01-08T12:45:04.918412", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "0luj62k2slpc0nfe"}
+{"timestamp": "2026-01-08T12:45:24.918412", "service": "order-service", "level": "INFO", "message": "order-service processed request", "trace_id": "27rcf5947f63h065"}
+{"timestamp": "2026-01-08T12:45:24.918412", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "b8udu24e6y3givbv"}
+{"timestamp": "2026-01-08T12:45:44.918412", "service": "order-service", "level": "DEBUG", "message": "order-service processed request", "trace_id": "ml6apk84ycrempiy"}
+{"timestamp": "2026-01-08T12:45:44.918412", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "0jbriqo72fy4ws2p"}
+{"timestamp": "2026-01-08T12:46:04.918412", "service": "order-service", "level": "ERROR", "message": "order-service encountered an error", "trace_id": "f6oo43xez7zobbb1"}
+{"timestamp": "2026-01-08T12:46:04.918412", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "phyjh6javjh7awie"}

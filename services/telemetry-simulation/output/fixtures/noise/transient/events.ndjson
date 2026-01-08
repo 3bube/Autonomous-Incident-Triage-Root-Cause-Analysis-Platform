@@ -1,0 +1,2 @@
+{"timestamp": "2026-01-08T12:45:30.918412", "type": "config_change", "service": "database-service", "details": "config_change event for database-service", "severity": "critical"}
+{"timestamp": "2026-01-08T12:45:47.918412", "type": "scaling_change", "service": "user-service", "details": "scaling_change event for user-service", "severity": "critical"}

@@ -1,4 +1,3 @@
-{"timestamp": "2026-01-08T12:05:36.042613", "type": "failover", "service": "payment-service", "details": "failover event for payment-service", "severity": "warning"}
-{"timestamp": "2026-01-08T12:06:07.042613", "type": "config_change", "service": "notification-service", "details": "config_change event for notification-service", "severity": "critical"}
-{"timestamp": "2026-01-08T12:06:42.042613", "type": "maintenance_window", "service": "notification-service", "details": "maintenance_window event for notification-service", "severity": "critical"}
-{"timestamp": "2026-01-08T12:07:07.042613", "type": "failover", "service": "notification-service", "details": "failover event for notification-service", "severity": "critical"}
+{"timestamp": "2026-01-08T12:42:49.887518", "type": "deployment", "service": "api-gateway", "details": "deployment event for api-gateway", "severity": "critical"}
+{"timestamp": "2026-01-08T12:43:02.887518", "type": "deployment", "service": "user-service", "details": "deployment event for user-service", "severity": "critical"}
+{"timestamp": "2026-01-08T12:43:05.887518", "type": "scaling_change", "service": "auth-service", "details": "scaling_change event for auth-service", "severity": "info"}

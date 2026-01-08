@@ -1,0 +1,60 @@
+{"timestamp": "2026-01-08T12:43:34.862665", "service": "payment-service", "metric": "request_latency", "value": 148.90122159111053, "unit": "ms"}
+{"timestamp": "2026-01-08T12:43:34.862665", "service": "payment-service", "metric": "memory_usage", "value": 58.98135800942277, "unit": "%"}
+{"timestamp": "2026-01-08T12:43:34.862665", "service": "payment-service", "metric": "request_rate", "value": 1047.9464250994417, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:43:34.862665", "service": "order-service", "metric": "request_latency", "value": 137.90228203422532, "unit": "ms"}
+{"timestamp": "2026-01-08T12:43:34.862665", "service": "order-service", "metric": "memory_usage", "value": 56.89022111266561, "unit": "%"}
+{"timestamp": "2026-01-08T12:43:34.862665", "service": "order-service", "metric": "request_rate", "value": 954.9579162578533, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:43:54.862665", "service": "payment-service", "metric": "request_latency", "value": 119.96098028134999, "unit": "ms"}
+{"timestamp": "2026-01-08T12:43:54.862665", "service": "payment-service", "metric": "memory_usage", "value": 59.62854642083221, "unit": "%"}
+{"timestamp": "2026-01-08T12:43:54.862665", "service": "payment-service", "metric": "request_rate", "value": 1055.1828390955743, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:43:54.862665", "service": "order-service", "metric": "request_latency", "value": 113.6874471508234, "unit": "ms"}
+{"timestamp": "2026-01-08T12:43:54.862665", "service": "order-service", "metric": "memory_usage", "value": 63.95511348225626, "unit": "%"}
+{"timestamp": "2026-01-08T12:43:54.862665", "service": "order-service", "metric": "request_rate", "value": 945.0657314426888, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:44:14.862665", "service": "payment-service", "metric": "request_latency", "value": 127.3863175176465, "unit": "ms"}
+{"timestamp": "2026-01-08T12:44:14.862665", "service": "payment-service", "metric": "memory_usage", "value": 58.166133001369936, "unit": "%"}
+{"timestamp": "2026-01-08T12:44:14.862665", "service": "payment-service", "metric": "request_rate", "value": 1011.4762873718603, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:44:14.862665", "service": "order-service", "metric": "request_latency", "value": 112.03478417582541, "unit": "ms"}
+{"timestamp": "2026-01-08T12:44:14.862665", "service": "order-service", "metric": "memory_usage", "value": 63.01562255833313, "unit": "%"}
+{"timestamp": "2026-01-08T12:44:14.862665", "service": "order-service", "metric": "request_rate", "value": 1105.9941806192924, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "payment-service", "metric": "request_latency", "value": 132.70167690159425, "unit": "ms"}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "payment-service", "metric": "memory_usage", "value": 58.930908670296, "unit": "%"}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "payment-service", "metric": "request_rate", "value": 1069.2697936329143, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "order-service", "metric": "request_latency", "value": 117.10857900306172, "unit": "ms"}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "order-service", "metric": "memory_usage", "value": 58.030867382741555, "unit": "%"}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "order-service", "metric": "request_rate", "value": 771.8704789940342, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "user-service", "metric": "request_latency", "value": 171.0229931564348, "unit": "ms", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "user-service", "metric": "error_rate", "value": 1.0940300961274172, "unit": "req/s", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "user-service", "metric": "cache_hit_ratio", "value": 63.281648976283364, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "analytics-service", "metric": "request_latency", "value": 148.9268888407673, "unit": "ms", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "analytics-service", "metric": "error_rate", "value": 0.5024254605203118, "unit": "req/s", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 63.42580974732654, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.862665", "service": "user-service", "metric": "request_latency", "value": 142.15908090663282, "unit": "ms", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.862665", "service": "user-service", "metric": "error_rate", "value": 0.5777544481001202, "unit": "req/s", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.862665", "service": "user-service", "metric": "cache_hit_ratio", "value": 54.60887500992076, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.862665", "service": "analytics-service", "metric": "request_latency", "value": 148.7491162686709, "unit": "ms", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.862665", "service": "analytics-service", "metric": "error_rate", "value": 0.9703325984601603, "unit": "req/s", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.862665", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 60.26956396140497, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:45:04.862665", "service": "database-service", "metric": "connection_pool_active", "value": 47.93180151563812, "unit": "count"}
+{"timestamp": "2026-01-08T12:45:04.862665", "service": "database-service", "metric": "request_latency", "value": 104.12945124752032, "unit": "ms"}
+{"timestamp": "2026-01-08T12:45:04.862665", "service": "database-service", "metric": "disk_usage", "value": 70.25083310724294, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:04.862665", "service": "auth-service", "metric": "connection_pool_active", "value": 44.76369345883307, "unit": "count"}
+{"timestamp": "2026-01-08T12:45:04.862665", "service": "auth-service", "metric": "request_latency", "value": 100.4042173045273, "unit": "ms"}
+{"timestamp": "2026-01-08T12:45:04.862665", "service": "auth-service", "metric": "disk_usage", "value": 67.84112020906682, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:24.862665", "service": "database-service", "metric": "connection_pool_active", "value": 52.679270079300565, "unit": "count"}
+{"timestamp": "2026-01-08T12:45:24.862665", "service": "database-service", "metric": "request_latency", "value": 130.15271832105202, "unit": "ms"}
+{"timestamp": "2026-01-08T12:45:24.862665", "service": "database-service", "metric": "disk_usage", "value": 66.83855085455909, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:24.862665", "service": "auth-service", "metric": "connection_pool_active", "value": 62.33830709786865, "unit": "count"}
+{"timestamp": "2026-01-08T12:45:24.862665", "service": "auth-service", "metric": "request_latency", "value": 143.1707553651406, "unit": "ms"}
+{"timestamp": "2026-01-08T12:45:24.862665", "service": "auth-service", "metric": "disk_usage", "value": 67.3219774370835, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:44.862665", "service": "database-service", "metric": "connection_pool_active", "value": 69.63454902126566, "unit": "count"}
+{"timestamp": "2026-01-08T12:45:44.862665", "service": "database-service", "metric": "request_latency", "value": 113.80652140499025, "unit": "ms"}
+{"timestamp": "2026-01-08T12:45:44.862665", "service": "database-service", "metric": "disk_usage", "value": 73.30420202253285, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:44.862665", "service": "auth-service", "metric": "connection_pool_active", "value": 41.352773806722766, "unit": "count"}
+{"timestamp": "2026-01-08T12:45:44.862665", "service": "auth-service", "metric": "request_latency", "value": 145.4862374871371, "unit": "ms"}
+{"timestamp": "2026-01-08T12:45:44.862665", "service": "auth-service", "metric": "disk_usage", "value": 68.85005270515671, "unit": "%"}
+{"timestamp": "2026-01-08T12:46:04.862665", "service": "database-service", "metric": "connection_pool_active", "value": 45.943360506712054, "unit": "count"}
+{"timestamp": "2026-01-08T12:46:04.862665", "service": "database-service", "metric": "request_latency", "value": 133.94521746299273, "unit": "ms"}
+{"timestamp": "2026-01-08T12:46:04.862665", "service": "database-service", "metric": "disk_usage", "value": 67.64493837958221, "unit": "%"}
+{"timestamp": "2026-01-08T12:46:04.862665", "service": "auth-service", "metric": "connection_pool_active", "value": 56.618689959543445, "unit": "count"}
+{"timestamp": "2026-01-08T12:46:04.862665", "service": "auth-service", "metric": "request_latency", "value": 164.64754670047137, "unit": "ms"}
+{"timestamp": "2026-01-08T12:46:04.862665", "service": "auth-service", "metric": "disk_usage", "value": 67.38453730248615, "unit": "%"}

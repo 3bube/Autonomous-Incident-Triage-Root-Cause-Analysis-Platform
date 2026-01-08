@@ -1,0 +1,18 @@
+{"timestamp": "2026-01-08T12:43:34.862665", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "ejlqtr5diczauhbv"}
+{"timestamp": "2026-01-08T12:43:34.862665", "service": "database-service", "level": "INFO", "message": "database-service processed request", "trace_id": "v4orm4vupis7fyzi"}
+{"timestamp": "2026-01-08T12:43:54.862665", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "8fzrx05ijjbdbijg"}
+{"timestamp": "2026-01-08T12:43:54.862665", "service": "database-service", "level": "DEBUG", "message": "database-service processed request", "trace_id": "s6pw79gu4ed4nhuk"}
+{"timestamp": "2026-01-08T12:44:14.862665", "service": "api-gateway", "level": "DEBUG", "message": "api-gateway processed request", "trace_id": "ubg4jza4wdex0afy"}
+{"timestamp": "2026-01-08T12:44:14.862665", "service": "database-service", "level": "DEBUG", "message": "database-service processed request", "trace_id": "xzwsodq6jrqifo49"}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "api-gateway", "level": "INFO", "message": "api-gateway processed request", "trace_id": "jwt3k1dn50dowkua"}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "database-service", "level": "DEBUG", "message": "database-service processed request", "trace_id": "xyw6s3f2lxpfhh8g"}
+{"timestamp": "2026-01-08T12:44:34.862665", "service": "api-gateway", "level": "ERROR", "message": "Service unavailable", "trace_id": "hyo3z5ojp65gw7c6", "error_type": "timeout"}
+{"timestamp": "2026-01-08T12:44:54.862665", "service": "api-gateway", "level": "ERROR", "message": "Socket timeout", "trace_id": "kgupp9n1qzvbx0xr", "error_type": "timeout"}
+{"timestamp": "2026-01-08T12:45:04.862665", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "6jc6wwl690xeb9go"}
+{"timestamp": "2026-01-08T12:45:04.862665", "service": "notification-service", "level": "INFO", "message": "notification-service processed request", "trace_id": "v6ehbm9y01xyhacw"}
+{"timestamp": "2026-01-08T12:45:24.862665", "service": "cache-service", "level": "INFO", "message": "cache-service processed request", "trace_id": "fnge5tfhmzxif5r2"}
+{"timestamp": "2026-01-08T12:45:24.862665", "service": "notification-service", "level": "INFO", "message": "notification-service processed request", "trace_id": "r9g5oc6yocsyjpoz"}
+{"timestamp": "2026-01-08T12:45:44.862665", "service": "cache-service", "level": "DEBUG", "message": "cache-service processed request", "trace_id": "a5qd7w4lmqji5ku8"}
+{"timestamp": "2026-01-08T12:45:44.862665", "service": "notification-service", "level": "DEBUG", "message": "notification-service processed request", "trace_id": "ehf916kq5mepfy8y"}
+{"timestamp": "2026-01-08T12:46:04.862665", "service": "cache-service", "level": "INFO", "message": "cache-service processed request", "trace_id": "tj3pplxp0j9iy556"}
+{"timestamp": "2026-01-08T12:46:04.862665", "service": "notification-service", "level": "DEBUG", "message": "notification-service processed request", "trace_id": "3uhjf7hhpqfsvl95"}

@@ -1,495 +1,60 @@
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "payment-service", "metric": "queue_depth", "value": 98.59907359301934, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "payment-service", "metric": "request_rate", "value": 1056.5463236583678, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "payment-service", "metric": "db_query_time", "value": 49.97536794406266, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 89.49773062160725, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "payment-service", "metric": "error_rate", "value": 0.5475486949564439, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "auth-service", "metric": "queue_depth", "value": 71.56606538767215, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "auth-service", "metric": "request_rate", "value": 936.2226899870491, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "auth-service", "metric": "db_query_time", "value": 57.65892689315605, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 86.56406839386395, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "auth-service", "metric": "error_rate", "value": 0.4533948365433399, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "analytics-service", "metric": "queue_depth", "value": 101.641243956988, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "analytics-service", "metric": "request_rate", "value": 927.0374931142962, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "analytics-service", "metric": "db_query_time", "value": 63.75662036702014, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 79.94663687249871, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:13.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.14314909157653805, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "payment-service", "metric": "queue_depth", "value": 109.17505726781101, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "payment-service", "metric": "request_rate", "value": 755.5097804828738, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "payment-service", "metric": "db_query_time", "value": 68.74158179204731, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 79.15439394930706, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "payment-service", "metric": "error_rate", "value": 0.24719142561794988, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "auth-service", "metric": "queue_depth", "value": 71.64154449160242, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "auth-service", "metric": "request_rate", "value": 1077.1332389726028, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "auth-service", "metric": "db_query_time", "value": 18.968927974953218, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 91.55129723742172, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "auth-service", "metric": "error_rate", "value": 0.43802297473834273, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "analytics-service", "metric": "queue_depth", "value": 106.9529196417572, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "analytics-service", "metric": "request_rate", "value": 1200.514487856163, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "analytics-service", "metric": "db_query_time", "value": 55.20535120939102, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 87.1781437727005, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:23.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.449626402893467, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "payment-service", "metric": "queue_depth", "value": 118.75941582618618, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "payment-service", "metric": "request_rate", "value": 1020.1517849064699, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "payment-service", "metric": "db_query_time", "value": 57.42944692694277, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 91.56893490651063, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "payment-service", "metric": "error_rate", "value": 0.22127343697898427, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "auth-service", "metric": "queue_depth", "value": 72.36546650418481, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "auth-service", "metric": "request_rate", "value": 1045.840293335579, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "auth-service", "metric": "db_query_time", "value": 33.698686252212234, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 86.09147161520568, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "auth-service", "metric": "error_rate", "value": 0.2819928446334443, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "analytics-service", "metric": "queue_depth", "value": 119.31281544667392, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "analytics-service", "metric": "request_rate", "value": 1089.0641417187537, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "analytics-service", "metric": "db_query_time", "value": 55.316126826833525, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 91.00205027190187, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:33.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.5341442390604939, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "payment-service", "metric": "queue_depth", "value": 129.25806107948986, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "payment-service", "metric": "request_rate", "value": 926.0714013300667, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "payment-service", "metric": "db_query_time", "value": 52.42383609362026, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 85.97200362764536, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "payment-service", "metric": "error_rate", "value": 0.47354499805282113, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "auth-service", "metric": "queue_depth", "value": 124.31478568244349, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "auth-service", "metric": "request_rate", "value": 1013.2783372004907, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "auth-service", "metric": "db_query_time", "value": 38.258150837882816, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 80.09588267965177, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "auth-service", "metric": "error_rate", "value": 0.14939250871507714, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "analytics-service", "metric": "queue_depth", "value": 113.99490160944057, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "analytics-service", "metric": "request_rate", "value": 973.3779850437176, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "analytics-service", "metric": "db_query_time", "value": 66.27470410814995, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 83.80431922503432, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:43.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.5758999409460196, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "payment-service", "metric": "queue_depth", "value": 99.55055428015562, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "payment-service", "metric": "request_rate", "value": 1054.9534457606173, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "payment-service", "metric": "db_query_time", "value": 66.67450741166749, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 82.07852950885274, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "payment-service", "metric": "error_rate", "value": 0.5491115055404899, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "auth-service", "metric": "queue_depth", "value": 52.96695450093686, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "auth-service", "metric": "request_rate", "value": 1223.727625321096, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "auth-service", "metric": "db_query_time", "value": 43.35887231210038, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 86.39663640582188, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "auth-service", "metric": "error_rate", "value": 0.3195889274349125, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "analytics-service", "metric": "queue_depth", "value": 87.65165075448427, "unit": "count"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "analytics-service", "metric": "request_rate", "value": 827.9476122999569, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "analytics-service", "metric": "db_query_time", "value": 38.099769831460065, "unit": "ms"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 85.02130736407894, "unit": "%"}
-{"timestamp": "2026-01-08T12:07:53.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.5517683472270171, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "payment-service", "metric": "queue_depth", "value": 107.63687145026155, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "payment-service", "metric": "request_rate", "value": 953.2418868586252, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "payment-service", "metric": "db_query_time", "value": 54.34825960635582, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 89.29608905610266, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "payment-service", "metric": "error_rate", "value": 0.4777926923356831, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "auth-service", "metric": "queue_depth", "value": 80.09095785646659, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "auth-service", "metric": "request_rate", "value": 941.0476203391016, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "auth-service", "metric": "db_query_time", "value": 52.866280078490746, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 86.86727618446602, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "auth-service", "metric": "error_rate", "value": 0.801005539829571, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "analytics-service", "metric": "queue_depth", "value": 137.81707572725742, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "analytics-service", "metric": "request_rate", "value": 967.3587919087283, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "analytics-service", "metric": "db_query_time", "value": 34.354372502974265, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 86.68727633130764, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:03.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.46360213575725984, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "payment-service", "metric": "queue_depth", "value": 157.20188808382062, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "payment-service", "metric": "request_rate", "value": 716.5284244488947, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "payment-service", "metric": "db_query_time", "value": 51.621815832266, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 88.05184479540827, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "payment-service", "metric": "error_rate", "value": 0.32961818320807273, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "auth-service", "metric": "queue_depth", "value": 93.37290375332047, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "auth-service", "metric": "request_rate", "value": 866.3629397640711, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "auth-service", "metric": "db_query_time", "value": 41.85251726451799, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 86.71766586409889, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "auth-service", "metric": "error_rate", "value": 0.5457559318662754, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "analytics-service", "metric": "queue_depth", "value": 108.29835531991061, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "analytics-service", "metric": "request_rate", "value": 1004.7910469263778, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "analytics-service", "metric": "db_query_time", "value": 73.07938682814022, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 87.18133523460565, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:13.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.6930353149464498, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "payment-service", "metric": "queue_depth", "value": 83.24998430593855, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "payment-service", "metric": "request_rate", "value": 778.2916212370186, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "payment-service", "metric": "db_query_time", "value": 56.777024196688, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 80.32098695634618, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "payment-service", "metric": "error_rate", "value": 0.6109962216202508, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "auth-service", "metric": "queue_depth", "value": 135.92198927028932, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "auth-service", "metric": "request_rate", "value": 1008.6931816177859, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "auth-service", "metric": "db_query_time", "value": 43.85524842658218, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 90.76348249107953, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "auth-service", "metric": "error_rate", "value": 0.47494573376241567, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "analytics-service", "metric": "queue_depth", "value": 79.89490554143052, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "analytics-service", "metric": "request_rate", "value": 952.9582042915412, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "analytics-service", "metric": "db_query_time", "value": 44.22492216187355, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 81.67684843066344, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:23.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.6392271434317005, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "payment-service", "metric": "queue_depth", "value": 62.722951190245105, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "payment-service", "metric": "request_rate", "value": 895.7772368561901, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "payment-service", "metric": "db_query_time", "value": 50.605324967678044, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 90.01917162223133, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "payment-service", "metric": "error_rate", "value": 0.6787774726161615, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "auth-service", "metric": "queue_depth", "value": 185.08364738804863, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "auth-service", "metric": "request_rate", "value": 959.152895260617, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "auth-service", "metric": "db_query_time", "value": 61.88730638231438, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 88.02189978597501, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "auth-service", "metric": "error_rate", "value": 0.6184244265023549, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "analytics-service", "metric": "queue_depth", "value": 117.5795421396009, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "analytics-service", "metric": "request_rate", "value": 1247.158107339541, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "analytics-service", "metric": "db_query_time", "value": 49.86774686649166, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 92.27876506068381, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:33.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.7080779730517733, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "payment-service", "metric": "queue_depth", "value": 67.68582210102589, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "payment-service", "metric": "request_rate", "value": 946.8160489000086, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "payment-service", "metric": "db_query_time", "value": 40.91399659533392, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 82.4627776415246, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "payment-service", "metric": "error_rate", "value": 0.7591675759690597, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "auth-service", "metric": "queue_depth", "value": 83.71705440365318, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "auth-service", "metric": "request_rate", "value": 976.1666530392296, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "auth-service", "metric": "db_query_time", "value": 52.671253799966664, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 74.47215855547645, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "auth-service", "metric": "error_rate", "value": 0.4586841866689356, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "analytics-service", "metric": "queue_depth", "value": 183.02542945586185, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "analytics-service", "metric": "request_rate", "value": 981.343101858509, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "analytics-service", "metric": "db_query_time", "value": 53.18387711221667, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 89.29290357725114, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:43.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.504165332690246, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "payment-service", "metric": "queue_depth", "value": 72.32511260130312, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "payment-service", "metric": "request_rate", "value": 1149.1500206384192, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "payment-service", "metric": "db_query_time", "value": 52.16302922117319, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 90.35544139187886, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "payment-service", "metric": "error_rate", "value": 0.5160148210860153, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "auth-service", "metric": "queue_depth", "value": 116.43317909827141, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "auth-service", "metric": "request_rate", "value": 991.9633249648901, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "auth-service", "metric": "db_query_time", "value": 61.04714278038356, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 91.89959794324135, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "auth-service", "metric": "error_rate", "value": 0.470346507487203, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "analytics-service", "metric": "queue_depth", "value": 98.54131342592764, "unit": "count"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "analytics-service", "metric": "request_rate", "value": 995.7713098299, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "analytics-service", "metric": "db_query_time", "value": 51.769831805858104, "unit": "ms"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 81.53359152230533, "unit": "%"}
-{"timestamp": "2026-01-08T12:08:53.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.7915910834477955, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "payment-service", "metric": "queue_depth", "value": 121.1331265987089, "unit": "count"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "payment-service", "metric": "request_rate", "value": 837.7998838635547, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "payment-service", "metric": "db_query_time", "value": 42.28003671206503, "unit": "ms"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 86.6490962216333, "unit": "%"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "payment-service", "metric": "error_rate", "value": 0.8592075771751808, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "auth-service", "metric": "queue_depth", "value": 119.20135943373305, "unit": "count"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "auth-service", "metric": "request_rate", "value": 985.2535531331907, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "auth-service", "metric": "db_query_time", "value": 79.38100651850412, "unit": "ms"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 79.10031067199075, "unit": "%"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "auth-service", "metric": "error_rate", "value": 0, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "analytics-service", "metric": "queue_depth", "value": 101.69053596368377, "unit": "count"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "analytics-service", "metric": "request_rate", "value": 1104.2492748851823, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "analytics-service", "metric": "db_query_time", "value": 39.2598518076282, "unit": "ms"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 88.55271873568866, "unit": "%"}
-{"timestamp": "2026-01-08T12:09:03.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.49713071464834563, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "payment-service", "metric": "queue_depth", "value": 138.15514863083197, "unit": "count"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "payment-service", "metric": "request_rate", "value": 1090.8016318696652, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "payment-service", "metric": "db_query_time", "value": 57.190531206219866, "unit": "ms"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "payment-service", "metric": "cache_hit_ratio", "value": 84.91753300774317, "unit": "%"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "payment-service", "metric": "error_rate", "value": 0.5246158716978367, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "auth-service", "metric": "queue_depth", "value": 95.13563016322149, "unit": "count"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "auth-service", "metric": "request_rate", "value": 960.722684420361, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "auth-service", "metric": "db_query_time", "value": 37.72102963405227, "unit": "ms"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "auth-service", "metric": "cache_hit_ratio", "value": 76.70535975587549, "unit": "%"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "auth-service", "metric": "error_rate", "value": 0.15658764962411442, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "analytics-service", "metric": "queue_depth", "value": 73.69894346406596, "unit": "count"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "analytics-service", "metric": "request_rate", "value": 1001.8327501675611, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "analytics-service", "metric": "db_query_time", "value": 71.54362471196748, "unit": "ms"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "analytics-service", "metric": "cache_hit_ratio", "value": 91.29804120216964, "unit": "%"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "analytics-service", "metric": "error_rate", "value": 0.650098996078891, "unit": "req/s"}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "analytics-service", "metric": "request_rate", "value": 1842.7878517156312, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 96.08048835910385, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "analytics-service", "metric": "memory_usage", "value": 108.92808403439648, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "analytics-service", "metric": "queue_depth", "value": 218.15638468747085, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "analytics-service", "metric": "cpu_usage", "value": 76.78625322716329, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "cache-service", "metric": "request_rate", "value": 1774.987198444935, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "cache-service", "metric": "connection_pool_active", "value": 91.55904538879368, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "cache-service", "metric": "memory_usage", "value": 106.38419607865023, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "cache-service", "metric": "queue_depth", "value": 214.38874837062062, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "cache-service", "metric": "cpu_usage", "value": 94.54132804147514, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "auth-service", "metric": "request_rate", "value": 1997.039046262113, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "auth-service", "metric": "connection_pool_active", "value": 84.30786283087323, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "auth-service", "metric": "memory_usage", "value": 112.2748917769978, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "auth-service", "metric": "queue_depth", "value": 222.29873477832567, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:13.244452", "service": "auth-service", "metric": "cpu_usage", "value": 81.67001455794744, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "analytics-service", "metric": "request_rate", "value": 1653.846234001879, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 92.40378485991292, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "analytics-service", "metric": "memory_usage", "value": 107.25567863501483, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "analytics-service", "metric": "queue_depth", "value": 226.61539245865995, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "analytics-service", "metric": "cpu_usage", "value": 77.99139504097283, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "cache-service", "metric": "request_rate", "value": 1666.9817003964797, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "cache-service", "metric": "connection_pool_active", "value": 98.90916783359054, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "cache-service", "metric": "memory_usage", "value": 103.9690930851365, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "cache-service", "metric": "queue_depth", "value": 207.69197374861918, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "cache-service", "metric": "cpu_usage", "value": 84.97760856325176, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "auth-service", "metric": "request_rate", "value": 1848.1382958028107, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "auth-service", "metric": "connection_pool_active", "value": 104.55902862208939, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "auth-service", "metric": "memory_usage", "value": 111.50597163612407, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "auth-service", "metric": "queue_depth", "value": 170.1413339611179, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:23.244452", "service": "auth-service", "metric": "cpu_usage", "value": 85.6595656167916, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "analytics-service", "metric": "request_rate", "value": 1794.8181776155482, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 99.31596409590574, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "analytics-service", "metric": "memory_usage", "value": 109.11878738191962, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "analytics-service", "metric": "queue_depth", "value": 189.80317874577005, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "analytics-service", "metric": "cpu_usage", "value": 76.3325035205796, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "cache-service", "metric": "request_rate", "value": 1729.7783287686061, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "cache-service", "metric": "connection_pool_active", "value": 91.86663070662966, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "cache-service", "metric": "memory_usage", "value": 106.22427919536106, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "cache-service", "metric": "queue_depth", "value": 114.23226934615388, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "cache-service", "metric": "cpu_usage", "value": 84.07709271677827, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "auth-service", "metric": "request_rate", "value": 1730.827781633208, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "auth-service", "metric": "connection_pool_active", "value": 88.5704292797495, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "auth-service", "metric": "memory_usage", "value": 103.59573952016305, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "auth-service", "metric": "queue_depth", "value": 171.87380565648522, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:33.244452", "service": "auth-service", "metric": "cpu_usage", "value": 84.5457288056223, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "analytics-service", "metric": "request_rate", "value": 1844.7224989435897, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 62.87158647305908, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "analytics-service", "metric": "memory_usage", "value": 109.28893319112177, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "analytics-service", "metric": "queue_depth", "value": 145.7900729731565, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "analytics-service", "metric": "cpu_usage", "value": 71.83823641918454, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "cache-service", "metric": "request_rate", "value": 1693.0143263247533, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "cache-service", "metric": "connection_pool_active", "value": 80.52281763452868, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "cache-service", "metric": "memory_usage", "value": 102.77652133509692, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "cache-service", "metric": "queue_depth", "value": 95.96956188977886, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "cache-service", "metric": "cpu_usage", "value": 82.82390312201679, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "auth-service", "metric": "request_rate", "value": 1792.2748671053412, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "auth-service", "metric": "connection_pool_active", "value": 92.70271535369612, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "auth-service", "metric": "memory_usage", "value": 110.23369518519198, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "auth-service", "metric": "queue_depth", "value": 181.57062786395852, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:43.244452", "service": "auth-service", "metric": "cpu_usage", "value": 78.83739905206365, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "analytics-service", "metric": "request_rate", "value": 1953.0532638374975, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 90.70362869551377, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "analytics-service", "metric": "memory_usage", "value": 108.59072354653992, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "analytics-service", "metric": "queue_depth", "value": 176.03835324097687, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "analytics-service", "metric": "cpu_usage", "value": 88.34343014342232, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "cache-service", "metric": "request_rate", "value": 1758.4041539987354, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "cache-service", "metric": "connection_pool_active", "value": 92.16395439104802, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "cache-service", "metric": "memory_usage", "value": 110.69418902736406, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "cache-service", "metric": "queue_depth", "value": 205.88032850517885, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "cache-service", "metric": "cpu_usage", "value": 82.80782163999956, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "auth-service", "metric": "request_rate", "value": 1813.7279697733468, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "auth-service", "metric": "connection_pool_active", "value": 102.62730939517047, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "auth-service", "metric": "memory_usage", "value": 107.91754178629519, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "auth-service", "metric": "queue_depth", "value": 161.65819416090216, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:09:53.244452", "service": "auth-service", "metric": "cpu_usage", "value": 76.63529497216041, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "analytics-service", "metric": "request_rate", "value": 1643.4812357240335, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 119.95693398315984, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "analytics-service", "metric": "memory_usage", "value": 104.0032736065855, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "analytics-service", "metric": "queue_depth", "value": 216.23805357057768, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "analytics-service", "metric": "cpu_usage", "value": 83.20471159932725, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "cache-service", "metric": "request_rate", "value": 1888.5685033473062, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "cache-service", "metric": "connection_pool_active", "value": 108.60305898157037, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "cache-service", "metric": "memory_usage", "value": 107.53480076575171, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "cache-service", "metric": "queue_depth", "value": 57.28857725631272, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "cache-service", "metric": "cpu_usage", "value": 83.47858292102052, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "auth-service", "metric": "request_rate", "value": 1822.2220921547334, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "auth-service", "metric": "connection_pool_active", "value": 91.12310523991283, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "auth-service", "metric": "memory_usage", "value": 105.99984072047789, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "auth-service", "metric": "queue_depth", "value": 283.7466559190508, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:03.244452", "service": "auth-service", "metric": "cpu_usage", "value": 89.16383804754483, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "analytics-service", "metric": "request_rate", "value": 1772.136900391342, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 83.30921499913276, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "analytics-service", "metric": "memory_usage", "value": 105.06508827256515, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "analytics-service", "metric": "queue_depth", "value": 208.39865520859914, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "analytics-service", "metric": "cpu_usage", "value": 86.5248201399343, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "cache-service", "metric": "request_rate", "value": 1716.9176188249767, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "cache-service", "metric": "connection_pool_active", "value": 99.8015745615979, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "cache-service", "metric": "memory_usage", "value": 112.11490116363706, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "cache-service", "metric": "queue_depth", "value": 163.57949187398114, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "cache-service", "metric": "cpu_usage", "value": 82.86001400593493, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "auth-service", "metric": "request_rate", "value": 1807.0727543929997, "unit": "req/s", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "auth-service", "metric": "connection_pool_active", "value": 86.29381263595077, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "auth-service", "metric": "memory_usage", "value": 111.34463551116079, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "auth-service", "metric": "queue_depth", "value": 109.44813794538366, "unit": "count", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "auth-service", "metric": "cpu_usage", "value": 88.43796998452505, "unit": "%", "anomaly": true}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "analytics-service", "metric": "request_latency", "value": 138.15038869005502, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "analytics-service", "metric": "disk_usage", "value": 70.26688257336089, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "analytics-service", "metric": "memory_usage", "value": 59.197060998660646, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 55.06523583457761, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "analytics-service", "metric": "queue_depth", "value": 60.16562285662775, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "database-service", "metric": "request_latency", "value": 139.7739781757704, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "database-service", "metric": "disk_usage", "value": 71.21727136844983, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "database-service", "metric": "memory_usage", "value": 60.738207849730685, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "database-service", "metric": "connection_pool_active", "value": 43.19540258861099, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "database-service", "metric": "queue_depth", "value": 58.813052745693604, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "api-gateway", "metric": "request_latency", "value": 129.52920339218113, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "api-gateway", "metric": "disk_usage", "value": 70.55836634044049, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "api-gateway", "metric": "memory_usage", "value": 62.564120056283244, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 33.8831576901746, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:13.244452", "service": "api-gateway", "metric": "queue_depth", "value": 84.50399598998416, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "analytics-service", "metric": "request_latency", "value": 91.28720305163037, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "analytics-service", "metric": "disk_usage", "value": 66.05350915556454, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "analytics-service", "metric": "memory_usage", "value": 58.05169542156362, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 46.549391560659586, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "analytics-service", "metric": "queue_depth", "value": 120.77128666038703, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "database-service", "metric": "request_latency", "value": 125.68413870348267, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "database-service", "metric": "disk_usage", "value": 74.18419629229719, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "database-service", "metric": "memory_usage", "value": 59.128011449962735, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "database-service", "metric": "connection_pool_active", "value": 35.4508698663848, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "database-service", "metric": "queue_depth", "value": 95.97449017472971, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "api-gateway", "metric": "request_latency", "value": 140.12420059592012, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "api-gateway", "metric": "disk_usage", "value": 68.61479588032056, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "api-gateway", "metric": "memory_usage", "value": 60.835897543481856, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 35.647145207297086, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:23.244452", "service": "api-gateway", "metric": "queue_depth", "value": 121.06966113082606, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "analytics-service", "metric": "request_latency", "value": 148.22983982390662, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "analytics-service", "metric": "disk_usage", "value": 71.21885542889984, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "analytics-service", "metric": "memory_usage", "value": 61.104955122554074, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 59.551810689716675, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "analytics-service", "metric": "queue_depth", "value": 112.50428111774275, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "database-service", "metric": "request_latency", "value": 112.1561828371182, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "database-service", "metric": "disk_usage", "value": 69.85511371148176, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "database-service", "metric": "memory_usage", "value": 57.89072587329558, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "database-service", "metric": "connection_pool_active", "value": 56.596373294835935, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "database-service", "metric": "queue_depth", "value": 94.78227556077826, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "api-gateway", "metric": "request_latency", "value": 134.57722260856082, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "api-gateway", "metric": "disk_usage", "value": 70.05589679560451, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "api-gateway", "metric": "memory_usage", "value": 62.47191829974289, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 35.84898056823004, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:33.244452", "service": "api-gateway", "metric": "queue_depth", "value": 133.8700224377372, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "analytics-service", "metric": "request_latency", "value": 131.70534300489513, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "analytics-service", "metric": "disk_usage", "value": 71.84623529754984, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "analytics-service", "metric": "memory_usage", "value": 59.127689759708204, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 54.796757355727536, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "analytics-service", "metric": "queue_depth", "value": 74.67020098170502, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "database-service", "metric": "request_latency", "value": 159.67108744391774, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "database-service", "metric": "disk_usage", "value": 70.02392246334396, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "database-service", "metric": "memory_usage", "value": 59.328387175972445, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "database-service", "metric": "connection_pool_active", "value": 59.897918548132836, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "database-service", "metric": "queue_depth", "value": 51.98396065440257, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "api-gateway", "metric": "request_latency", "value": 102.97188738327263, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "api-gateway", "metric": "disk_usage", "value": 72.0908174238696, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "api-gateway", "metric": "memory_usage", "value": 57.36380264720346, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 39.68122133514143, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:43.244452", "service": "api-gateway", "metric": "queue_depth", "value": 51.78652550975107, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "analytics-service", "metric": "request_latency", "value": 113.67961288563619, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "analytics-service", "metric": "disk_usage", "value": 72.01565871933789, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "analytics-service", "metric": "memory_usage", "value": 56.978642390828824, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 62.35729393664534, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "analytics-service", "metric": "queue_depth", "value": 138.1136620826191, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "database-service", "metric": "request_latency", "value": 121.49013791431024, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "database-service", "metric": "disk_usage", "value": 70.53213797003421, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "database-service", "metric": "memory_usage", "value": 58.144494789407865, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "database-service", "metric": "connection_pool_active", "value": 59.16634664899357, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "database-service", "metric": "queue_depth", "value": 55.158535048550824, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "api-gateway", "metric": "request_latency", "value": 119.97360311909421, "unit": "ms"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "api-gateway", "metric": "disk_usage", "value": 72.01449321916348, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "api-gateway", "metric": "memory_usage", "value": 60.83760765848925, "unit": "%"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 51.68449024711043, "unit": "count"}
-{"timestamp": "2026-01-08T12:10:53.244452", "service": "api-gateway", "metric": "queue_depth", "value": 93.51084487406942, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "analytics-service", "metric": "request_latency", "value": 159.88868966134723, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "analytics-service", "metric": "disk_usage", "value": 69.33693116832974, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "analytics-service", "metric": "memory_usage", "value": 59.072577046324504, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 40.05153548020667, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "analytics-service", "metric": "queue_depth", "value": 113.65795839131887, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "database-service", "metric": "request_latency", "value": 128.18670879646035, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "database-service", "metric": "disk_usage", "value": 75.14850937932076, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "database-service", "metric": "memory_usage", "value": 63.15782295350777, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "database-service", "metric": "connection_pool_active", "value": 31.100244683107398, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "database-service", "metric": "queue_depth", "value": 92.03464679937935, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "api-gateway", "metric": "request_latency", "value": 100.8564951988774, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "api-gateway", "metric": "disk_usage", "value": 71.94469316901636, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "api-gateway", "metric": "memory_usage", "value": 59.67712015018574, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 49.823126745714895, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:03.244452", "service": "api-gateway", "metric": "queue_depth", "value": 77.48444260934019, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "analytics-service", "metric": "request_latency", "value": 85.31277515545298, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "analytics-service", "metric": "disk_usage", "value": 70.77272828643846, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "analytics-service", "metric": "memory_usage", "value": 54.45507608880368, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 44.18138131426109, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "analytics-service", "metric": "queue_depth", "value": 141.91705949722606, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "database-service", "metric": "request_latency", "value": 98.86973229471269, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "database-service", "metric": "disk_usage", "value": 71.37010614712409, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "database-service", "metric": "memory_usage", "value": 60.373129310568295, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "database-service", "metric": "connection_pool_active", "value": 55.988625402850005, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "database-service", "metric": "queue_depth", "value": 130.130100057998, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "api-gateway", "metric": "request_latency", "value": 96.82461056903274, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "api-gateway", "metric": "disk_usage", "value": 72.40848836592035, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "api-gateway", "metric": "memory_usage", "value": 62.14230739386734, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 39.11784856514899, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:13.244452", "service": "api-gateway", "metric": "queue_depth", "value": 135.56557890949165, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "analytics-service", "metric": "request_latency", "value": 114.08437428612321, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "analytics-service", "metric": "disk_usage", "value": 67.90084030249741, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "analytics-service", "metric": "memory_usage", "value": 62.93206620671326, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 61.86717402415445, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "analytics-service", "metric": "queue_depth", "value": 96.5215658565915, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "database-service", "metric": "request_latency", "value": 87.39426144682545, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "database-service", "metric": "disk_usage", "value": 71.06743970947424, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "database-service", "metric": "memory_usage", "value": 62.96095166578877, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "database-service", "metric": "connection_pool_active", "value": 58.87788957744419, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "database-service", "metric": "queue_depth", "value": 91.32860822429757, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "api-gateway", "metric": "request_latency", "value": 109.1295138295558, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "api-gateway", "metric": "disk_usage", "value": 72.44983691456129, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "api-gateway", "metric": "memory_usage", "value": 61.907174408321005, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 32.46407407977639, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:23.244452", "service": "api-gateway", "metric": "queue_depth", "value": 75.74162939275388, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "analytics-service", "metric": "request_latency", "value": 126.99453876119983, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "analytics-service", "metric": "disk_usage", "value": 71.73305733805877, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "analytics-service", "metric": "memory_usage", "value": 67.44119914772429, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 19.785765468989467, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "analytics-service", "metric": "queue_depth", "value": 127.6292098892319, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "database-service", "metric": "request_latency", "value": 152.50547126587546, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "database-service", "metric": "disk_usage", "value": 69.28746869994438, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "database-service", "metric": "memory_usage", "value": 57.03400847398112, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "database-service", "metric": "connection_pool_active", "value": 45.66178619137121, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "database-service", "metric": "queue_depth", "value": 117.37754355725555, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "api-gateway", "metric": "request_latency", "value": 123.23108765973993, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "api-gateway", "metric": "disk_usage", "value": 68.73842617922678, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "api-gateway", "metric": "memory_usage", "value": 59.200822708739835, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 55.725132575557446, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:33.244452", "service": "api-gateway", "metric": "queue_depth", "value": 139.18901599409128, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "analytics-service", "metric": "request_latency", "value": 74.75513031996731, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "analytics-service", "metric": "disk_usage", "value": 69.17559730687223, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "analytics-service", "metric": "memory_usage", "value": 58.05692551261457, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 40.51212559503636, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "analytics-service", "metric": "queue_depth", "value": 135.59761651523615, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "database-service", "metric": "request_latency", "value": 140.8415364047301, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "database-service", "metric": "disk_usage", "value": 66.10072205246757, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "database-service", "metric": "memory_usage", "value": 58.040829521850654, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "database-service", "metric": "connection_pool_active", "value": 59.50647894272268, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "database-service", "metric": "queue_depth", "value": 98.65228814221311, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "api-gateway", "metric": "request_latency", "value": 113.66252622153905, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "api-gateway", "metric": "disk_usage", "value": 72.26495007658048, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "api-gateway", "metric": "memory_usage", "value": 62.22287057546734, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 60.25913861007541, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:43.244452", "service": "api-gateway", "metric": "queue_depth", "value": 112.94481463247672, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "analytics-service", "metric": "request_latency", "value": 114.53642701660156, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "analytics-service", "metric": "disk_usage", "value": 67.52514113504861, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "analytics-service", "metric": "memory_usage", "value": 58.232815748100045, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 46.92680021416756, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "analytics-service", "metric": "queue_depth", "value": 65.57443114399297, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "database-service", "metric": "request_latency", "value": 131.31920885144729, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "database-service", "metric": "disk_usage", "value": 68.09219164142586, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "database-service", "metric": "memory_usage", "value": 64.25099998019698, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "database-service", "metric": "connection_pool_active", "value": 45.719415524411716, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "database-service", "metric": "queue_depth", "value": 104.2078423757976, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "api-gateway", "metric": "request_latency", "value": 106.37803066096086, "unit": "ms"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "api-gateway", "metric": "disk_usage", "value": 70.87686201855884, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "api-gateway", "metric": "memory_usage", "value": 56.69656785212369, "unit": "%"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 44.87452831829849, "unit": "count"}
-{"timestamp": "2026-01-08T12:11:53.244452", "service": "api-gateway", "metric": "queue_depth", "value": 16.79376111668975, "unit": "count"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "analytics-service", "metric": "request_latency", "value": 149.2368520660545, "unit": "ms"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "analytics-service", "metric": "disk_usage", "value": 69.77437345382536, "unit": "%"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "analytics-service", "metric": "memory_usage", "value": 60.756138697946575, "unit": "%"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 47.384313790737295, "unit": "count"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "analytics-service", "metric": "queue_depth", "value": 86.45972580533963, "unit": "count"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "database-service", "metric": "request_latency", "value": 148.50814419359796, "unit": "ms"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "database-service", "metric": "disk_usage", "value": 70.02317977254947, "unit": "%"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "database-service", "metric": "memory_usage", "value": 52.53879106020722, "unit": "%"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "database-service", "metric": "connection_pool_active", "value": 60.453147347567906, "unit": "count"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "database-service", "metric": "queue_depth", "value": 57.722585638586864, "unit": "count"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "api-gateway", "metric": "request_latency", "value": 132.43812495436126, "unit": "ms"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "api-gateway", "metric": "disk_usage", "value": 70.04739192312557, "unit": "%"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "api-gateway", "metric": "memory_usage", "value": 64.62100107278475, "unit": "%"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 39.30242815721634, "unit": "count"}
-{"timestamp": "2026-01-08T12:12:03.244452", "service": "api-gateway", "metric": "queue_depth", "value": 148.9007755195963, "unit": "count"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "analytics-service", "metric": "request_latency", "value": 125.40545646610941, "unit": "ms"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "analytics-service", "metric": "disk_usage", "value": 69.67386980192397, "unit": "%"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "analytics-service", "metric": "memory_usage", "value": 59.327644376464285, "unit": "%"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "analytics-service", "metric": "connection_pool_active", "value": 30.328364725397858, "unit": "count"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "analytics-service", "metric": "queue_depth", "value": 111.35982410898465, "unit": "count"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "database-service", "metric": "request_latency", "value": 112.2875155038974, "unit": "ms"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "database-service", "metric": "disk_usage", "value": 68.06569792767124, "unit": "%"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "database-service", "metric": "memory_usage", "value": 58.25497212138094, "unit": "%"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "database-service", "metric": "connection_pool_active", "value": 57.53244912401159, "unit": "count"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "database-service", "metric": "queue_depth", "value": 139.34043847674096, "unit": "count"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "api-gateway", "metric": "request_latency", "value": 134.69091137948772, "unit": "ms"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "api-gateway", "metric": "disk_usage", "value": 67.83875729126476, "unit": "%"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "api-gateway", "metric": "memory_usage", "value": 56.79592417976771, "unit": "%"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "api-gateway", "metric": "connection_pool_active", "value": 43.155428814754416, "unit": "count"}
-{"timestamp": "2026-01-08T12:12:13.244452", "service": "api-gateway", "metric": "queue_depth", "value": 105.1606432722048, "unit": "count"}
+{"timestamp": "2026-01-08T12:43:34.899933", "service": "api-gateway", "metric": "db_query_time", "value": 54.560463385044216, "unit": "ms"}
+{"timestamp": "2026-01-08T12:43:34.899933", "service": "api-gateway", "metric": "memory_usage", "value": 54.9385092204541, "unit": "%"}
+{"timestamp": "2026-01-08T12:43:34.899933", "service": "api-gateway", "metric": "connection_pool_active", "value": 46.738002856906235, "unit": "count"}
+{"timestamp": "2026-01-08T12:43:34.899933", "service": "payment-service", "metric": "db_query_time", "value": 37.45067382803049, "unit": "ms"}
+{"timestamp": "2026-01-08T12:43:34.899933", "service": "payment-service", "metric": "memory_usage", "value": 58.03761083847614, "unit": "%"}
+{"timestamp": "2026-01-08T12:43:34.899933", "service": "payment-service", "metric": "connection_pool_active", "value": 53.92620231730212, "unit": "count"}
+{"timestamp": "2026-01-08T12:43:54.899933", "service": "api-gateway", "metric": "db_query_time", "value": 58.439759023265395, "unit": "ms"}
+{"timestamp": "2026-01-08T12:43:54.899933", "service": "api-gateway", "metric": "memory_usage", "value": 55.94703696959942, "unit": "%"}
+{"timestamp": "2026-01-08T12:43:54.899933", "service": "api-gateway", "metric": "connection_pool_active", "value": 48.45450770527272, "unit": "count"}
+{"timestamp": "2026-01-08T12:43:54.899933", "service": "payment-service", "metric": "db_query_time", "value": 63.759745896210205, "unit": "ms"}
+{"timestamp": "2026-01-08T12:43:54.899933", "service": "payment-service", "metric": "memory_usage", "value": 62.52986105861294, "unit": "%"}
+{"timestamp": "2026-01-08T12:43:54.899933", "service": "payment-service", "metric": "connection_pool_active", "value": 47.42755797772615, "unit": "count"}
+{"timestamp": "2026-01-08T12:44:14.899933", "service": "api-gateway", "metric": "db_query_time", "value": 48.86032778846156, "unit": "ms"}
+{"timestamp": "2026-01-08T12:44:14.899933", "service": "api-gateway", "metric": "memory_usage", "value": 60.84220905831635, "unit": "%"}
+{"timestamp": "2026-01-08T12:44:14.899933", "service": "api-gateway", "metric": "connection_pool_active", "value": 52.649144967102785, "unit": "count"}
+{"timestamp": "2026-01-08T12:44:14.899933", "service": "payment-service", "metric": "db_query_time", "value": 50.707309356822165, "unit": "ms"}
+{"timestamp": "2026-01-08T12:44:14.899933", "service": "payment-service", "metric": "memory_usage", "value": 57.06647975288532, "unit": "%"}
+{"timestamp": "2026-01-08T12:44:14.899933", "service": "payment-service", "metric": "connection_pool_active", "value": 50.75941798398316, "unit": "count"}
+{"timestamp": "2026-01-08T12:44:34.899933", "service": "api-gateway", "metric": "db_query_time", "value": 54.26196925829867, "unit": "ms"}
+{"timestamp": "2026-01-08T12:44:34.899933", "service": "api-gateway", "metric": "memory_usage", "value": 63.578678613776816, "unit": "%"}
+{"timestamp": "2026-01-08T12:44:34.899933", "service": "api-gateway", "metric": "connection_pool_active", "value": 58.218768077919975, "unit": "count"}
+{"timestamp": "2026-01-08T12:44:34.899933", "service": "payment-service", "metric": "db_query_time", "value": 52.22240265545861, "unit": "ms"}
+{"timestamp": "2026-01-08T12:44:34.899933", "service": "payment-service", "metric": "memory_usage", "value": 61.19736487669755, "unit": "%"}
+{"timestamp": "2026-01-08T12:44:34.899933", "service": "payment-service", "metric": "connection_pool_active", "value": 37.781115379769034, "unit": "count"}
+{"timestamp": "2026-01-08T12:44:34.899933", "service": "inventory-service", "metric": "request_rate", "value": 1787.6884614667, "unit": "req/s", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.899933", "service": "inventory-service", "metric": "memory_usage", "value": 105.4123403920006, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.899933", "service": "inventory-service", "metric": "disk_usage", "value": 123.38377289577407, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.899933", "service": "api-gateway", "metric": "request_rate", "value": 1889.609192319871, "unit": "req/s", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.899933", "service": "api-gateway", "metric": "memory_usage", "value": 108.3319484770567, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:34.899933", "service": "api-gateway", "metric": "disk_usage", "value": 128.30847148244374, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.899933", "service": "inventory-service", "metric": "request_rate", "value": 1917.5237786389248, "unit": "req/s", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.899933", "service": "inventory-service", "metric": "memory_usage", "value": 114.03386158724801, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.899933", "service": "inventory-service", "metric": "disk_usage", "value": 128.78324596249718, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.899933", "service": "api-gateway", "metric": "request_rate", "value": 1712.3267005357295, "unit": "req/s", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.899933", "service": "api-gateway", "metric": "memory_usage", "value": 111.53891514069811, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:44:54.899933", "service": "api-gateway", "metric": "disk_usage", "value": 128.55142642939296, "unit": "%", "anomaly": true}
+{"timestamp": "2026-01-08T12:45:04.899933", "service": "notification-service", "metric": "db_query_time", "value": 63.68704675063728, "unit": "ms"}
+{"timestamp": "2026-01-08T12:45:04.899933", "service": "notification-service", "metric": "disk_usage", "value": 68.69585771770747, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:04.899933", "service": "notification-service", "metric": "error_rate", "value": 0.5552912723296983, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:45:04.899933", "service": "cache-service", "metric": "db_query_time", "value": 54.258066381362674, "unit": "ms"}
+{"timestamp": "2026-01-08T12:45:04.899933", "service": "cache-service", "metric": "disk_usage", "value": 69.72431277194167, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:04.899933", "service": "cache-service", "metric": "error_rate", "value": 0.43184170549507345, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:45:24.899933", "service": "notification-service", "metric": "db_query_time", "value": 48.855847165760224, "unit": "ms"}
+{"timestamp": "2026-01-08T12:45:24.899933", "service": "notification-service", "metric": "disk_usage", "value": 74.38238035154002, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:24.899933", "service": "notification-service", "metric": "error_rate", "value": 0.4571096603189244, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:45:24.899933", "service": "cache-service", "metric": "db_query_time", "value": 31.03252872728928, "unit": "ms"}
+{"timestamp": "2026-01-08T12:45:24.899933", "service": "cache-service", "metric": "disk_usage", "value": 72.53041931517406, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:24.899933", "service": "cache-service", "metric": "error_rate", "value": 0.551894060720355, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:45:44.899933", "service": "notification-service", "metric": "db_query_time", "value": 60.31478625807465, "unit": "ms"}
+{"timestamp": "2026-01-08T12:45:44.899933", "service": "notification-service", "metric": "disk_usage", "value": 70.16740601628518, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:44.899933", "service": "notification-service", "metric": "error_rate", "value": 0.7003957417237991, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:45:44.899933", "service": "cache-service", "metric": "db_query_time", "value": 48.590639910055, "unit": "ms"}
+{"timestamp": "2026-01-08T12:45:44.899933", "service": "cache-service", "metric": "disk_usage", "value": 66.75305880362257, "unit": "%"}
+{"timestamp": "2026-01-08T12:45:44.899933", "service": "cache-service", "metric": "error_rate", "value": 0.3049325811425193, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:46:04.899933", "service": "notification-service", "metric": "db_query_time", "value": 52.1344863439245, "unit": "ms"}
+{"timestamp": "2026-01-08T12:46:04.899933", "service": "notification-service", "metric": "disk_usage", "value": 68.50985133683994, "unit": "%"}
+{"timestamp": "2026-01-08T12:46:04.899933", "service": "notification-service", "metric": "error_rate", "value": 0.8074115237119888, "unit": "req/s"}
+{"timestamp": "2026-01-08T12:46:04.899933", "service": "cache-service", "metric": "db_query_time", "value": 54.19881056347795, "unit": "ms"}
+{"timestamp": "2026-01-08T12:46:04.899933", "service": "cache-service", "metric": "disk_usage", "value": 71.05600907510522, "unit": "%"}
+{"timestamp": "2026-01-08T12:46:04.899933", "service": "cache-service", "metric": "error_rate", "value": 0.5393511905779176, "unit": "req/s"}

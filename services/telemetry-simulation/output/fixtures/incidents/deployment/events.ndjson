@@ -1,4 +1,4 @@
-{"timestamp": "2026-01-08T12:08:17.244452", "type": "scaling_change", "service": "database-service", "details": "scaling_change event for database-service", "severity": "info"}
-{"timestamp": "2026-01-08T12:09:12.244452", "type": "scaling_change", "service": "analytics-service", "details": "scaling_change event for analytics-service", "severity": "warning"}
-{"timestamp": "2026-01-08T12:09:13.244452", "type": "deployment", "service": "notification-service", "details": "Deploying new version to notification-service", "severity": "info", "version": "2.1.0"}
-{"timestamp": "2026-01-08T12:14:13.244452", "type": "deployment", "service": "notification-service", "details": "Deployment completed for notification-service", "severity": "info", "version": "2.1.0"}
+{"timestamp": "2026-01-08T12:43:50.899933", "type": "config_change", "service": "api-gateway", "details": "config_change event for api-gateway", "severity": "info"}
+{"timestamp": "2026-01-08T12:44:12.899933", "type": "config_change", "service": "database-service", "details": "config_change event for database-service", "severity": "warning"}
+{"timestamp": "2026-01-08T12:44:34.899933", "type": "deployment", "service": "user-service", "details": "Deploying new version to user-service", "severity": "info", "version": "2.1.0"}
+{"timestamp": "2026-01-08T12:49:34.899933", "type": "deployment", "service": "user-service", "details": "Deployment completed for user-service", "severity": "info", "version": "2.1.0"}

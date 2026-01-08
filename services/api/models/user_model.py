@@ -23,5 +23,6 @@ class UserModel(Base):
     password = Column(String, nullable=False)
     is_active = Column(Boolean, default=True, nullable=False)
     last_login = Column(DateTime, nullable=True)
+    organizations = relationship("OrganizationModel", back_populates="owner", foreign_keys="OrganizationModel.owner_id")
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
     updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)

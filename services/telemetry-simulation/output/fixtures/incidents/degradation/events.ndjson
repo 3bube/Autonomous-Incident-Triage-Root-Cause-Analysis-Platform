@@ -1,0 +1,2 @@
+{"timestamp": "2026-01-08T12:44:22.862665", "type": "maintenance_window", "service": "order-service", "details": "maintenance_window event for order-service", "severity": "critical"}
+{"timestamp": "2026-01-08T12:44:32.862665", "type": "failover", "service": "cache-service", "details": "failover event for cache-service", "severity": "info"}
