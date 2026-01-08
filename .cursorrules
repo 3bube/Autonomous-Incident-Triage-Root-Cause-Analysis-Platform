@@ -1,0 +1,384 @@
+# Cursor Rules for Autonomous Incident Triage & Root Cause Analysis Platform
+
+## Project Overview
+
+An intelligent platform that automatically identifies, categorizes, and analyzes system incidents to determine their root causes using AI/ML. The platform uses a microservices architecture with a Next.js frontend and FastAPI backend.
+
+## Tech Stack
+
+### Frontend
+- **Framework**: Next.js 16.1.1 with App Router
+- **Language**: TypeScript (strict mode enabled)
+- **UI Components**: Radix UI primitives
+- **State Management**: Zustand for global state, React Query for server state
+- **Forms**: React Hook Form with Zod validation
+- **Styling**: Tailwind CSS v4
+- **Charts**: Recharts
+- **HTTP Client**: Axios with interceptors and retry logic
+
+### Backend
+- **Framework**: FastAPI
+- **Language**: Python 3.13+
+- **Database**: PostgreSQL with SQLAlchemy ORM
+- **Migrations**: Alembic
+- **Authentication**: JWT tokens stored in HTTP-only cookies
+- **Password Hashing**: bcrypt
+- **Async Drivers**: asyncpg/psycopg for database connections
+
+### Database
+- **Type**: PostgreSQL
+- **ORM**: SQLAlchemy with async support
+- **Migrations**: Alembic (located in `services/api/alembic/`)
+
+## File Structure
+
+```
+.
+├── frontend/                    # Next.js application
+│   ├── app/                     # App Router directory
+│   │   ├── (auth)/             # Auth route group
+│   │   │   ├── login/
+│   │   │   └── signup/
+│   │   ├── (main)/             # Main dashboard route group
+│   │   │   ├── dashboard/      # Dashboard routes
+│   │   │   └── layout.tsx      # Dashboard layout with Header/Sidebar
+│   │   ├── layout.tsx          # Root layout
+│   │   └── page.tsx            # Home page (redirects to /login)
+│   ├── components/             # React components
+│   │   ├── auth/               # Authentication components
+│   │   ├── dashboard/          # Dashboard-specific components
+│   │   └── ui/                 # Reusable UI primitives (shadcn/ui)
+│   ├── lib/                    # Utility libraries
+│   │   ├── axios/              # API client configuration
+│   │   └── utils.ts            # Helper functions
+│   ├── store/                  # Zustand stores
+│   ├── services/               # Service layer (API calls)
+│   ├── hooks/                  # Custom React hooks
+│   ├── types/                  # TypeScript type definitions
+│   ├── constants.tsx           # Application constants
+│   ├── proxy.ts                # Next.js middleware (NOT middleware.ts)
+│   ├── next.config.ts          # Next.js configuration
+│   └── tsconfig.json           # TypeScript configuration
+│
+├── services/
+│   ├── api/                    # FastAPI main service
+│   │   ├── models/             # SQLAlchemy models
+│   │   ├── routes/             # API route handlers
+│   │   ├── schemas/            # Pydantic schemas
+│   │   ├── services/           # Business logic layer
+│   │   ├── core/               # Core configuration
+│   │   │   ├── config.py       # Settings (uses pydantic-settings)
+│   │   │   ├── database.py     # Database connection
+│   │   │   └── security.py     # JWT/auth utilities
+│   │   ├── controllers/        # Controller layer (if used)
+│   │   ├── alembic/            # Database migrations
+│   │   ├── main.py             # FastAPI app entry point
+│   │   └── requirements.txt    # Python dependencies
+│   ├── ingestion/              # Data ingestion service (empty - TODO)
+│   ├── ml-engine/              # ML model inference (empty - TODO)
+│   ├── stream-processor/       # Real-time processing (empty - TODO)
+│   └── telemetry-simulation/   # Test data generator (empty - TODO)
+│
+└── infra/                      # Infrastructure as Code
+    ├── docker/                 # Docker configurations
+    ├── k8s/                    # Kubernetes manifests
+    └── terraform/              # Terraform IaC
+```
+
+## Frontend Development Guidelines
+
+### Next.js App Router Patterns
+
+1. **Server vs Client Components**:
+   - Default: Server components (no `"use client"`)
+   - Use `"use client"` only when needed (hooks, interactivity, browser APIs)
+   - Keep server components for data fetching and static content
+
+2. **Route Organization**:
+   - Use route groups `(auth)` and `(main)` for layout organization
+   - Dynamic routes: `[id]` for single params, `[...slug]` for catch-all
+   - Route handlers in `app/api/` (currently empty but can be used)
+
+3. **File Naming**:
+   - Pages: `page.tsx`
+   - Layouts: `layout.tsx`
+   - Loading: `loading.tsx`
+   - Error: `error.tsx`
+   - Not Found: `not-found.tsx`
+
+### TypeScript Patterns
+
+1. **Path Aliases**: Use `@/` prefix for imports (configured in `tsconfig.json`)
+   ```typescript
+   import { Button } from "@/components/ui/button";
+   import { useAuthStore } from "@/store/auth-store";
+   ```
+
+2. **Type Safety**: 
+   - Always type function parameters and return values
+   - Use interfaces for object shapes, types for unions/intersections
+   - Define types in `types/` directory, export from `types/index.ts`
+
+3. **Strict Mode**: Enabled - always handle null/undefined properly
+
+### Component Patterns
+
+1. **Component Structure**:
+   ```typescript
+   "use client"; // Only if needed
+   
+   import { useState } from "react";
+   import type { ComponentProps } from "@/types";
+   
+   interface Props {
+     // Props definition
+   }
+   
+   export default function ComponentName({ prop1, prop2 }: Props) {
+     // Component logic
+     return <div>...</div>;
+   }
+   ```
+
+2. **Data Fetching**:
+   - Use React Query (`@tanstack/react-query`) for server state
+   - Create custom hooks in `hooks/queries/` for data fetching
+   - Use Zustand for client-side global state
+
+3. **Form Handling**:
+   - Use React Hook Form with Zod validation
+   - Define schemas with Zod, use `zodResolver` in forms
+   - Example pattern:
+     ```typescript
+     const schema = z.object({ email: z.string().email() });
+     const form = useForm({ resolver: zodResolver(schema) });
+     ```
+
+### API Client Patterns
+
+1. **API Client**: Located in `lib/axios/api-client.ts`
+   - Handles retries with exponential backoff
+   - Automatically includes cookies (`withCredentials: true`)
+   - Base URL from `NEXT_PUBLIC_API_URL` env variable (default: `http://localhost:8000/api`)
+
+2. **Service Layer**: Create service files in `services/` directory
+   - One service per resource (e.g., `auth.service.ts`, `incident.service.ts`)
+   - Methods should return typed promises
+   - Use the `apiClient` instance
+
+### Middleware (IMPORTANT)
+
+**This project uses `proxy.ts` instead of `middleware.ts`**:
+- Location: `frontend/proxy.ts`
+- Function must be named `middleware` (not `proxy`) for Next.js to recognize it
+- Protects `/dashboard/*` routes by checking for `access_token` cookie
+- Redirects unauthenticated users to `/login` with redirect parameter
+- Redirects authenticated users away from `/login` and `/signup`
+
+### Authentication Flow
+
+1. **Login**: POST to `/api/v1/auth/login` sets `access_token` and `refresh_token` cookies
+2. **Cookies**: HTTP-only, `secure` flag conditional on `DEBUG` setting (False in dev, True in prod)
+3. **Middleware**: Reads `access_token` cookie to protect routes
+4. **State**: Zustand store (`auth-store.tsx`) manages auth state
+5. **Check Auth**: `authService.checkAuth()` hits `/api/v1/auth/me` endpoint
+
+### Styling Guidelines
+
+1. **Tailwind CSS**: Use utility classes, avoid inline styles
+2. **Dark Mode**: Default dark theme, use semantic color classes
+3. **Component Library**: Use Radix UI primitives from `components/ui/`
+4. **Responsive**: Mobile-first approach, use Tailwind breakpoints
+
+## Backend Development Guidelines
+
+### FastAPI Patterns
+
+1. **Route Organization**:
+   - One router per resource in `routes/` directory
+   - Prefix routes with `/api/v1/` (or `/api/` for dashboard)
+   - Use dependency injection for database sessions
+
+2. **Route Structure**:
+   ```python
+   from fastapi import APIRouter, Depends, HTTPException
+   from sqlalchemy.orm import Session
+   from core.database import get_db
+   
+   router = APIRouter(prefix="/api/v1/resource", tags=["resource"])
+   
+   @router.get("/", response_model=List[ResourceSchema])
+   async def list_resources(db: Session = Depends(get_db)):
+       # Implementation
+       pass
+   ```
+
+3. **Error Handling**:
+   - Use HTTPException with appropriate status codes
+   - Return consistent error formats: `{"detail": "error message"}`
+   - Log errors using the logger from `core.config.get_logger()`
+
+4. **Response Models**:
+   - Define Pydantic schemas in `schemas/` directory
+   - Use `response_model` parameter in route decorators
+   - Separate schemas for create/update/response
+
+### Database Patterns
+
+1. **Models**: Located in `models/` directory
+   - Use SQLAlchemy ORM models
+   - Inherit from `Base` (from `core.database`)
+   - Use proper relationships and foreign keys
+
+2. **Migrations**:
+   - Create migrations: `alembic revision --autogenerate -m "description"`
+   - Apply migrations: `alembic upgrade head`
+   - Always review auto-generated migrations before applying
+
+3. **Database Sessions**:
+   - Use dependency injection: `db: Session = Depends(get_db)`
+   - Handle transactions properly (commit/rollback)
+   - Use async/await where appropriate
+
+4. **Service Layer**:
+   - Business logic in `services/` directory
+   - Services take `db: Session` as parameter
+   - Keep routes thin, business logic in services
+
+### Authentication & Security
+
+1. **JWT Tokens**:
+   - Access tokens: Short-lived (default 30 minutes, configurable)
+   - Refresh tokens: Long-lived (default 7 days, configurable)
+   - Stored in HTTP-only cookies (not accessible via JavaScript)
+
+2. **Password Handling**:
+   - Hash with bcrypt using `hash_password()` from `core.security`
+   - Verify with `verify_password()` from `core.security`
+   - Never store plaintext passwords
+
+3. **Protected Routes**:
+   - Use `get_current_user` dependency from `core.security`
+   - Extracts user email from JWT token
+   - Raises 401 if invalid/missing token
+
+4. **Cookie Settings**:
+   ```python
+   is_secure = not settings.DEBUG  # False in dev, True in prod
+   response.set_cookie(
+       key="access_token",
+       value=token,
+       httponly=True,
+       secure=is_secure,
+       samesite="lax",
+       path="/"
+   )
+   ```
+
+### Configuration
+
+1. **Settings**: Defined in `core/config.py` using `pydantic-settings`
+2. **Environment Variables**: Load from `.env` file in `services/api/`
+3. **Required Variables**:
+   - `DATABASE_URL`: PostgreSQL connection string
+   - `SECRET_KEY`: JWT signing secret
+   - `ALGORITHM`: JWT algorithm (e.g., "HS256")
+   - `DEBUG`: Boolean flag for development mode
+
+### Logging
+
+1. **Logger**: Use `get_logger(__name__)` from `core.config`
+2. **Log Levels**: INFO for normal operations, ERROR for exceptions, DEBUG for detailed info
+3. **Log Files**: Automatically logged to `logs/app.log` in production (DEBUG=False)
+
+## Code Conventions
+
+### General
+
+1. **Naming**:
+   - Python: `snake_case` for functions/variables, `PascalCase` for classes
+   - TypeScript: `camelCase` for functions/variables, `PascalCase` for components/types
+   - Files: Match the pattern of the language (snake_case for Python, kebab-case for TSX)
+
+2. **Imports**:
+   - Python: Group standard library, third-party, local imports
+   - TypeScript: Group React imports, third-party, local imports
+   - Use absolute imports where possible (path aliases in TS)
+
+3. **Documentation**:
+   - Python: Use docstrings for functions and classes
+   - TypeScript: Use JSDoc comments for complex functions
+   - Include parameter types and return types
+
+4. **Error Messages**:
+   - User-friendly messages in API responses
+   - Detailed logging for debugging
+   - Don't expose sensitive information in errors
+
+### TypeScript Specific
+
+1. **Components**: Export as default, use PascalCase naming
+2. **Hooks**: Prefix with `use` (e.g., `useAuth`, `useIncidents`)
+3. **Utilities**: Export named functions from utility files
+4. **Types**: Define in `types/` directory, re-export from `types/index.ts`
+
+### Python Specific
+
+1. **Type Hints**: Use type hints for function parameters and returns
+2. **Async/Await**: Use async functions for database operations and external calls
+3. **Exceptions**: Catch specific exceptions, log and re-raise or return appropriate HTTP errors
+4. **Dependencies**: Use FastAPI's dependency injection system
+
+## Development Workflows
+
+### Frontend Development
+
+```bash
+cd frontend
+npm install              # First time setup
+npm run dev             # Start dev server (localhost:3000)
+npm run build           # Production build
+npm run lint            # Run ESLint
+```
+
+### Backend Development
+
+```bash
+cd services/api
+python -m venv venv                              # Create venv (if not exists)
+source venv/Scripts/activate                     # Windows: venv\Scripts\activate.ps1
+pip install -r requirements.txt                  # Install dependencies
+alembic upgrade head                             # Apply migrations
+python main.py                                   # Run API server
+```
+
+### Database Migrations
+
+```bash
+cd services/api
+alembic revision --autogenerate -m "description"  # Create migration
+alembic upgrade head                              # Apply migrations
+alembic downgrade -1                              # Rollback one migration
+```
+
+## Important Notes
+
+1. **Middleware**: This project uses `proxy.ts` (NOT `middleware.ts`) - function must be named `middleware` for Next.js
+2. **Cookies**: Authentication uses HTTP-only cookies, `secure` flag is conditional on DEBUG mode
+3. **CORS**: Backend allows credentials and configured origins from `CORS_ORIGINS` setting
+4. **API Base URL**: Frontend uses `NEXT_PUBLIC_API_URL` env variable (defaults to `http://localhost:8000/api`)
+5. **Database Models**: All models exist in `models/` but business logic in routes is stubbed with TODOs
+6. **Microservices**: `ingestion/`, `ml-engine/`, `stream-processor/`, `telemetry-simulation/` directories are empty and need implementation
+
+## Testing (Future)
+
+- Frontend: Set up Jest/Vitest with React Testing Library
+- Backend: Use pytest for Python unit/integration tests
+- E2E: Consider Playwright or Cypress for end-to-end tests
+
+## Deployment
+
+- Docker: Each service should have its own Dockerfile in `infra/docker/`
+- Kubernetes: Manifests in `infra/k8s/`
+- Terraform: Infrastructure as Code in `infra/terraform/`
+- Environment: Use environment variables, never hardcode secrets
