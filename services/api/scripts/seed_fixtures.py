@@ -64,39 +64,117 @@ def list_fixtures():
 
 
 def seed_to_db():
-    """Show fixture summary and database seeding guidance."""
+    """Seed fixtures from NDJSON files to database."""
     fixtures_path = Path(__file__).parent.parent.parent / "telemetry-simulation" / "output" / "fixtures"
     
     if not fixtures_path.exists():
         print(f"❌ Fixtures path not found: {fixtures_path}")
         return
     
+    print("Attempting to seed to database...")
+    print()
+    
     try:
-        # Try to import models to validate database connectivity
         from core.database import SessionLocal
-        from sqlalchemy import text
+        from models.incident_log_model import IncidentLogModel
+        from models.incidents_model import IncidentModel
+        from models.services_model import ServiceModel
+        from models.organization_model import OrganizationModel
+        from models.user_model import UserModel
+        from core.security import hash_password
+        
         db = SessionLocal()
-        db.execute(text("SELECT 1"))
-        db.close()
         
-        print("✅ Database connection successful")
-        print()
-        print("📝 Next steps to seed data:")
-        print("   1. Fix ServiceModel enum to use lowercase values (healthy, degraded, critical, unknown)")
-        print("   2. Create a service record via SQL: INSERT INTO services (organization_id, name, description) VALUES (...)")
-        print("   3. Run seed_fixtures.py again to populate logs")
-        print()
-        print("   Alternatively:")
-        print("   1. Import NDJSON files directly in your application")
-        print("   2. Process them through your API endpoints")
+        # Ensure we have a user (required for organization owner_id)
+        user = db.query(UserModel).first()
+        if not user:
+            user = UserModel(
+                email="test@example.com",
+                full_name="Test User",
+                password=hash_password("testpass123")
+            )
+            db.add(user)
+            db.flush()
         
+        # Ensure we have an organization
+        org = db.query(OrganizationModel).first()
+        if not org:
+            org = OrganizationModel(name="Test Organization", owner_id=user.id)
+            db.add(org)
+            db.flush()
+        
+        # Get or create a test incident
+        incident = db.query(IncidentModel).first()
+        if not incident:
+            # Get first service
+            service = db.query(ServiceModel).first()
+            if not service:
+                print("⚠️  No services available. Create one first with: python create_service2.py")
+                db.close()
+                return
+            
+            incident = IncidentModel(
+                organization_id=org.id,
+                primary_service_id=service.id,
+                title="Test Incident from Fixtures",
+                severity="medium",
+                status="open"
+            )
+            db.add(incident)
+            db.flush()
+        
+        # Get a service for the logs
+        service = db.query(ServiceModel).first()
+        service_id = service.id if service else None
+        
+        # Load logs from all fixture directories
+        log_files = list(fixtures_path.rglob("logs.ndjson"))
+        if log_files:
+            print(f"📂 Found {len(log_files)} log files to load")
+            total_loaded = 0
+            for log_file in log_files:
+                print(f"  Loading: {log_file.relative_to(fixtures_path)}")
+                with open(log_file) as f:
+                    count = 0
+                    for line in f:
+                        if line.strip():
+                            data = json.loads(line)
+                            # Create incident log entry
+                            log = IncidentLogModel(
+                                incident_id=incident.id,
+                                service_id=service_id,
+                                timestamp=data.get("timestamp"),
+                                source=data.get("service", "unknown"),
+                                level=data.get("level", "INFO"),
+                                message=data.get("message", "")
+                            )
+                            db.add(log)
+                            count += 1
+                    print(f"    ✓ Added {count} log entries")
+                    total_loaded += count
+            
+            db.commit()
+            print()
+            print(f"✅ Successfully seeded {total_loaded} log entries to incident #{incident.id}")
+        else:
+            print("⚠️  No log files found")
+            
     except Exception as e:
-        print(f"❌ Database connection failed: {e}")
+        try:
+            db.rollback()
+        except:
+            pass
+        print(f"❌ Database seeding failed: {e}")
         print()
-        print("💡 To use fixtures without database:")
-        print("   1. Run: python main.py <scenario> from telemetry-simulation/")
-        print("   2. Use generated NDJSON files from output/fixtures/")
-        print("   3. Import fixtures in your application initialization")
+        print("💡 Troubleshooting:")
+        print("   1. Ensure create_service.py has been run")
+        print("   2. Check .env file has valid DATABASE_URL")
+        print("   3. Check alembic migrations are up to date")
+    finally:
+        try:
+            db.close()
+        except:
+            pass
 
 if __name__ == "__main__":
     print("🎯 Telemetry Fixture Seeding Script")

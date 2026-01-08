@@ -21,9 +21,9 @@ class ServiceModel(Base):
     organization_id = Column(Integer, ForeignKey("organizations.id"), nullable=False)
     name = Column(String, nullable=False)
     description = Column(String, nullable=True)
-    tier = Column(SQLEnum(TierEnum), nullable=False, default=TierEnum.NON_CRITICAL)
+    tier = Column(SQLEnum(TierEnum, native_enum=False), nullable=False, default=TierEnum.NON_CRITICAL)
     owner_team = Column(String, nullable=False)
-    health_status = Column(SQLEnum(ServiceHealthEnum), default=ServiceHealthEnum.UNKNOWN, nullable=False)
+    health_status = Column(SQLEnum(ServiceHealthEnum, native_enum=False), default=ServiceHealthEnum.UNKNOWN, nullable=False)
     avg_latency = Column(Float, nullable=True)  # milliseconds
     error_rate = Column(Float, nullable=True)  # percentage
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
