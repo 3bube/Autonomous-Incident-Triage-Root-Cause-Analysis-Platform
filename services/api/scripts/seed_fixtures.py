@@ -1,190 +1,244 @@
-import json
+"""Seed database with telemetry fixture data."""
 import sys
-import os
+import json
 from pathlib import Path
-
-# Add parent directory to Python path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-# Load environment variables from .env file
 from dotenv import load_dotenv
-env_path = Path(__file__).parent.parent / ".env"
-load_dotenv(env_path)
+from datetime import datetime
+
+# Add parent directory to path to import core module
+api_dir = Path(__file__).parent.parent
+sys.path.insert(0, str(api_dir))
+
+# Load environment variables from api/.env
+env_path = api_dir / '.env'
+if env_path.exists():
+    load_dotenv(env_path)
+else:
+    print(f"Warning: .env file not found at {env_path}")
+
+from core.database import SessionLocal
+from sqlalchemy import text
+
+# Find fixtures path relative to project root
+fixtures_path = Path(__file__).parent.parent.parent.parent / 'services' / 'telemetry-simulation' / 'output' / 'fixtures'
 
 
-def list_fixtures():
-    """List all generated fixtures."""
-    fixtures_path = Path(__file__).parent.parent.parent / "telemetry-simulation" / "output" / "fixtures"
-    
-    if not fixtures_path.exists():
-        print(f"❌ Fixtures path not found: {fixtures_path}")
-        return
-    
-    print("📂 Generated fixtures:")
-    print()
-    
-    # Group by scenario type
-    scenarios = {}
-    for ndjson_file in fixtures_path.rglob("*.ndjson"):
-        scenario_type = ndjson_file.parent.parent.name
-        scenario_name = ndjson_file.parent.name
-        file_type = ndjson_file.stem
+def escape_sql_string(s):
+    """Escape single quotes in SQL strings."""
+    if isinstance(s, str):
+        return s.replace("'", "''")
+    return str(s)
+
+
+def seed_logs(db_session, log_file):
+    """Load logs from a fixture file into the database."""
+    with open(log_file) as f:
+        count = 0
+        for line in f:
+            if line.strip():
+                try:
+                    data = json.loads(line)
+                    service_name = escape_sql_string(data.get('service', 'unknown'))
+                    level = escape_sql_string(data.get('level', 'INFO'))
+                    message = escape_sql_string(data.get('message', ''))
+                    trace_id = data.get('trace_id')
+                    timestamp = data.get('timestamp')
+                    
+                    query = f"""
+                        INSERT INTO logs (service_name, timestamp, level, message, trace_id, created_at)
+                        VALUES ('{service_name}', '{timestamp}', '{level}', '{message}', 
+                                {f"'{trace_id}'" if trace_id else 'NULL'}, NOW())
+                    """
+                    db_session.execute(text(query))
+                    count += 1
+                except Exception as e:
+                    print(f"  Error processing log line: {e}")
+                    continue
         
-        key = f"{scenario_type}/{scenario_name}"
-        if key not in scenarios:
-            scenarios[key] = {"files": {}, "total_records": 0}
+        db_session.commit()
+    return count
+
+
+def seed_metrics(db_session, metrics_file):
+    """Load metrics from a fixture file into the database."""
+    with open(metrics_file) as f:
+        count = 0
+        for line in f:
+            if line.strip():
+                try:
+                    data = json.loads(line)
+                    service_name = escape_sql_string(data.get('service', 'unknown'))
+                    metric_name = escape_sql_string(data.get('metric', 'unknown'))
+                    value = data.get('value', 0)
+                    unit = data.get('unit', '')
+                    timestamp = data.get('timestamp')
+                    
+                    query = f"""
+                        INSERT INTO metrics (service_name, metric_name, value, unit, timestamp, created_at)
+                        VALUES ('{service_name}', '{metric_name}', {value}, '{unit}', '{timestamp}', NOW())
+                    """
+                    db_session.execute(text(query))
+                    count += 1
+                except Exception as e:
+                    print(f"  Error processing metric line: {e}")
+                    continue
         
-        # Count lines (records) in the file
-        try:
-            with open(ndjson_file) as f:
-                count = sum(1 for line in f if line.strip())
-            scenarios[key]["files"][file_type] = count
-            scenarios[key]["total_records"] += count
-        except Exception as e:
-            print(f"  ⚠️  Error reading {ndjson_file}: {e}")
-    
-    # Print organized output
-    for scenario, data in sorted(scenarios.items()):
-        print(f"  📁 {scenario}")
-        for file_type, count in data["files"].items():
-            print(f"     • {file_type}.ndjson: {count:,} records")
-        print()
-    
-    # Summary
-    total_scenarios = len(scenarios)
-    total_files = sum(len(s["files"]) for s in scenarios.values())
-    total_records = sum(s["total_records"] for s in scenarios.values())
-    
-    print(f"✅ Summary:")
-    print(f"   • Total scenarios: {total_scenarios}")
-    print(f"   • Total files: {total_files}")
-    print(f"   • Total records: {total_records:,}")
-    print()
-    print(f"   Fixtures ready for integration or manual database seeding!")
+        db_session.commit()
+    return count
 
 
-def seed_to_db():
-    """Seed fixtures from NDJSON files to database."""
-    fixtures_path = Path(__file__).parent.parent.parent / "telemetry-simulation" / "output" / "fixtures"
-    
-    if not fixtures_path.exists():
-        print(f"❌ Fixtures path not found: {fixtures_path}")
-        return
-    
-    print("Attempting to seed to database...")
-    print()
+def seed_traces(db_session, traces_file):
+    """Load traces from a fixture file into the database."""
+    with open(traces_file) as f:
+        count = 0
+        for line in f:
+            if line.strip():
+                try:
+                    data = json.loads(line)
+                    trace_id = escape_sql_string(data.get('trace_id', ''))
+                    span_id = escape_sql_string(data.get('span_id', ''))
+                    parent_span_id = data.get('parent_span_id')
+                    service_name = escape_sql_string(data.get('service', 'unknown'))
+                    operation = escape_sql_string(data.get('operation', 'unknown'))
+                    duration = data.get('duration_ms', 0)
+                    timestamp = data.get('timestamp')
+                    status = data.get('status', 'unknown')
+                    
+                    query = f"""
+                        INSERT INTO traces (trace_id, span_id, parent_span_id, service_name, operation, 
+                                          duration, timestamp, status, created_at)
+                        VALUES ('{trace_id}', '{span_id}', {f"'{parent_span_id}'" if parent_span_id else 'NULL'}, 
+                                '{service_name}', '{operation}', {duration}, '{timestamp}', '{status}', NOW())
+                    """
+                    db_session.execute(text(query))
+                    count += 1
+                except Exception as e:
+                    print(f"  Error processing trace line: {e}")
+                    continue
+        
+        db_session.commit()
+    return count
+
+
+def seed_events(db_session, events_file):
+    """Load events from a fixture file into the database."""
+    with open(events_file) as f:
+        count = 0
+        for line in f:
+            if line.strip():
+                try:
+                    data = json.loads(line)
+                    service_name = escape_sql_string(data.get('service', 'unknown'))
+                    event_type = escape_sql_string(data.get('type', 'unknown'))
+                    details = escape_sql_string(data.get('details', ''))
+                    severity = escape_sql_string(data.get('severity', 'info'))
+                    timestamp = data.get('timestamp')
+                    
+                    query = f"""
+                        INSERT INTO events (service_name, timestamp, type, details, severity, created_at)
+                        VALUES ('{service_name}', '{timestamp}', '{event_type}', '{details}', '{severity}', NOW())
+                    """
+                    db_session.execute(text(query))
+                    count += 1
+                except Exception as e:
+                    print(f"  Error processing event line: {e}")
+                    continue
+        
+        db_session.commit()
+    return count
+
+
+
+def main():
+    """Main seeding function."""
+    db_session = SessionLocal()
     
     try:
-        from core.database import SessionLocal
-        from models.incident_log_model import IncidentLogModel
-        from models.incidents_model import IncidentModel
-        from models.services_model import ServiceModel
-        from models.organization_model import OrganizationModel
-        from models.user_model import UserModel
-        from core.security import hash_password
+        if not fixtures_path.exists():
+            print(f"❌ Fixtures path not found: {fixtures_path}")
+            return
         
-        db = SessionLocal()
+        print(f"📂 Loading fixtures from: {fixtures_path}\n")
         
-        # Ensure we have a user (required for organization owner_id)
-        user = db.query(UserModel).first()
-        if not user:
-            user = UserModel(
-                email="test@example.com",
-                full_name="Test User",
-                password=hash_password("testpass123")
-            )
-            db.add(user)
-            db.flush()
+        # Track all scenarios and their file counts
+        scenarios = {}
         
-        # Ensure we have an organization
-        org = db.query(OrganizationModel).first()
-        if not org:
-            org = OrganizationModel(name="Test Organization", owner_id=user.id)
-            db.add(org)
-            db.flush()
+        # Walk through all fixture directories and seed data
+        for scenario_dir in fixtures_path.iterdir():
+            if scenario_dir.is_dir():
+                scenario_name = scenario_dir.name
+                print(f"\n🔄 Processing scenario: {scenario_name}")
+                
+                # Initialize scenario counter
+                scenarios[scenario_name] = {'logs': 0, 'metrics': 0, 'traces': 0, 'events': 0}
+                
+                # Seed logs
+                logs_file = scenario_dir / 'logs.ndjson'
+                if logs_file.exists():
+                    count = seed_logs(db_session, logs_file)
+                    scenarios[scenario_name]['logs'] = count
+                    print(f"  ✓ Logs: {count} records")
+                
+                # Seed metrics
+                metrics_file = scenario_dir / 'metrics.ndjson'
+                if metrics_file.exists():
+                    count = seed_metrics(db_session, metrics_file)
+                    scenarios[scenario_name]['metrics'] = count
+                    print(f"  ✓ Metrics: {count} records")
+                
+                # Seed traces
+                traces_file = scenario_dir / 'traces.ndjson'
+                if traces_file.exists():
+                    count = seed_traces(db_session, traces_file)
+                    scenarios[scenario_name]['traces'] = count
+                    print(f"  ✓ Traces: {count} records")
+                
+                # Seed events
+                events_file = scenario_dir / 'events.ndjson'
+                if events_file.exists():
+                    count = seed_events(db_session, events_file)
+                    scenarios[scenario_name]['events'] = count
+                    print(f"  ✓ Events: {count} records")
         
-        # Get or create a test incident
-        incident = db.query(IncidentModel).first()
-        if not incident:
-            # Get first service
-            service = db.query(ServiceModel).first()
-            if not service:
-                print("⚠️  No services available. Create one first with: python create_service2.py")
-                db.close()
-                return
+        # Print summary
+        print("\n" + "="*60)
+        print("📊 SEEDING SUMMARY")
+        print("="*60)
+        
+        total_logs = 0
+        total_metrics = 0
+        total_traces = 0
+        total_events = 0
+        
+        for scenario, counts in scenarios.items():
+            print(f"\n{scenario}:")
+            print(f"  Logs:    {counts['logs']:4d}")
+            print(f"  Metrics: {counts['metrics']:4d}")
+            print(f"  Traces:  {counts['traces']:4d}")
+            print(f"  Events:  {counts['events']:4d}")
             
-            incident = IncidentModel(
-                organization_id=org.id,
-                primary_service_id=service.id,
-                title="Test Incident from Fixtures",
-                severity="medium",
-                status="open"
-            )
-            db.add(incident)
-            db.flush()
+            total_logs += counts['logs']
+            total_metrics += counts['metrics']
+            total_traces += counts['traces']
+            total_events += counts['events']
         
-        # Get a service for the logs
-        service = db.query(ServiceModel).first()
-        service_id = service.id if service else None
+        print("\n" + "-"*60)
+        print(f"TOTAL:")
+        print(f"  Logs:    {total_logs:4d}")
+        print(f"  Metrics: {total_metrics:4d}")
+        print(f"  Traces:  {total_traces:4d}")
+        print(f"  Events:  {total_events:4d}")
+        print(f"  GRAND TOTAL: {total_logs + total_metrics + total_traces + total_events:4d} records")
+        print("="*60)
+        print("✅ Seeding completed successfully!\n")
         
-        # Load logs from all fixture directories
-        log_files = list(fixtures_path.rglob("logs.ndjson"))
-        if log_files:
-            print(f"📂 Found {len(log_files)} log files to load")
-            total_loaded = 0
-            for log_file in log_files:
-                print(f"  Loading: {log_file.relative_to(fixtures_path)}")
-                with open(log_file) as f:
-                    count = 0
-                    for line in f:
-                        if line.strip():
-                            data = json.loads(line)
-                            # Create incident log entry
-                            log = IncidentLogModel(
-                                incident_id=incident.id,
-                                service_id=service_id,
-                                timestamp=data.get("timestamp"),
-                                source=data.get("service", "unknown"),
-                                level=data.get("level", "INFO"),
-                                message=data.get("message", "")
-                            )
-                            db.add(log)
-                            count += 1
-                    print(f"    ✓ Added {count} log entries")
-                    total_loaded += count
-            
-            db.commit()
-            print()
-            print(f"✅ Successfully seeded {total_loaded} log entries to incident #{incident.id}")
-        else:
-            print("⚠️  No log files found")
-            
     except Exception as e:
-        try:
-            db.rollback()
-        except:
-            pass
-        print(f"❌ Database seeding failed: {e}")
-        print()
-        print("💡 Troubleshooting:")
-        print("   1. Ensure create_service.py has been run")
-        print("   2. Check .env file has valid DATABASE_URL")
-        print("   3. Check alembic migrations are up to date")
+        print(f"\n❌ Error during seeding: {e}")
+        db_session.rollback()
+        raise
     finally:
-        try:
-            db.close()
-        except:
-            pass
+        db_session.close()
+
 
 if __name__ == "__main__":
-    print("🎯 Telemetry Fixture Seeding Script")
-    print("=" * 50)
-    print()
-    
-    # First, list available fixtures
-    list_fixtures()
-    
-    # Then, attempt to seed to database
-    print("Attempting to seed to database...")
-    print()
-    seed_to_db()
+    main()

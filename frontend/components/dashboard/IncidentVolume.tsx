@@ -49,7 +49,9 @@ export default function IncidentVolume({
   const [isOpen, setIsOpen] = useState(false);
   const [selectedRange, setSelectedRange] = useState(timeRange);
 
-  const handleRangeSelect = (range: string) => {
+  const handleRangeSelect = (
+    range: "Last 7 Days" | "Last 30 Days" | "Last 90 Days"
+  ) => {
     setSelectedRange(range);
     setIsOpen(false);
     onTimeRangeChange?.(range);
@@ -73,19 +75,21 @@ export default function IncidentVolume({
 
           {isOpen && (
             <div className="absolute right-0 mt-2 w-40 bg-[#1a2635] border border-[#233648] rounded-md shadow-lg z-10">
-              {["Last 7 Days", "Last 30 Days", "Last 90 Days"].map((range) => (
-                <button
-                  key={range}
-                  onClick={() => handleRangeSelect(range)}
-                  className={`w-full text-left px-4 py-2 text-xs transition ${
-                    selectedRange === range
-                      ? "bg-[#2b8cee] text-white"
-                      : "text-[#92adc9] hover:bg-[#233648]"
-                  }`}
-                >
-                  {range}
-                </button>
-              ))}
+              {(["Last 7 Days", "Last 30 Days", "Last 90 Days"] as const).map(
+                (range) => (
+                  <button
+                    key={range}
+                    onClick={() => handleRangeSelect(range)}
+                    className={`w-full text-left px-4 py-2 text-xs transition ${
+                      selectedRange === range
+                        ? "bg-[#2b8cee] text-white"
+                        : "text-[#92adc9] hover:bg-[#233648]"
+                    }`}
+                  >
+                    {range}
+                  </button>
+                )
+              )}
             </div>
           )}
         </div>
@@ -95,7 +99,11 @@ export default function IncidentVolume({
       <div className="h-64">
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={chartData}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#233648" vertical={false} />
+            <CartesianGrid
+              strokeDasharray="3 3"
+              stroke="#233648"
+              vertical={false}
+            />
             <XAxis
               dataKey="day"
               stroke="#92adc9"
@@ -111,17 +119,8 @@ export default function IncidentVolume({
             />
             <Tooltip content={<CustomTooltip />} />
 
-            {/* Bar Chart - Blue bars with red for highest */}
-            <Bar
-              dataKey="volume"
-              fill="#2b5a9f"
-              radius={[4, 4, 0, 0]}
-              shape={
-                <CustomBarShape
-                  maxVolume={Math.max(...chartData.map((d) => d.volume))}
-                />
-              }
-            />
+            {/* Bar Chart - Blue bars */}
+            <Bar dataKey="volume" fill="#2b5a9f" radius={[4, 4, 0, 0]} />
 
             {/* Line Chart - Dotted trend line */}
             <Line
@@ -139,20 +138,3 @@ export default function IncidentVolume({
     </div>
   );
 }
-
-// Custom bar shape to color Sunday's bar in red
-const CustomBarShape = (props: any) => {
-  const { x, y, width, height, fill, payload, maxVolume } = props;
-  const isMaxDay = payload?.volume === maxVolume;
-
-  return (
-    <rect
-      x={x}
-      y={y}
-      width={width}
-      height={height}
-      fill={isMaxDay ? "#ef4444" : fill}
-      radius={[4, 4, 0, 0]}
-    />
-  );
-};
