@@ -11,6 +11,7 @@ import {
   flexRender,
 } from "@tanstack/react-table";
 import { Badge } from "@/components/ui/badge";
+import { useLogs } from "@/hooks/queries/useTelemetry";
 
 type Severity = "P1" | "P2" | "P3" | "P4";
 type Status = "Investigating" | "Monitoring" | "Mitigated" | "Resolved";
@@ -26,7 +27,6 @@ interface Incident {
 }
 
 interface IncidentsTableProps {
-  incidents?: Incident[];
   onAnalyze?: (incidentId: string) => void;
 }
 
@@ -50,40 +50,67 @@ const getStatusVariant = (status: Status) => {
   return variants[status] as any;
 };
 
-const defaultIncidents: Incident[] = [
-  {
-    id: "1",
-    severity: "P1",
-    name: "Database Latency Spike",
-    description: "#INC-2401",
-    service: "User-DB",
-    duration: "14s 32s",
-    status: "Investigating",
-  },
-  {
-    id: "2",
-    severity: "P2",
-    name: "Checkout API 500 Errors",
-    description: "#INC-2399",
-    service: "Checkout",
-    duration: "42s 18s",
-    status: "Monitoring",
-  },
-  {
-    id: "3",
-    severity: "P3",
-    name: "Image Resizing Slow",
-    description: "#INC-2398",
-    service: "Media-Svc",
-    duration: "2h 15m",
-    status: "Mitigated",
-  },
-];
+// Helper to map log level to severity
+const mapLogLevelToSeverity = (level: string): Severity => {
+  switch (level.toUpperCase()) {
+    case "ERROR":
+      return "P1";
+    case "WARN":
+      return "P2";
+    case "INFO":
+      return "P3";
+    default:
+      return "P4";
+  }
+};
 
-export default function IncidentsTable({
-  incidents = defaultIncidents,
-  onAnalyze,
-}: IncidentsTableProps) {
+// Helper to calculate time difference
+const getTimeDifference = (timestamp: string): string => {
+  const now = new Date();
+  const past = new Date(timestamp);
+  const diffMs = now.getTime() - past.getTime();
+  const diffSecs = Math.floor(diffMs / 1000);
+  const diffMins = Math.floor(diffSecs / 60);
+  const diffHours = Math.floor(diffMins / 60);
+
+  if (diffHours > 0) {
+    return `${diffHours}h ${diffMins % 60}m`;
+  } else if (diffMins > 0) {
+    return `${diffMins}m ${diffSecs % 60}s`;
+  } else {
+    return `${diffSecs}s`;
+  }
+};
+
+export default function IncidentsTable({ onAnalyze }: IncidentsTableProps) {
+  const [skip, setSkip] = useState(0);
+  const limit = 10;
+
+  // Fetch ERROR level logs from the API
+  const { data, isLoading } = useLogs(skip, limit, undefined, "ERROR");
+
+  // Transform logs to incidents
+  const incidents: Incident[] = useMemo(() => {
+    if (!data?.items) return [];
+
+    return data.items.map((log, index) => ({
+      id: log.id.toString(),
+      severity: mapLogLevelToSeverity(log.level),
+      name:
+        log.message.substring(0, 50) + (log.message.length > 50 ? "..." : ""),
+      description: `#INC-${log.id}`,
+      service: log.service_name,
+      duration: getTimeDifference(log.timestamp),
+      status:
+        index % 4 === 0
+          ? "Investigating"
+          : index % 4 === 1
+            ? "Monitoring"
+            : index % 4 === 2
+              ? "Mitigated"
+              : "Resolved",
+    }));
+  }, [data]);
   const [globalFilter, setGlobalFilter] = useState("");
   const [selectedSeverity, setSelectedSeverity] = useState<Severity | "All">(
     "All"
@@ -318,61 +345,87 @@ export default function IncidentsTable({
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto -mx-6 -mb-6 rounded-lg">
-        <table className="w-full">
-          <thead className="border-b border-[#233648] bg-[#2b8cee]/50">
-            {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id} className="hover:bg-transparent">
-                {headerGroup.headers.map((header, index) => (
-                  <th
-                    key={header.id}
-                    className={`text-md font-semibold text-[#92adc9] uppercase tracking-wider p-4 text-left ${
-                      index === 0 ? "rounded-tl-lg" : ""
-                    } ${index === headerGroup.headers.length - 1 ? "rounded-tr-lg" : ""}`}
-                  >
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <tr
-                key={row.id}
-                className="border border-b-0 border-[#233648] hover:bg-[#1f2f3f] transition"
-              >
-                {row.getVisibleCells().map((cell) => (
-                  <td
-                    key={cell.id}
-                    className="px-6 py-4 text-md text-[#92adc9]"
-                  >
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      {isLoading ? (
+        <div className="text-center py-12 text-[#92adc9]">
+          Loading incidents...
+        </div>
+      ) : incidents.length === 0 ? (
+        <div className="text-center py-12 text-[#92adc9]">
+          No incidents found
+        </div>
+      ) : (
+        <div className="overflow-x-auto -mx-6 -mb-6 rounded-lg">
+          <table className="w-full">
+            <thead className="border-b border-[#233648] bg-[#2b8cee]/50">
+              {table.getHeaderGroups().map((headerGroup) => (
+                <tr key={headerGroup.id} className="hover:bg-transparent">
+                  {headerGroup.headers.map((header, index) => (
+                    <th
+                      key={header.id}
+                      className={`text-md font-semibold text-[#92adc9] uppercase tracking-wider p-4 text-left ${
+                        index === 0 ? "rounded-tl-lg" : ""
+                      } ${index === headerGroup.headers.length - 1 ? "rounded-tr-lg" : ""}`}
+                    >
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
+                    </th>
+                  ))}
+                </tr>
+              ))}
+            </thead>
+            <tbody>
+              {table.getRowModel().rows.map((row) => (
+                <tr
+                  key={row.id}
+                  className="border border-b-0 border-[#233648] hover:bg-[#1f2f3f] transition"
+                >
+                  {row.getVisibleCells().map((cell) => (
+                    <td
+                      key={cell.id}
+                      className="px-6 py-4 text-md text-[#92adc9]"
+                    >
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
 
       {/* Footer */}
-      <div className="flex items-center justify-between text-md text-[#92adc9] bg-[#2b8cee]/50 p-4 rounded-b-lg mt-4 -mx-6 -mb-6 px-6">
-        <span>Showing {table.getRowModel().rows.length} active incidents</span>
-        <div className="flex gap-2">
-          <button className="p-1 hover:bg-[#233648] rounded transition">
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-          <button className="p-1 hover:bg-[#233648] rounded transition">
-            <ChevronRight className="w-4 h-4" />
-          </button>
+      {!isLoading && incidents.length > 0 && (
+        <div className="flex items-center justify-between text-md text-[#92adc9] bg-[#2b8cee]/50 p-4 rounded-b-lg mt-4 -mx-6 -mb-6 px-6">
+          <span>
+            Showing {skip + 1}-{Math.min(skip + limit, data?.total || 0)} of{" "}
+            {data?.total || 0} incidents
+          </span>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setSkip(Math.max(0, skip - limit))}
+              disabled={skip === 0}
+              className="p-1 hover:bg-[#233648] rounded transition disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => setSkip(skip + limit)}
+              disabled={!data || skip + limit >= data.total}
+              className="p-1 hover:bg-[#233648] rounded transition disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

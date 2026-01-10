@@ -10,3 +10,5 @@ pyjwt
 bcrypt
 python-multipart
 alembic
+langchain
+langchain-groq

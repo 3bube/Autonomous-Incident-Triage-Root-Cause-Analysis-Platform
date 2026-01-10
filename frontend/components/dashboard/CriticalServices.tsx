@@ -2,6 +2,7 @@
 
 import React from "react";
 import { AlertCircle } from "lucide-react";
+import { useCriticalServices } from "@/hooks/queries/useDashboard";
 
 interface Service {
   id: string;
@@ -13,36 +14,8 @@ interface Service {
 }
 
 interface CriticalServicesProps {
-  services?: Service[];
   onViewAll?: () => void;
 }
-
-const defaultServices: Service[] = [
-  {
-    id: "1",
-    name: "User Database",
-    owner: "Primary Database",
-    status: "critical",
-    metric: "92.49",
-    metricLabel: "%",
-  },
-  {
-    id: "2",
-    name: "Checkout API",
-    owner: "Checkout-Svc",
-    status: "warning",
-    metric: "98.15",
-    metricLabel: "%",
-  },
-  {
-    id: "3",
-    name: "Authentication",
-    owner: "Global",
-    status: "healthy",
-    metric: "Link",
-    metricLabel: "",
-  },
-];
 
 const statusConfig = {
   critical: {
@@ -57,12 +30,28 @@ const statusConfig = {
     dotColor: "bg-teal-500",
     textColor: "text-teal-500",
   },
+  degraded: {
+    dotColor: "bg-yellow-500",
+    textColor: "text-yellow-500",
+  },
 };
 
-export default function CriticalServices({
-  services = defaultServices,
-  onViewAll,
-}: CriticalServicesProps) {
+export default function CriticalServices({ onViewAll }: CriticalServicesProps) {
+  const { data, isLoading } = useCriticalServices(1, 10);
+
+  // Transform API response to component format
+  const services: Service[] =
+    data?.map((service) => ({
+      id: service.service_id.toString(),
+      name: service.service_name,
+      owner: service.version || "N/A",
+      status:
+        service.status === "degraded"
+          ? "warning"
+          : (service.status as "critical" | "warning" | "healthy"),
+      metric: service.error_rate?.toFixed(2) || "0",
+      metricLabel: "%",
+    })) || [];
   return (
     <div className="p-6 bg-[#111a22] border border-[#233648] rounded-lg">
       {/* Header */}
@@ -77,41 +66,67 @@ export default function CriticalServices({
       </div>
 
       {/* Services List */}
-      <div className="space-y-4">
-        {services.map((service) => (
-          <div
-            key={service.id}
-            className="flex items-center justify-between p-3 bg-[#1a2635] border border-[#233648] rounded-md hover:border-[#2b8cee] transition"
-          >
-            <div className="flex items-center gap-3 flex-1">
-              {/* Status Dot */}
-              <div
-                className={`w-2 h-2 rounded-full ${statusConfig[service.status].dotColor}`}
-              />
+      {isLoading ? (
+        <div className="space-y-4">
+          {[1, 2, 3].map((i) => (
+            <div
+              key={i}
+              className="flex items-center justify-between p-3 bg-[#1a2635] border border-[#233648] rounded-md animate-pulse"
+            >
+              <div className="flex items-center gap-3 flex-1">
+                <div className="w-2 h-2 rounded-full bg-[#233648]" />
+                <div className="flex-1">
+                  <div className="h-4 bg-[#233648] rounded w-32 mb-1" />
+                  <div className="h-3 bg-[#233648] rounded w-20" />
+                </div>
+              </div>
+              <div className="h-4 bg-[#233648] rounded w-12" />
+            </div>
+          ))}
+        </div>
+      ) : services.length === 0 ? (
+        <div className="text-center py-8 text-[#92adc9]">
+          No critical services found
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {services.map((service) => (
+            <div
+              key={service.id}
+              className="flex items-center justify-between p-3 bg-[#1a2635] border border-[#233648] rounded-md hover:border-[#2b8cee] transition"
+            >
+              <div className="flex items-center gap-3 flex-1">
+                {/* Status Dot */}
+                <div
+                  className={`w-2 h-2 rounded-full ${statusConfig[service.status].dotColor}`}
+                />
 
-              {/* Service Info */}
-              <div className="flex-1">
-                <p className="text-sm font-medium text-white">{service.name}</p>
-                {service.owner && (
-                  <p className="text-xs text-[#58738e]">{service.owner}</p>
+                {/* Service Info */}
+                <div className="flex-1">
+                  <p className="text-sm font-medium text-white">
+                    {service.name}
+                  </p>
+                  {service.owner && (
+                    <p className="text-xs text-[#58738e]">{service.owner}</p>
+                  )}
+                </div>
+              </div>
+
+              {/* Metric */}
+              <div
+                className={`text-sm font-semibold ${statusConfig[service.status].textColor}`}
+              >
+                {service.metric}
+                {service.metricLabel && (
+                  <span className="text-xs font-normal ml-0.5">
+                    {service.metricLabel}
+                  </span>
                 )}
               </div>
             </div>
-
-            {/* Metric */}
-            <div
-              className={`text-sm font-semibold ${statusConfig[service.status].textColor}`}
-            >
-              {service.metric}
-              {service.metricLabel && (
-                <span className="text-xs font-normal ml-0.5">
-                  {service.metricLabel}
-                </span>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

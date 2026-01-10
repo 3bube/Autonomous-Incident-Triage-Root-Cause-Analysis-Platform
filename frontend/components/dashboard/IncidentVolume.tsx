@@ -14,27 +14,19 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { ChevronDown } from "lucide-react";
+import { useIncidentVolume } from "@/hooks/queries/useDashboard";
 
-interface IncidentVolumeProps {
-  timeRange?: "Last 7 Days" | "Last 30 Days" | "Last 90 Days";
-  onTimeRangeChange?: (range: string) => void;
-}
-
-const chartData = [
-  { day: "Mon", volume: 45, trend: 30 },
-  { day: "Tue", volume: 62, trend: 35 },
-  { day: "Wed", volume: 58, trend: 42 },
-  { day: "Thu", volume: 73, trend: 48 },
-  { day: "Fri", volume: 51, trend: 45 },
-  { day: "Sat", volume: 48, trend: 42 },
-  { day: "Sun", volume: 85, trend: 40 },
-];
+const timeRangeMap = {
+  "Last 7 Days": 168, // 7 days in hours
+  "Last 30 Days": 720,
+  "Last 90 Days": 2160,
+};
 
 const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     return (
       <div className="bg-[#1a2635] border border-[#233648] rounded px-2 py-1 text-xs text-white">
-        <p>{payload[0].payload.day}</p>
+        <p>{payload[0].payload.timestamp}</p>
         <p>Volume: {payload[0].value}</p>
       </div>
     );
@@ -42,20 +34,27 @@ const CustomTooltip = ({ active, payload }: any) => {
   return null;
 };
 
-export default function IncidentVolume({
-  timeRange = "Last 7 Days",
-  onTimeRangeChange,
-}: IncidentVolumeProps) {
+export default function IncidentVolume() {
+  const [selectedRange, setSelectedRange] =
+    useState<keyof typeof timeRangeMap>("Last 7 Days");
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedRange, setSelectedRange] = useState(timeRange);
 
-  const handleRangeSelect = (
-    range: "Last 7 Days" | "Last 30 Days" | "Last 90 Days"
-  ) => {
+  const hours = timeRangeMap[selectedRange];
+  const { data: incidentData, isLoading } = useIncidentVolume(undefined, hours);
+
+  const handleRangeSelect = (range: keyof typeof timeRangeMap) => {
     setSelectedRange(range);
     setIsOpen(false);
-    onTimeRangeChange?.(range);
   };
+
+  const chartData =
+    incidentData?.data?.data_points?.map((point) => ({
+      timestamp: new Date(point.timestamp).toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+      }),
+      volume: point.incident_count,
+    })) || [];
 
   return (
     <div className="p-6 bg-[#111a22] border border-[#233648] rounded-lg">
@@ -75,66 +74,65 @@ export default function IncidentVolume({
 
           {isOpen && (
             <div className="absolute right-0 mt-2 w-40 bg-[#1a2635] border border-[#233648] rounded-md shadow-lg z-10">
-              {(["Last 7 Days", "Last 30 Days", "Last 90 Days"] as const).map(
-                (range) => (
-                  <button
-                    key={range}
-                    onClick={() => handleRangeSelect(range)}
-                    className={`w-full text-left px-4 py-2 text-xs transition ${
-                      selectedRange === range
-                        ? "bg-[#2b8cee] text-white"
-                        : "text-[#92adc9] hover:bg-[#233648]"
-                    }`}
-                  >
-                    {range}
-                  </button>
-                )
-              )}
+              {(
+                Object.keys(timeRangeMap) as Array<keyof typeof timeRangeMap>
+              ).map((range) => (
+                <button
+                  key={range}
+                  onClick={() => handleRangeSelect(range)}
+                  className={`w-full text-left px-4 py-2 text-xs transition ${
+                    selectedRange === range
+                      ? "bg-[#2b8cee] text-white"
+                      : "text-[#92adc9] hover:bg-[#233648]"
+                  }`}
+                >
+                  {range}
+                </button>
+              ))}
             </div>
           )}
         </div>
       </div>
 
       {/* Chart */}
-      <div className="h-64">
-        <ResponsiveContainer width="100%" height="100%">
-          <ComposedChart data={chartData}>
-            <CartesianGrid
-              strokeDasharray="3 3"
-              stroke="#233648"
-              vertical={false}
-            />
-            <XAxis
-              dataKey="day"
-              stroke="#92adc9"
-              style={{ fontSize: "12px" }}
-              axisLine={{ stroke: "#233648" }}
-              tickLine={{ stroke: "#233648" }}
-            />
-            <YAxis
-              stroke="#92adc9"
-              style={{ fontSize: "12px" }}
-              axisLine={{ stroke: "#233648" }}
-              tickLine={{ stroke: "#233648" }}
-            />
-            <Tooltip content={<CustomTooltip />} />
+      {isLoading ? (
+        <div className="h-64 flex items-center justify-center">
+          <div className="text-[#92adc9]">Loading chart...</div>
+        </div>
+      ) : chartData.length === 0 ? (
+        <div className="h-64 flex items-center justify-center">
+          <div className="text-[#92adc9]">No data available</div>
+        </div>
+      ) : (
+        <div className="h-64">
+          <ResponsiveContainer width="100%" height="100%">
+            <ComposedChart data={chartData}>
+              <CartesianGrid
+                strokeDasharray="3 3"
+                stroke="#233648"
+                vertical={false}
+              />
+              <XAxis
+                dataKey="timestamp"
+                stroke="#92adc9"
+                style={{ fontSize: "12px" }}
+                axisLine={{ stroke: "#233648" }}
+                tickLine={{ stroke: "#233648" }}
+              />
+              <YAxis
+                stroke="#92adc9"
+                style={{ fontSize: "12px" }}
+                axisLine={{ stroke: "#233648" }}
+                tickLine={{ stroke: "#233648" }}
+              />
+              <Tooltip content={<CustomTooltip />} />
 
-            {/* Bar Chart - Blue bars */}
-            <Bar dataKey="volume" fill="#2b5a9f" radius={[4, 4, 0, 0]} />
-
-            {/* Line Chart - Dotted trend line */}
-            <Line
-              type="monotone"
-              dataKey="trend"
-              stroke="#fbbf24"
-              strokeWidth={2}
-              strokeDasharray="5 5"
-              dot={false}
-              isAnimationActive={false}
-            />
-          </ComposedChart>
-        </ResponsiveContainer>
-      </div>
+              {/* Bar Chart - Blue bars */}
+              <Bar dataKey="volume" fill="#2b5a9f" radius={[4, 4, 0, 0]} />
+            </ComposedChart>
+          </ResponsiveContainer>
+        </div>
+      )}
     </div>
   );
 }

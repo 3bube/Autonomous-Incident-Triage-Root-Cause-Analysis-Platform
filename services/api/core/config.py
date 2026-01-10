@@ -11,6 +11,9 @@ class Settings(BaseSettings):
     APP_NAME: str = "Autonomous Incident Triage API"
     APP_VERSION: str = "1.0.0"
     DEBUG: bool = False
+
+    # Groq AI Settings
+    GROQ_API_KEY: Optional[str] = None
     
     # Database Settings (Required - must be in .env)
     DATABASE_URL: str

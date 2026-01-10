@@ -2,8 +2,6 @@ from sqlalchemy import Column, String, ForeignKey, Integer, DateTime
 from sqlalchemy.orm import relationship
 from core.database import Base
 from datetime import datetime, timezone
-# Import to resolve relationship
-from models.user_model import UserModel  # noqa: F401
 
 class OrganizationModel(Base):
     __tablename__ = 'organizations'

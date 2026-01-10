@@ -10,6 +10,7 @@ from routes.ai_model_routes import router as ai_model_router
 from routes.team_routes import router as team_router
 from routes.dashboard_routes import router as dashboard_router
 from routes.service_routes import router as service_router
+from routes.telemetry_routes import router as telemetry_router
 import uvicorn
 
 logger = get_logger(__name__)
@@ -40,6 +41,7 @@ app.include_router(ai_model_router)
 app.include_router(team_router)
 app.include_router(dashboard_router)
 app.include_router(service_router)
+app.include_router(telemetry_router)
 
 
 @app.get("/")
